@@ -12,14 +12,14 @@
                 font: normal normal normal 14px Verdana, Tahoma, sans-serif;
             }
         </style>
-        <title>CATS - Page Preview</title>
+        <title>CATS - Página Vista Previa</title>
     </head>
 
     <body>
         <div style="text-align: center;">
             <?php $this->_($this->previewMessage); ?>
             <br />
-            <input type="button" class="button" value="Close Preview" style="position: relative; top: 6px;" onclick="parent.window.close();" />
+            <input type="button" class="button" value="Cerrar Vista Previa" style="position: relative; top: 6px;" onclick="parent.window.close();" />
         </div>
     </body>
 </html>

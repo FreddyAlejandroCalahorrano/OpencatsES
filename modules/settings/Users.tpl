@@ -11,21 +11,21 @@
                     <td width="3%">
                         <img src="images/settings.gif" width="24" height="24" alt="Settings" style="border: none; margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Settings: User Management</h2></td>
+                    <td><h2>Ajustes: Gestión de Usuarios</h2></td>
                 </tr>
             </table>
 
-            <p class="note">User Management</p>
+            <p class="note">Gestión de Usuarios</p>
 
             <table class="sortable">
                 <thead>
                     <tr>
-                        <th align="left" nowrap="nowrap">First Name</th>
-                        <th align="left" nowrap="nowrap">Last Name</th>
-                        <th align="left">Username</th>
-                        <th align="left" nowrap="nowrap">Access Level</th>
-                        <th align="left" nowrap="nowrap">Last Success</th>
-                        <th align="left" nowrap="nowrap">Last Fail</th>
+                        <th align="left" nowrap="nowrap">Nombre</th>
+                        <th align="left" nowrap="nowrap">Apellido</th>
+                        <th align="left">Nombre de Usuario</th>
+                        <th align="left" nowrap="nowrap">Nivel de Acceso</th>
+                        <th align="left" nowrap="nowrap">Último Exito</th>
+                        <th align="left" nowrap="nowrap">Último Fallo</th>
                     </tr>
                 </thead>
 
@@ -52,7 +52,7 @@
             </table>
             <?php if (AUTH_MODE != "ldap"): ?>
                 <a id="add_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=addUser" title="You have <?php $this->_($this->license['diff']); ?> user accounts remaining.">
-                    <img src="images/candidate_inline.gif" width="16" height="16" class="absmiddle" alt="add" style="border: none;" />&nbsp;Add User
+                    <img src="images/candidate_inline.gif" width="16" height="16" class="absmiddle" alt="add" style="border: none;" />&nbsp;Agregar Usuario
                 </a>
             <?php endif; ?>
         </div>

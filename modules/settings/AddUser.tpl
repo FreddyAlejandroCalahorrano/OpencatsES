@@ -11,13 +11,13 @@
                     <td width="3%" valign="bottom">
                         <img src="images/settings.gif" width="24" height="24" border="0" alt="Settings" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td valign="bottom"><h2>Settings: Add Site User</h2></td>
+                    <td valign="bottom"><h2>Ajustes: Agregar Usuario del Sitio</h2></td>
                 </tr>
             </table>
 
             <p class="note">
-                <span style="float: left;">Add Site User</span>
-                <span style="float: right;"><a href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=manageUsers'>Back to User Management</a></span>&nbsp;
+                <span style="float: left;">Agregar Usuario del Sitio</span>
+                <span style="float: right;"><a href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=manageUsers'>Volver a Gestión de Usuarios</a></span>&nbsp;
             </p>
 
             <form name="addUserForm" id="addUserForm" action="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=addUser" method="post" onsubmit="return checkAddUserForm(document.addUserForm);" autocomplete="off">
@@ -28,8 +28,8 @@
                         <td align="left" valign="top">
                             <table class="editTable" width="550">
                                 <tr>
-                                    <td class="tdVertical">
-                                        <label id="firstNameLabel" for="firstName">First Name:</label>
+                                    <td class="tdVertical" >
+                                        <label id="firstNameLabel" for="firstName">Nombre:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" class="inputbox" id="firstName" name="firstName" style="width: 150px;" />&nbsp;*
@@ -38,7 +38,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="lastNameLabel" for="lastName">Last Name:</label>
+                                        <label id="lastNameLabel" for="lastName">Apellido:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" class="inputbox" id="lastName" name="lastName" style="width: 150px;" />&nbsp;*
@@ -47,7 +47,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="emailLabel" for="username">E-Mail:</label>
+                                        <label id="emailLabel" for="username">Correo Electrónico:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" class="inputbox" id="email" name="email" style="width: 150px;" />
@@ -56,7 +56,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="usernameLabel" for="username">Username:</label>
+                                        <label id="usernameLabel" for="username">Nombre de Usuario:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" class="inputbox" id="username" name="username" style="width: 150px;" />&nbsp;*
@@ -65,11 +65,11 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="passwordLabel" for="password">Password:</label>
+                                        <label id="passwordLabel" for="password">Contraseña:</label>
                                     </td>
                                     <td class="tdData">
 					<?php if ($this->auth_mode == "ldap"): ?>
-					LDAP Authentication is enabled, hence password not required.
+                       La autenticación LDAP está habilitada, por lo que no se requiere contraseña.
                             		<input type="hidden" class="inputbox" id="password" name="password" value="password" />
                             		<?php else: ?>
                                         <input type="password" class="inputbox" id="password" name="password" style="width: 150px;" />&nbsp;*
@@ -79,7 +79,8 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="retypePasswordLabel" for="retypePassword">Retype Password:</label>
+                                        <label id="retypePasswordLabel" for="retypePassword">
+                                            Vuelva a Ecribir la Contraseña:</label>
                                     </td>
                                     <td class="tdData">
 					<?php if ($this->auth_mode == "ldap"): ?>
@@ -92,7 +93,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="accessLevelLabel" for="accessLevel">Access Level:</label>
+                                        <label id="accessLevelLabel" for="accessLevel">Nivel de Acceso:</label>
                                     </td>
                                     <td class="tdData">
                                         <span id="accessLevelsSpan">
@@ -114,7 +115,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="tdVertical">Access Description:</td>
+                                    <td class="tdVertical" >Access Description:</td>
                                     <td class="tdData">
                                         <span id="userAccessStatus">Delete - All lower access, plus the ability to delete information on the system.</span>
                                     </td>

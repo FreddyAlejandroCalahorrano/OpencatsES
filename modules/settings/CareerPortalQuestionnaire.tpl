@@ -140,7 +140,7 @@ div.questionContainerPlainJane { }
                                         <td class="questionColumnText" align="left" valign="top" width="130" align="left">
                                             <div id="question<?php echo $questionIndex; ?>TypeContainer">
                                                 <div id="question<?php echo $questionIndex; ?>TypeLabel">
-                                                    <span id="question<?php echo $questionIndex; ?>TypeLabelValue"><?php echo $question['questionTypeLabel']; ?></span>
+                                                    <span id="question<?php echo $questionIndex; ?>TypeLabelValue"><?php echo $question['questionType']; ?></span>
                                                     <a href="javascript:void(0);" id="question<?php echo $questionIndex; ?>TypeChange" onclick="promptChangeQuestionType(this);">(Editar)</a>
                                                 </div>
                                                 <div id="question<?php echo $questionIndex; ?>TypeInput" style="display: none;">
