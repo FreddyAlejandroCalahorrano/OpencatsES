@@ -11,19 +11,19 @@
                     <td width="3%">
                         <img src="images/settings.gif" width="24" height="24" alt="Settings" style="border: none; margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Settings: Administration</h2></td>
+                    <td><h2>Ajustes: Administración</h2></td>
                 </tr>
             </table>
 
-            <p class="note">System Information</p>
+            <p class="note">Información del Sistema</p>
 
             <table class="editTable" width="700">
                     <tr>
-                        <td class="tdVertical" colspan="2"><span style="font-weight: bold;">General Information</span></td>
+                        <td class="tdVertical" colspan="2"><span style="font-weight: bold;">Información General</span></td>
                     </tr>
                     <tr>
                         <td class="tdVertical" style="width:250px;">
-                            Operating System:
+                            Sistema Operativo:
                         </td>
                         <td class="tdData">
                             <?php echo(php_uname()); ?>
@@ -31,15 +31,15 @@
                     </tr>
                     <tr>
                         <td class="tdVertical" style="width:250px;">
-                            Operating System Type:
+                            Tipo de Sistema Operativo:
                         </td>
                         <td class="tdData">
-                            CATS thinks your operating system is <span class="bold"><?php $this->_($this->OSType); ?>.</span>
+                            CATS cree que su Sistema Operativo es <span class="bold"><?php $this->_($this->OSType); ?>.</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="tdVertical" style="width:250px;">
-                            PHP Version:
+                            Versión de PHP:
                         </td>
                         <td class="tdData">
                             <?php echo(PHP_VERSION); ?>
@@ -47,7 +47,7 @@
                     </tr>
                     <tr>
                         <td class="tdVertical" style="width:250px;">
-                            Database Version:
+                            Versión de la Base de Datos:
                         </td>
                         <td class="tdData">
                             <?php $this->_($this->databaseVersion); ?>
@@ -55,7 +55,7 @@
                     </tr>
                     <tr>
                         <td class="tdVertical" style="width:250px;">
-                            Installation Directory:
+                            Directorio de Instalación:
                         </td>
                         <td class="tdData">
                             <?php $this->_($this->installationDirectory); ?>
@@ -65,7 +65,7 @@
                         <td class="tdVertical" colspan="2">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td class="tdVertical" colspan="2"><span style="font-weight: bold;">Module Schema Version Information</span></td>
+                        <td class="tdVertical" colspan="2"><span style="font-weight: bold;">Información de la Versión del Esquema del Módulo</span></td>
                     </tr>
                     <?php foreach ($this->schemaVersions as $rowIndex => $row): ?>
                     <tr>
@@ -78,7 +78,7 @@
                     </tr>
                     <?php endforeach; ?>
             </table>
-            <input type="button" name="back" class="button" value="Back" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=administration';" />
+            <input type="button" name="back" class="button" value="Regresar" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=administration';" />
 
         </div>
     </div>

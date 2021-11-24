@@ -106,7 +106,7 @@
                                                 <input type="radio" name="accessLevel" id="<?php echo($radioButtonID); ?>" value="<?php $this->_($accessLevel['accessID']); ?>" title="<?php $this->_($accessLevel['longDescription']); ?>" <?php if ($accessLevel['accessID'] == $this->defaultAccessLevel): ?>checked<?php endif; ?> onclick="document.getElementById('userAccessStatus').innerHTML='<?php $this->_($accessLevel['longDescription']); ?>'; <?php if($accessLevel['accessID'] >= ACCESS_LEVEL_SA): ?>document.getElementById('eeoIsVisible').checked=true; document.getElementById('eeoIsVisible').disabled=true;  document.getElementById('eeoVisibleSpan').style.display='none';<?php else: ?>document.getElementById('eeoIsVisible').disabled=false;<?php endif; ?>" />
                                                 <label for="<?php echo($radioButtonID); ?>" title="<?php $this->_(str_replace('\'', '\\\'', $accessLevel['longDescription'])); ?>">
                                                     <?php $this->_($accessLevel['shortDescription']); ?>
-                                                    <?php if ($accessLevel['accessID'] == $this->defaultAccessLevel): ?>(Default)<?php endif; ?>
+                                                    <?php if ($accessLevel['accessID'] == $this->defaultAccessLevel): ?>(Por Defecto)<?php endif; ?>
                                                 </label>
                                                 <br />
                                             <?php endforeach; ?>
@@ -115,19 +115,19 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="tdVertical" >Access Description:</td>
+                                    <td class="tdVertical" >Descripción de Acceso:</td>
                                     <td class="tdData">
-                                        <span id="userAccessStatus">Delete - All lower access, plus the ability to delete information on the system.</span>
+                                        <span id="userAccessStatus">Eliminar: todos los accesos inferiores, más la capacidad de eliminar información en el sistema.</span>
                                     </td>
                                 </tr>
 
                                 <?php if (count($this->categories) > 0): ?>
                                     <tr>
                                         <td class="tdVertical">
-                                            <label id="accessLevelLabel" for="accessLevel">Role:</label>
+                                            <label id="accessLevelLabel" for="accessLevel">Rol:</label>
                                         </td>
                                         <td class="tdData">
-                                           <input type="radio" name="role" value="none" title="" checked onclick="document.getElementById('userRoleDesc').innerHTML='This user is a normal user.';  document.getElementById('accessLevelsSpan').style.display='';" /> Normal User
+                                           <input type="radio" name="role" value="none" title="" checked onclick="document.getElementById('userRoleDesc').innerHTML='This user is a normal user.';  document.getElementById('accessLevelsSpan').style.display='';" />Usuario Normal
                                            <br />
                                            <?php foreach ($this->categories as $category): ?>
                                                <?php if (isset($category[4])): ?>
@@ -140,32 +140,32 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="tdVertical">Role Description:</td>
+                                        <td class="tdVertical">Descripción del Rol:</td>
                                         <td class="tdData">
-                                            <span id="userRoleDesc" style="font-size: smaller">This user is a normal user.</span>
+                                            <span id="userRoleDesc" style="font-size: smaller">Este usuario es un usuario normal.</span>
                                         </td>
                                     </tr>
                                 <?php else: ?>
                                     <span style="display:none;">
-                                        <input type="radio" name="role" value="none" title="" checked /> Normal User
+                                        <input type="radio" name="role" value="none" title="" checked />Usuario Normal
                                     </span>
                                 <?php endif; ?>
                                 <?php if($this->EEOSettingsRS['enabled'] == 1): ?>
                                      <tr>
-                                        <td class="tdVertical">Allowed to view EEO Information:</td>
+                                        <td class="tdVertical">Permitido ver la Información de EEO:</td>
                                         <td class="tdData">
                                             <span id="eeoIsVisibleCheckSpan">
                                                 <input type="checkbox" name="eeoIsVisible" id="eeoIsVisible" onclick="if (this.checked) document.getElementById('eeoVisibleSpan').style.display='none'; else document.getElementById('eeoVisibleSpan').style.display='';">
-                                                &nbsp;This user is <span id="eeoVisibleSpan">not </span>allowed to edit and view candidate's EEO information.
+                                                &nbsp;Este Usuario <span id="eeoVisibleSpan">no </span>tiene permitido editar y ver la información de EEO del candidato.
                                             </span>
                                         </td>
                                     </tr>
                                 <?php endif; ?>
                                 <?php if (!$this->license['canAdd'] && !$this->license['unlimited']): ?>
                                     <tr>
-                                        <td class="tdVertical">Notice:</td>
+                                        <td class="tdVertical">Aviso:</td>
                                         <td class="tdData" style="color: #800000;">
-                                            <b>You are currently using your full allotment of active user accounts. Disable an existing account or upgrade your license to add another active user.</b>
+                                            <b>Actualmente está utilizando su asignación completa de cuentas de usuario activas. Deshabilite una cuenta existente o actualice su licencia para agregar otro usuario activo.</b>
                                         </td>
                                     </tr>
                                 <?php endif; ?>
@@ -177,9 +177,9 @@
                     </tr>
                 </table>
 
-                <input type="submit" class="button" name="submit" id="submit" value="Add User" />&nbsp;
-                <input type="reset"  class="button" name="reset"  id="reset"  value="Reset" onclick="document.getElementById('userAccessStatus').innerHTML='Delete - All lower access, plus the ability to delete information on the system.'" />&nbsp;
-                <input type="button" class="button" name="back"   id="back"   value="Cancel" onclick="javascript:goToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=manageUsers');" />
+                <input type="submit" class="button" name="submit" id="submit" value="Agregar Usuario" />&nbsp;
+                <input type="reset"  class="button" name="reset"  id="reset"  value="Borrar" onclick="document.getElementById('userAccessStatus').innerHTML='Eliminar: todos los accesos inferiores, más la capacidad de eliminar información en el sistema.'" />&nbsp;
+                <input type="button" class="button" name="back"   id="back"   value="Cancelar" onclick="javascript:goToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=manageUsers');" />
             </form>
         </div>
     </div>

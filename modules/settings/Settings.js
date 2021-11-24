@@ -113,7 +113,7 @@ function testEmailSettings(sessionCookie)
 
         if (!http.responseXML)
         {
-            testOutput.innerHTML = '<span style="color: #ff0000"><br />An error occurred.<br /><br />'
+            testOutput.innerHTML = '<span style="color: #ff0000"><br />Ocurrió un Error.<br /><br />'
                 + http.responseText + '</span>';
             return;
         }
@@ -123,13 +123,13 @@ function testEmailSettings(sessionCookie)
         var errorMessageNode = http.responseXML.getElementsByTagName('errormessage').item(0);
         if (!errorCodeNode.firstChild || errorCodeNode.firstChild.nodeValue != '0')
         {
-            testOutput.innerHTML = '<span style="color: #ff0000"><br />An error occurred.<br /><br />'
+            testOutput.innerHTML = '<span style="color: #ff0000"><br />Ocurrió un Error.<br /><br />'
                 + errorMessageNode.firstChild.nodeValue + '</span>';
         }
         else
         {
-            testOutput.innerHTML = '<br /><span style="color: #419933">Test reported Success!<br /><br /> '
-                + 'Check your E-Mail to verify that you received the test message.</span>';
+            testOutput.innerHTML = '<br /><span style="color: #419933">Prueba Informada ¡Éxito!<br /><br /> '
+                + 'Revise su correo electrónico para verificar que recibió el mensaje de prueba.</span>';
         }
     }
 

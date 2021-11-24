@@ -11,31 +11,31 @@
                     <td width="3%">
                         <img src="images/settings.gif" width="24" height="24" border="0" alt="Settings" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Settings: Site Backup</h2></td>
+                    <td><h2>Ajustes: Copia de Seguridad del Sitio</h2></td>
                 </tr>
             </table>
 
-            <p class="note">Create Site Backup</p>
+            <p class="note">Crear Copia de Seguridad del Sitio</p>
 
             <table class="searchTable" width="100%">
                 <tr>
                     <td>
-                        Create a backup of your entire CATS database (including all of your attachments).<br />
-                        Note: Only one backup of your database can be stored on the server at a time.  Creating a new backup will
-                        delete the previous backup.<br />
+                        Cree una copia de seguridad de toda su base de datos CATS (incluidos todos sus archivos adjuntos).<br />
+                        Nota: Solo se puede almacenar una copia de seguridad de su base de datos en el servidor a la vez. Crear una nueva copia de seguridad
+                        eliminar la copia de seguridad anterior.<br />
                         <br />
                     </td>
                 </tr>
                     <td>
                     <span id="backupRunning" style="display:none;">
-                        Backing up database, please wait... (Now would be a good time to take a coffee break!)
+                        Realizando una copia de seguridad de la base de datos, espere ... (¡Ahora sería un buen momento para tomar un café!)
                         <br /><br />
-                        Status:<br />
+                        Estado:<br />
                     </span>
                     <span id="progressHistory">
                     </span>
                     <span id="progress">
-                        Last backup:
+                        Última Copia de Seguridad:
                         <table class="attachmentsTable">
                             <?php foreach ($this->attachmentsRS as $rowNumber => $attachmentsData): ?>
                                 <tr>
@@ -52,7 +52,7 @@
                                     </td>
                                     <td><?php $this->_($attachmentsData['dateCreated']) ?></td>
                                     <td>
-                                        <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=deleteBackup" title="Delete" onclick="javascript:return confirm('Delete this backup?');">
+                                        <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=deleteBackup" title="Eliminar" onclick="javascript:return confirm('¿Eliminar esta copia de seguridad?');">
                                             <img src="images/actions/delete.gif" alt="" width="16" height="16" border="0" />
                                         </a>
                                     </td>
@@ -60,14 +60,14 @@
                             <?php endforeach; ?>
                         </table>
                         <?php if (empty($this->attachmentsRS)): ?>
-                            None<br />
+                            Ninguna<br />
                         <?php else: ?>
-                            Click the file above to download the backup.<br />
+                            Haga clic en el archivo de arriba para descargar la copia de seguridad.<br />
                         <?php endif; ?>
 
                     <br />
-                    <input type="button" class="button" value="Create Full System Backup" onclick="startBackup('settings:backup', '');" style="margin:3px; width:200px;"><br />
-                    <input type="button" class="button" value="Create Attachments Backup" onclick="startBackup('settings:backup', '&attachmentsOnly=true');" style="margin:3px; width:200px;">
+                    <input type="button" class="button" value="Crear una Copia de Seguridad Completa del Sistema" onclick="startBackup('settings:backup', '');" style="margin:3px; width:300px;"><br />
+                    <input type="button" class="button" value="Crear Copia de Seguridad de Archivos Adjuntos" onclick="startBackup('settings:backup', '&attachmentsOnly=true');" style="margin:3px; width:300px;">
                     </span>
                     <span id="progressBar" style="display:none;">
                     <br /><br />

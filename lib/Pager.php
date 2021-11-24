@@ -306,7 +306,7 @@ class Pager
         if ($this->_currentPage != 1)
         {
             echo sprintf(
-                '<a class="pagerPrevNext" href="%s?%s&amp;page=%s&amp;sortBy=%s&amp;sortDirection=%s">&lt;&lt; Previous</a>%s',
+                '<a class="pagerPrevNext" href="%s?%s&amp;page=%s&amp;sortBy=%s&amp;sortDirection=%s">&lt;&lt; Previa</a>%s',
                 $indexName,
                 $this->_baseURL,
                 ($this->_currentPage - 1),
@@ -317,7 +317,7 @@ class Pager
         }
         else
         {
-            echo '<span class="pagerPrevNext">&lt;&lt; Previous</span>', "\n";
+            echo '<span class="pagerPrevNext">&lt;&lt; Previa</span>', "\n";
         }
 
         /* Selection drop down menu JavaScript. */
@@ -374,14 +374,14 @@ class Pager
             if ($i == $this->_currentPage)
             {
                 echo sprintf(
-                    '<option selected="selected" value="">Page %s%s</option>',
+                    '<option selected="selected" value="">Página %s%s</option>',
                     $i, $navText
                 );
             }
             else
             {
                 echo sprintf(
-                    '<option value="%s">Page %s%s</option>',
+                    '<option value="%s">Página %s%s</option>',
                     $i, $i, $navText
                 );
             }
@@ -396,7 +396,7 @@ class Pager
         if ($this->_currentPage != $this->_totalPages)
         {
             echo sprintf(
-                '<a class="pagerPrevNext" href="%s?%s&amp;page=%s&amp;sortBy=%s&amp;sortDirection=%s">Next &gt;&gt;</a>%s',
+                '<a class="pagerPrevNext" href="%s?%s&amp;page=%s&amp;sortBy=%s&amp;sortDirection=%s">Siguiente &gt;&gt;</a>%s',
                 $indexName,
                 $this->_baseURL,
                 ($this->_currentPage + 1),
@@ -407,7 +407,7 @@ class Pager
         }
         else
         {
-            echo '<span class="pagerPrevNext">Next &gt;&gt;</span>', "\n";
+            echo '<span class="pagerPrevNext">Siguiente &gt;&gt;</span>', "\n";
         }
 
         /* If we have any alpha data, draw the alpha bar */

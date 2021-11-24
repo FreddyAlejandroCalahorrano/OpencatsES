@@ -11,28 +11,28 @@
                     <td width="3%">
                         <img src="images/settings.gif" width="24" height="24" border="0" alt="Settings" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Settings: Administration</h2></td>
+                    <td><h2>Ajustes: Administración</h2></td>
                 </tr>
             </table>
 
-            <p class="note">New Version</p>
+            <p class="note">Nueva Versión</p>
 
             <table class="searchTable" width="100%">
                 <tr>
                     <td>
                         <?php if ($this->versionCheckPref): ?>
                             <p>
-                                Your current version is: <span class="bold"><?php echo(CATSUtility::getVersion()); ?> Build <?php echo(CATSUtility::getBuild()); ?></span>.<br />
+                                Tu versión actual es: <span class="bold"><?php echo(CATSUtility::getVersion()); ?> Construida <?php echo(CATSUtility::getBuild()); ?></span>.<br />
                                 <?php if ($this->newVersion): ?>
-                                    <span class="bold">A new version is available!</span><br />
-                                    Go to <a href="http://www.catsone.com/" target="_blank">www.catsone.com</a> to learn more.<br />
+                                    <span class="bold">¡Una nueva version esta disponible!</span><br />
+                                    Ir a <a href="http://www.catsone.com/" target="_blank">www.catsone.com</a> para saber más.<br />
                                 <?php else: ?>
-                                    Catsone.com reports your version is up to date.<br />
+                                    Catsone.com informa que su versión está actualizada.<br />
                                 <?php endif; ?>
                             </p>
                             <?php $this->_($this->newVersionNews); ?>
                         <?php else: ?>
-                            <span>Version checking is currently disabled.</span><br /><br />
+                            <span>La verificación de versiones está actualmente deshabilitada.</span><br /><br />
                         <?php endif; ?>
                         <!-- <form action="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=administration" id="changeNewVersionForm" method="post">
                             <input type="hidden" name="postback" value="postback" />

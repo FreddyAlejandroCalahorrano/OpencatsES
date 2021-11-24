@@ -11,11 +11,11 @@
                     <td width="3%">
                         <img src="images/settings.gif" width="24" height="24" border="0" alt="Settings" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Settings: Login Activity</h2></td>
+                    <td><h2>Ajustes: Actividad de Inicio de Sesión</h2></td>
                 </tr>
             </table>
 
-            <p class="note">Recent Login Activity</p>
+            <p class="note">Actividad de Inicio de Sesión Reciente</p>
 
             <form name="loginActivityViewSelectorForm" id="loginActivityViewSelectorForm" action="<?php echo(CATSUtility::getIndexName()); ?>" method="get">
                 <input type="hidden" name="m" value="settings" />
@@ -26,14 +26,14 @@
                         <td>
                             <select name="view" id="view" onchange="document.loginActivityViewSelectorForm.submit();">
                                 <?php if ($this->view == 'successful'): ?>
-                                    <option value="successful" selected="selected">Successful Logins</option>
-                                    <option value="unsuccessful">Unsuccessful Logins</option>
+                                    <option value="successful" selected="selected">Inicios de Sesión Exitosos</option>
+                                    <option value="unsuccessful">Inicios de Sesión Fallidos</option>
                                 <?php elseif ($this->view == 'unsuccessful'): ?>
-                                    <option value="successful">Successful Logins</option>
-                                    <option value="unsuccessful" selected="selected">Unsuccessful Logins</option>
+                                    <option value="successful">Inicios de Sesión Exitosos</option>
+                                    <option value="unsuccessful" selected="selected">Inicios de Sesión Fallidos</option>
                                 <?php else: ?>
-                                    <option value="successful">Successful Logins</option>
-                                    <option value="unsuccessful">Unsuccessful Logins</option>
+                                    <option value="successful">Inicios de Sesión Exitosos</option>
+                                    <option value="unsuccessful">Inicios de Sesión Fallidos</option>
                                 <?php endif; ?>
                             </select>
                             <!--&nbsp;&nbsp;&nbsp;&nbsp;
@@ -48,22 +48,22 @@
                     <thead>
                         <tr>
                             <th align="left" nowrap="nowrap">
-                                <?php $this->pager->printSortLink('firstName', 'First Name'); ?>
+                                <?php $this->pager->printSortLink('firstName', 'Nombre'); ?>
                             </th>
                             <th align="left" nowrap="nowrap">
-                                <?php $this->pager->printSortLink('lastName', 'Last Name'); ?>
+                                <?php $this->pager->printSortLink('lastName', 'Apellido'); ?>
                             </th>
                             <th align="left">
                                 <?php $this->pager->printSortLink('ip', 'IP'); ?>
                             </th>
                             <th align="left">
-                                <?php $this->pager->printSortLink('hostname', 'Hostname'); ?>
+                                <?php $this->pager->printSortLink('hostname', 'Nombre de Host'); ?>
                             </th>
                             <th align="left" nowrap="nowrap">
-                                <?php $this->pager->printSortLink('shortUserAgent', 'User Agent'); ?>
+                                <?php $this->pager->printSortLink('shortUserAgent', 'Agente de Usuario'); ?>
                             </th>
                             <th align="left" nowrap="nowrap">
-                                <?php $this->pager->printSortLink('dateSort', 'Date / Time'); ?>
+                                <?php $this->pager->printSortLink('dateSort', 'Fecha / Hora'); ?>
                             </th>
                         </tr>
                     </thead>

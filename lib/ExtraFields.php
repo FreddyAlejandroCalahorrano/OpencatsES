@@ -912,27 +912,27 @@ class ExtraFields
     {
         return array (
             EXTRA_FIELD_TEXT => array(
-                'name' => 'Text Box',
+                'name' => 'Cuadro de Texto',
                 'hasOptions' => false
                 ),
             EXTRA_FIELD_TEXTAREA => array(
-                'name' => 'Multiline Text Box',
+                'name' => 'Cuadro de Texto Multilínea',
                 'hasOptions' => false
                 ),
             EXTRA_FIELD_CHECKBOX => array(
-                'name' => 'Check Box',
+                'name' => 'Casilla de Verificación',
                 'hasOptions' => false
                 ),
             EXTRA_FIELD_DROPDOWN => array(
-                'name' => 'Dropdown List',
+                'name' => 'Lista Desplegable',
                 'hasOptions' => true
                 ),
             EXTRA_FIELD_RADIO => array(
-                'name' => 'Radio Button List',
+                'name' => 'Lista de Botones Seleccionables',
                 'hasOptions' => true
                 ),
             EXTRA_FIELD_DATE => array(
-                'name' => 'Date',
+                'name' => 'Fecha',
                 'hasOptions' => false
                 ),
           );

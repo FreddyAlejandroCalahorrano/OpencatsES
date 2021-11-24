@@ -13,11 +13,11 @@
                     <td width="3%">
                         <img src="images/settings.gif" width="24" height="24" border="0" alt="Settings" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Settings: Administration</h2></td>
+                    <td><h2>Ajustes: Administración</h2></td>
                 </tr>
             </table>
 
-            <p class="note">Tags Settings</p>
+            <p class="note">Configuración de Etiquetas</p>
 
             <table>
                 <tr>
@@ -54,7 +54,7 @@ function showNew(frm,data){
 function doDelete(id){
 	//alert($('#id_li_tag_'+id).html());return;
 	
-	if (!confirm('Are you sure you want to delete this tag?')) return;
+	if (!confirm('¿Estás seguro de que quieres eliminar esta etiqueta?')) return;
 	$.ajax({
 		type: 'POST',
 		url: '<?= CATSUtility::getIndexName() ?>?m=settings&a=ajax_tags_del',
@@ -85,7 +85,7 @@ function editTag(id){
 
                                 <tr id="fromAddressRow">
                                     <td class="tdVertical" style="width: 175px;">
-                                        <label>Add/Remove Tags</label>
+                                        <label>Agregar / Quitar Etiquetas</label>
                                     </td>
                                     <td class="tdData">
                                     	<div  class="lst">
@@ -97,7 +97,7 @@ function editTag(id){
 														<form method="post" action="<?= CATSUtility::getIndexName() ?>?m=settings&amp;a=ajax_tags_add">
 															<input type="hidden" name="tag_parent_id" value="<?= $tag_parent_id ?>" />
 															<input type="text" name="tag_title" value="" />
-															<input type="button" value="Add" onclick="doAdd(this.form);" />
+															<input type="button" value="Añadir" onclick="doAdd(this.form);" />
 														</form>
 													</li>
 
@@ -126,7 +126,7 @@ function editTag(id){
 													<form method="post" action="<?= CATSUtility::getIndexName() ?>?m=settings&amp;a=ajax_tags_add">
 														<input type="hidden" name="tag_parent_id" value="<?= $tag_parent_id ?>" />
 														<input type="text" name="tag_title" value="" />
-														<input type="button" value="Add" onclick="doAdd(this.form);" />
+														<input type="button" value="Añadir" onclick="doAdd(this.form);" />
 													</form>
 												</li>
 											</ul>
@@ -135,7 +135,7 @@ function editTag(id){
 											<img src="images/actions/add.gif" />
 											<form method="post" action="<?= CATSUtility::getIndexName() ?>?m=settings&amp;a=ajax_tags_add">
 												<input type="text" name="tag_title" value="" />
-												<input type="button" value="Add" onclick="doAdd(this.form);" />
+												<input type="button" value="Añadir" onclick="doAdd(this.form);" />
 											</form>
 										</li>
 									</div>

@@ -11,22 +11,22 @@
                     <td width="3%">
                         <img src="images/settings.gif" width="24" height="24" alt="Settings" style="border: none; margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Settings: User Details</h2></td>
+                    <td><h2>Ajustes: Detalles del Usuario</h2></td>
                 </tr>
             </table>
 
             <p class="note">
                 <?php /* Leave these separate; just one span makes the background image display weird. */ ?>
                 <?php if ($this->privledged): ?>
-                    <span style="float: left;">User Details</span>
-                    <span style="float: right;"><a href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=manageUsers'>Back to User Management</a></span>&nbsp;
+                    <span style="float: left;">Detalles del Usuario</span>
+                    <span style="float: right;"><a href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=manageUsers'>Volver a Gestión de Usuarios</a></span>&nbsp;
                 <?php else: ?>
-                    User Details
+                    Detalles del Usuario
                 <?php endif; ?>
             </p>
 
             <?php if (!$this->privledged): ?>
-                <p>Contact your site administrator to change these settings.</p>
+                <p>Póngase en contacto con el administrador de su sitio para cambiar esta configuración.</p>
             <?php endif; ?>
 
             <table class="detailsOutside">
@@ -34,7 +34,7 @@
                     <td width="100%" height="100%">
                         <table class="detailsInside" height="100%">
                             <tr>
-                                <td class="vertical" style="width: 135px;">Name:</td>
+                                <td class="vertical" style="width: 135px;">Nombre:</td>
                                 <td class="data">
                                     <span class="bold">
                                         <?php $this->_($this->data['firstName']); ?>
@@ -44,7 +44,7 @@
                             </tr>
 
                             <tr>
-                                <td class="vertical">E-Mail:</td>
+                                <td class="vertical">Correo Electrónico:</td>
                                 <td class="data">
                                     <a href="mailto:<?php $this->_($this->data['email']); ?>">
                                         <?php $this->_($this->data['email']); ?>
@@ -53,19 +53,19 @@
                             </tr>
 
                             <tr>
-                                <td class="vertical">Username:</td>
+                                <td class="vertical">Nombre de Usuario:</td>
                                 <td class="data"><?php $this->_($this->data['username']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Access Level:</td>
+                                <td class="vertical">Nivel de Acceso:</td>
                                 <td class="data"><?php $this->_($this->data['accessLevelLongDescription']); ?></td>
                             </tr>
                             
                             <?php if($this->EEOSettingsRS['enabled'] == 1): ?> <tr>
-                                <td class="vertical">Can See EEO Info:</td>
-                                    <td class="data">                                       
-                                        This user is <?php if ($this->data['canSeeEEOInfo'] == 0): ?>not <?php endif; ?>allowed to edit and view candidate's EEO information.
+                                <td class="vertical">Puede Ver la Información de EEO:</td>
+                                    <td class="data">
+                                        Este usuario <?php if ($this->data['canSeeEEOInfo'] == 0): ?>no <?php endif; ?>tiene permitido editar y ver la información de EEO del candidato
                                     </td>
                                 </tr>
                             <?php endif; ?>
@@ -74,7 +74,7 @@
                                 <?php foreach ($this->categories as $category): ?>
                                     <?php if ($this->data['categories'] == $category[1]): ?>
                                         <tr>
-                                            <td class="vertical">Role:</td>
+                                            <td class="vertical">Rol:</td>
                                             <td class="data">
                                                 <?php $this->_($category[0]); ?> - <?php $this->_($category[2]); ?>
                                             </td>
@@ -84,12 +84,12 @@
                             <?php endif; ?>
 
                            <tr>
-                                <td class="vertical">Last Successful Login:</td>
+                                <td class="vertical">Último Inicio de Sesión Exitoso:</td>
                                 <td class="data"><?php $this->_($this->data['successfulDate']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Last Failed Login:</td>
+                                <td class="vertical">Último Inicio de Sesión Fallido:</td>
                                 <td class="data"><?php $this->_($this->data['unsuccessfulDate']); ?></td>
                             </tr>
                         </table>
@@ -98,7 +98,7 @@
             </table>
             <?php if ($this->privledged): ?>
                 <a id="edit_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=editUser&amp;userID=<?php $this->_($this->data['userID']); ?>" title="Edit">
-                    <img src="images/actions/edit.gif" width="16" height="16" class="absmiddle" style="border: none;" alt="edit user" />&nbsp;Edit
+                    <img src="images/actions/edit.gif" width="16" height="16" class="absmiddle" style="border: none;" alt="edit user" />&nbsp;Editar
                 </a>
             <?php else: ?>
                 <input type="button" name="back" class = "button" value="Back" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings';" />
@@ -107,15 +107,15 @@
             <br />
 
             <?php if ($this->privledged): ?>
-                <p class="note">Recent Logins Activity</p>
+                <p class="note">Actividad de Inicios de Sesión Recientes</p>
                 <table class="sortable">
                     <thead>
                         <tr>
                             <th align="left" nowrap="nowrap">IP</th>
-                            <th align="left" nowrap="nowrap">Host Name</th>
-                            <th align="left" nowrap="nowrap">User Agent</th>
-                            <th align="left">Date</th>
-                            <th align="left" nowrap="nowrap">Successful</th>
+                            <th align="left" nowrap="nowrap">Nombre de Host</th>
+                            <th align="left" nowrap="nowrap">Agente de Usuario</th>
+                            <th align="left">Fecha</th>
+                            <th align="left" nowrap="nowrap">Exitoso</th>
                         </tr>
                     </thead>
 

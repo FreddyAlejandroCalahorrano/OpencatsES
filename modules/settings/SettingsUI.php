@@ -917,10 +917,10 @@ class SettingsUI extends UserInterface
         
         $possibleVariables = "%CANDSTATUS%%CANDOWNER%%CANDFIRSTNAME%%CANDFULLNAME%%CANDPREVSTATUS%";
         $emailTemplates = new EmailTemplates($this->_siteID);
-        $emailTemplateID = $emailTemplates->add("", "New Email Template", "CUSTOM", $this->_siteID, $possibleVariables);
+        $emailTemplateID = $emailTemplates->add("", "Nueva Plantilla", "CUSTOM", $this->_siteID, $possibleVariables);
         if($emailTemplateID < 1)
         {
-            CommonErrors::fatal(COMMONERROR_RECORDERROR, $this, 'Failed to add template.');
+            CommonErrors::fatal(COMMONERROR_RECORDERROR, $this, 'No se Pudo Agregar la Plantilla.');
         }
         else
         {

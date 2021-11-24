@@ -11,18 +11,18 @@
                     <td width="3%">
                         <img src="images/settings.gif" width="24" height="24" border="0" alt="Settings" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Settings: Customization</h2></td>
+                    <td><h2>Ajustes: Personalización</h2></td>
                 </tr>
             </table>
 
-            <p class="note">Customize Extra Fields</p>
+            <p class="note">Personalizar Campos Adicionales</p>
 
             <form name="editSettingsForm" id="editSettingsForm" action="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=customizeExtraFields" method="post">
               <input type="hidden" name="postback" value="postback" />
               <table class="sortable" width="920">
                 <div id="changedDiv" style="display:none;">
                   <div style="font-weight:bold; border: 1px solid #000; background-color: #ff0000; padding:5px;">
-                     You have made changes, to apply them press 'Save' at the bottom of the page.
+                      Ha realizado cambios, para aplicarlos presione 'Guardar' en la parte inferior de la página.
                   </div>
                   <br />
                 </div>
@@ -37,10 +37,10 @@
                    }
                    var inlineEditIDCounter = 0;
                 </script>
-                    <?php foreach (array(array("name" => "Job Orders", "RS" => $this->extraFieldSettingsJobOrdersRS, "type" => DATA_ITEM_JOBORDER), 
-                                         array("name" => "Candidates", "RS" => $this->extraFieldSettingsCandidatesRS, "type" => DATA_ITEM_CANDIDATE), 
-                                         array("name" => "Companies", "RS" => $this->extraFieldSettingsCompaniesRS, "type" => DATA_ITEM_COMPANY), 
-                                         array("name" => "Contacts", "RS" => $this->extraFieldSettingsContactsRS, "type" => DATA_ITEM_CONTACT)) as $index => $data): ?>
+                    <?php foreach (array(array("name" => " Órdenes de Trabajo", "RS" => $this->extraFieldSettingsJobOrdersRS, "type" => DATA_ITEM_JOBORDER),
+                                         array("name" => "Candidatos", "RS" => $this->extraFieldSettingsCandidatesRS, "type" => DATA_ITEM_CANDIDATE),
+                                         array("name" => "Empresas", "RS" => $this->extraFieldSettingsCompaniesRS, "type" => DATA_ITEM_COMPANY),
+                                         array("name" => "Contactos", "RS" => $this->extraFieldSettingsContactsRS, "type" => DATA_ITEM_CONTACT)) as $index => $data): ?>
                         <tr>
                             <td style="width:150px;">
                                 <?php echo($data['name']); ?>
@@ -450,10 +450,10 @@
                                             <th width="75">
                                             </th>
                                             <th align="left" width="325" nowrap="nowrap">
-                                                Field Name
+                                                Nombre del Campo
                                             </th>
                                             <th align="left">
-                                                Field Type
+                                                Tipo de Campo
                                             </th>
                                         </tr>
                                     </thead>
@@ -500,13 +500,13 @@
                                     <table>
                                         <tr>
                                             <td>
-                                                Name:
+                                                Nombre:
                                             </td>
                                             <td>
                                                 <input id="addFieldName<?php echo($index); ?>" style="width:240px;" value="" class="inputbox" />
                                             </td>
                                             <td>
-                                                Type:
+                                                Tipo:
                                             </td>
                                             <td>
                                                 <select id="addFieldSelect<?php echo($index); ?>">
@@ -517,12 +517,12 @@
                                             </td>
                                         </tr>
                                     </table>                                    
-                                    <input type="button" class="button" value="Add Field" onclick="onAddField<?php echo($index); ?>();" />&nbsp;
-                                    <input type="button" class="button" value="Cancel" onclick="onHideAddArea<?php echo($index); ?>();" />
+                                    <input type="button" class="button" value="Añadir Campo" onclick="onAddField<?php echo($index); ?>();" />&nbsp;
+                                    <input type="button" class="button" value="Cancelar" onclick="onHideAddArea<?php echo($index); ?>();" />
                                 </div>
                                 <div id="addFieldOption<?php echo($index); ?>">
                                     <a href="javascript:void(0);" onclick="document.getElementById('addField<?php echo($index); ?>').style.display=''; document.getElementById('addFieldOption<?php echo($index); ?>').style.display='none'; document.getElementById('addFieldName<?php echo($index); ?>').value=''; document.getElementById('addFieldName<?php echo($index); ?>').focus();">
-                                        <img src="images/actions/add_small.gif" border="0" />&nbsp;Add field to <?php echo($data['name']); ?>
+                                        <img src="images/actions/add_small.gif" border="0" />&nbsp;Agregar campo a <?php echo($data['name']); ?>
                                     </a>
                                 </div>
                                 <br />
@@ -532,8 +532,8 @@
                     <?php endforeach; ?>
                     
                 </table>
-                <input type="submit" class="button" value="Save" style="display:none;" id="buttonSave" />
-                <input type="button" name="back" class = "button" value="Done" id="buttonDone"  onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=administration';" />
+                <input type="submit" class="button" value="Guardar" style="display:none;" id="buttonSave" />
+                <input type="button" name="back" class = "button" value="Regresar" id="buttonDone"  onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=administration';" />
             </form>
         </div>
     </div>
