@@ -149,7 +149,7 @@
                 document.getElementById('selectHistoryDiv').style.height = document.getElementById('historyTable').offsetHeight + 'px';
             </script>
 
-            <p class="note">Other History</p>
+            <p class="note">Otro Historial</p>
 
             <table>
                 <?php foreach ($this->revisionRS as $revisionID => $revision): ?>
@@ -163,18 +163,18 @@
                                     <?php if ($revision['previousValue'] != '' && $revision['previousValue'] != '(NEW)' && $revision['previousValue'] != '(ADD)'): ?>
                                                 <span style="font-size:10px;">
                                                     <?php if ($revision['theField'] == 'ACTIVITY'): ?>
-                                                        Old Value: <?php echo($revision['previousValue']); ?><br />
+                                                        Valor Antiguo: <?php echo($revision['previousValue']); ?><br />
                                                     <?php else: ?>
-                                                        Old Value: <?php $this->_($revision['previousValue']); ?><br />
+                                                        Valor Antiguo: <?php $this->_($revision['previousValue']); ?><br />
                                                     <?php endif; ?>
                                                 </span>
                                     <?php endif; ?>
                                     <?php if ($revision['newValue'] != '' && $revision['newValue'] != '(DELETE)'): ?>
                                                 <span style="font-size:10px;">
                                                     <?php if ($revision['theField'] == 'ACTIVITY'): ?>
-                                                        New Value: <?php echo($revision['newValue']); ?>
+                                                        Nuevo Valor: <?php echo($revision['newValue']); ?>
                                                     <?php else: ?>
-                                                        New Value: <?php $this->_($revision['newValue']); ?>
+                                                        Nuevo Valor: <?php $this->_($revision['newValue']); ?>
                                                     <?php endif; ?>
                                                 </span>
                                     <?php endif; ?>

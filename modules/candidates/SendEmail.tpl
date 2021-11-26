@@ -11,11 +11,11 @@
                     <td width="3%">
                         <img src="images/candidate.gif" width="24" height="24" border="0" alt="Candidates" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Candidates: Send E-mail</h2></td>
+                    <td><h2>Candidatos: Enviar Correo Electrónico</h2></td>
                 </tr>
             </table>
 
-            <p class="note">Send Candidates E-mail</p>
+            <p class="note">Enviar Correo Electrónico de los Candidatos</p>
 
             <?php
             if($this->success == true)
@@ -24,7 +24,7 @@
 
                 <br />
                 <span style="font-size: 12pt; font-weight: 900;">
-                Your e-mail has been successfully sent to the following recipients:
+                    Su correo electrónico ha sido enviado con éxito a los siguientes destinatarios:
                 <blockquote>
                 <?php
                 echo $this->success_to;
@@ -82,7 +82,7 @@
                             </tr>
                             <tr>
                                 <td class="tdVertical" style="text-align: right;">
-                                    <label id="emailSubjectLabel" for="emailSubject">Subject</label>
+                                    <label id="emailSubjectLabel" for="emailSubject">Sujeto</label>
                                 </td>
                                 <td class="tdData">
                                     <input id="emailSubject" tabindex="<?php echo($tabIndex++); ?>" type="text" name="emailSubject" class="inputbox" style="width: 600px;" />
@@ -90,7 +90,7 @@
                             </tr>
                             <tr>
                                 <td class="tdVertical" style="text-align: right;">
-                                    <label id="emailTemplateLabel" for="emailTemplate">Template</label>
+                                    <label id="emailTemplateLabel" for="emailTemplate">Plantilla</label>
                                 </td>
                                 <td class="tdData">
                                     <select id="emailTemplate" name="emailTemplate" tabindex="<?php echo($tabIndex++);?>" onchange="showTemplate('<?php echo($this->sessionCookie); ?>');">
@@ -100,7 +100,7 @@
                                         <?php endforeach; ?>
                                     </select>
                                 
-                                    <label id="emailPreviewLabel" for="candidateName">Preview for:</label>
+                                    <label id="emailPreviewLabel" for="candidateName">Vista Previa para:</label>
                                     <select id="candidateName" tabindex="<?php echo($tabIndex++); ?>" onchange="replaceTemplateTags('<?php echo($this->sessionCookie); ?>')">
                                         <option selected="selected" value="-1">----</option>
                                         <?php foreach($this->recipients as $data): ?>
@@ -111,7 +111,7 @@
                             </tr>
                             <tr>
                                 <td class="tdVertical" style="text-align: right;">
-                                    <label id="emailBodyLabel" for="emailBody">Body</label>
+                                    <label id="emailBodyLabel" for="emailBody">Cuerpo</label>
                                 </td>
                                 <td class="tdData">
                                     <textarea id="emailBody" tabindex="<?php echo($tabIndex++); ?>" name="emailBody" rows="10" cols="90" style="width: 600px;" class="inputbox"></textarea>
@@ -122,8 +122,8 @@
                             </tr>
                             <tr>
                                 <td align="right" valign="top" colspan="2">
-                                    <input type="submit" tabindex="<?php echo($tabIndex++); ?>" class="button" value="Send E-Mail" />&nbsp;
-                                    <input type="reset"  tabindex="<?php echo($tabIndex++); ?>" class="button" value="Reset" />&nbsp;
+                                    <input type="submit" tabindex="<?php echo($tabIndex++); ?>" class="button" value="Enviar Correo Electrónico" />&nbsp;
+                                    <input type="reset"  tabindex="<?php echo($tabIndex++); ?>" class="button" value="Borrar" />&nbsp;
                                 </td>
                             </tr>
                         </table>

@@ -12,8 +12,8 @@ quickAction.CandidateDuplicateMenu.prototype.getOptions = function()
     if(this.getPermissions().candidates_merge)
     {
         return [
-            new quickAction.LinkMenuOption("Merge", this.urlDecode(this.mergeUrl), 0),
-            new quickAction.LinkMenuOption("Remove duplicity warning", this.urlDecode(this.removeUrl), 1)
+            new quickAction.LinkMenuOption("Unir", this.urlDecode(this.mergeUrl), 0),
+            new quickAction.LinkMenuOption("Eliminar la advertencia de duplicidad", this.urlDecode(this.removeUrl), 1)
         ];
     }
     return null;

@@ -20,12 +20,12 @@
                 <input type="hidden" id="newCandidateID" name="newCandidateID" value=<?php echo $this->newCandidateID; ?> />
                 
                 <tr>
-                    <td colspan=2 align="right">Original candidate&nbsp;</td>
-                    <td colspan=2 align="left">Duplicate candidate&nbsp;</td>
+                    <td colspan=2 align="right">Candidato Original&nbsp;</td>
+                    <td colspan=2 align="left">Candidato Duplicado&nbsp;</td>
                 </tr>
                 
                 <tr>
-                    <td colspan=4 align="center">First Name</td>
+                    <td colspan=4 align="center">Primer Nombre</td>
                 </tr>
                 <tr>
                     <td align="right"><?php echo($this->rsOld['firstName']); ?></td>
@@ -36,7 +36,7 @@
                 
                 
                 <tr>
-                    <td colspan=4 align="center">Middle Name&nbsp;</td>
+                    <td colspan=4 align="center">Segundo Nombre&nbsp;</td>
                 </tr>
                 <tr>
                     <td align="right"><?php echo($this->rsOld['middleName']); ?></td>
@@ -46,7 +46,7 @@
                 </tr>
                 
                 <tr>
-                    <td colspan=4 align="center">Last Name&nbsp;</td>
+                    <td colspan=4 align="center">Apellido&nbsp;</td>
                 </tr>
                 <tr>
                     <td align="right"><?php echo($this->rsOld['lastName']); ?></td>
@@ -57,7 +57,7 @@
                 
                 
                 <tr>
-                    <td colspan=4 align="center">E-mails (max. 2)&nbsp;</td>
+                    <td colspan=4 align="center">Correo Electrónico (max. 2)&nbsp;</td>
                 </tr>
                 <tr>
                     <td align="right"><?php echo($this->rsOld['email1'] == '') ?  '(none)' : ($this->rsOld['email1']);  ?></td>
@@ -72,7 +72,7 @@
                     <td align="left"><?php echo($this->rsNew['email2'] == '') ?  '(none)' : ($this->rsNew['email2']); ?></td>
                 </tr>
                 <tr>
-                    <td colspan=4 align="center">Cell phone&nbsp;</td>
+                    <td colspan=4 align="center">Teléfono Celular&nbsp;</td>
                 </tr>
                 <tr>
                     <td align="right"><?php echo($this->rsOld['phoneCell'] == '') ? '(none)' : ($this->rsOld['phoneCell']); ?></td>
@@ -82,7 +82,7 @@
                 </tr>
                 
                 <tr>
-                    <td colspan=4 align="center">Home phone&nbsp;</td>
+                    <td colspan=4 align="center">Teléfono de Casa&nbsp;</td>
                 </tr>
                 <tr>
                     <td align="right"><?php echo($this->rsOld['phoneHome'] == '') ? '(none)' : ($this->rsOld['phoneHome']); ?></td>
@@ -92,7 +92,7 @@
                 </tr>
                 
                 <tr>
-                    <td colspan=4 align="center">Work phone&nbsp;</td>
+                    <td colspan=4 align="center">Teléfono de Trabajo&nbsp;</td>
                 </tr>
                 <tr>
                     <td align="right"><?php echo($this->rsOld['phoneWork'] == '') ? '(none)' : ($this->rsOld['phoneWork']); ?></td>
@@ -102,7 +102,7 @@
                 </tr>
                 
                 <tr>
-                    <td colspan=4 align="center">Website&nbsp;</td>
+                    <td colspan=4 align="center">Sitio Web&nbsp;</td>
                 </tr>
                 <tr>
                     <td align="right"><?php echo($this->rsOld['webSite'] == '') ? '(none)' : ($this->rsOld['webSite']); ?></td>
@@ -112,7 +112,7 @@
                 </tr>
                 
                 <tr>
-                    <td colspan=4 align="center">Address&nbsp;</td>
+                    <td colspan=4 align="center">Dirección&nbsp;</td>
                 </tr>
                 <tr>
                     <?php if($this->rsOld['address'] == "" && $this->rsOld['city'] == "" && $this->rsOld['state'] == "" && $this->rsOld['zip'] == ""): ?>
@@ -139,10 +139,10 @@
             </form>
         </table>
     <?php else: ?>
-        <p>These candidates have been successfully merged.</p>
+        <p>Estos candidatos se han fusionado con éxito.</p>
 
         <form method="get" action="<?php echo(CATSUtility::getIndexName()); ?>">
-            <input type="button" name="close" value="Close" onclick="parentHidePopWinRefresh();" />
+            <input type="button" name="close" value="Cerrar" onclick="parentHidePopWinRefresh();" />
         </form>
     <?php endif; ?>
 

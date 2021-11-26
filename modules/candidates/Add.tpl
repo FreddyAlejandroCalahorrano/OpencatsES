@@ -53,12 +53,12 @@
                     <?php if ($this->isParsingEnabled): ?>
                     <tr>
                         <td class="tdVertical" colspan="2">
-                            <img src="images/parser/manual-es.png" border="0" />
+                            <img src="images/parser/manual.gif" border="0" />
                         </td>
                         <td class="tdVertical">
                             <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                 <tr>
-                                    <td align="left"><img src="images/parser/import-es.png" border="0" /></td>
+                                    <td align="left"><img src="images/parser/import.gif" border="0" /></td>
                                     <td align="right">
                                         &nbsp;
                                     </td>
@@ -130,7 +130,7 @@
 
                                 <textarea class="inputbox" tabindex="90" name="addressBlock" id="addressBlock" rows="5" cols="40" style="width: 500px; height: 250px;"></textarea>
 
-                                <?php $freeformBottom = '<p class="freeformbottom">Cut and paste freeform address here.</p>'; ?>
+                                <?php $freeformBottom = '<p class="freeformbottom">Corta y pega la dirección de forma libre aquí.</p>'; ?>
                                 <?php eval(Hooks::get('CANDIDATE_TEMPLATE_BELOW_FREEFORM')); ?>
                                 <?php echo($freeformBottom); ?>
                             <?php endif; ?>

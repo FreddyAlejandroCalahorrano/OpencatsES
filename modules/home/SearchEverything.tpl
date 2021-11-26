@@ -10,25 +10,25 @@
                     <td width="3%">
                         <img src="images/search.gif" width="24" height="24" border="0" alt="Quick Search" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Quick Search</h2></td>
+                    <td><h2>Búsqueda Rápida</h2></td>
                 </tr>
             </table>
             <br />
 
             <!-- JO -->
-            <p class="note">Job Orders Results</p>
+            <p class="note">Resultados de Órdenes de Trabajo</p>
             <?php if (!empty($this->jobOrdersRS)): ?>
                 <table class="sortable" width="100%">
                     <tr>
-                        <th align="left">Title</th>
-                        <th align="left">Company</th>
-                        <th align="left">Type</th>
-                        <th align="left">Status</th>
-                        <th align="left">Start</th>
-                        <th align="left">Recruiter</th>
-                        <th align="left">Owner</th>
-                        <th align="left">Created</th>
-                        <th align="left">Modified</th>
+                        <th align="left">Título</th>
+                        <th align="left">Empresa</th>
+                        <th align="left">Tipo</th>
+                        <th align="left">Estado</th>
+                        <th align="left">Inicio</th>
+                        <th align="left">Reclutadorr</th>
+                        <th align="left">Dueño</th>
+                        <th align="left">Creado</th>
+                        <th align="left">Modificado</th>
 
                     </tr>
 
@@ -56,23 +56,23 @@
                     <?php endforeach; ?>
                 </table>
             <?php else: ?>
-                <p>No matching entries found.</p>
+                <p>No se Encontraron Entradas Coincidentes.</p>
             <?php endif; ?>
             <br />
             <!-- /JO -->
 
             <!-- Candidates -->
-            <p class="note">Candidates Results</p>
+            <p class="note">Resultados de Candidatos/p>
             <?php if (!empty($this->candidatesRS)): ?>
                 <table class="sortable" width="100%">
                     <tr>
-                        <th align="left" nowrap="nowrap">First Name</th>
-                        <th align="left" nowrap="nowrap">Last Name</th>
-                        <th align="left" width="160">Home</th>
-                        <th align="left" width="160">Cell</th>
-                        <th align="left" width="65">Owner</th>
-                        <th align="left" width="60">Created</th>
-                        <th align="left" width="60">Modified</th>
+                        <th align="left" nowrap="nowrap">Nombre</th>
+                        <th align="left" nowrap="nowrap">Apellido</th>
+                        <th align="left" width="160">Teléfono</th>
+                        <th align="left" width="160">Celular</th>
+                        <th align="left" width="65">Dueño</th>
+                        <th align="left" width="60">Creado</th>
+                        <th align="left" width="60">Modificado</th>
                     </tr>
 
                     <?php foreach ($this->candidatesRS as $rowNumber => $candidatesData): ?>
@@ -96,22 +96,22 @@
                     <?php endforeach; ?>
                 </table>
             <?php else: ?>
-                <p>No matching entries found.</p>
+                <p>No se Encontraron Entradas Coincidentes.</p>
             <?php endif; ?>
             <br />
             <!-- /Candidates -->
 
             <!-- Companies -->
-            <p class="note">Companies Results</p>
+            <p class="note">Resultados de Empresas</p>
             <?php if (!empty($this->companiesRS)): ?>
                 <table class="sortable" width="100%">
                     <thead>
                         <tr>
-                            <th align="left">Name</th>
-                            <th align="left" width="160" nowrap="nowrap">Primary Phone</th>
-                            <th align="left" width="65">Owner</th>
-                            <th align="left" width="60">Created</th>
-                            <th align="left" width="60">Modified</th>
+                            <th align="left">Nombre</th>
+                            <th align="left" width="160" nowrap="nowrap">Teléfono Principal</th>
+                            <th align="left" width="65">Dueño</th>
+                            <th align="left" width="60">Creado</th>
+                            <th align="left" width="60">Modificado</th>
                         </tr>
                     </thead>
 
@@ -130,25 +130,25 @@
                     <?php endforeach; ?>
                 </table>
             <?php else: ?>
-                <p>No matching entries found.</p>
+                <p>No se Encontraron Entradas Coincidentes.</p>
             <?php endif; ?>
             <br />
             <!-- /Companies -->
 
             <!-- Contacts -->
-            <p class="note">Contacts Results</p>
+            <p class="note">Resultados de Contactos</p>
             <?php if (!empty($this->contactsRS)): ?>
                 <table class="sortable" width="100%">
                     <tr>
-                        <th align="left" nowrap="nowrap">First Name</th>
-                        <th align="left" nowrap="nowrap">Last Name</th>
-                        <th align="left">Title</th>
-                        <th align="left">Company</th>
-                        <th align="left">Work</th>
-                        <th align="left">Cell</th>
-                        <th align="left">Owner</th>
-                        <th align="left">Created</th>
-                        <th align="left">Modified</th>
+                        <th align="left" nowrap="nowrap">Nombre</th>
+                        <th align="left" nowrap="nowrap">Apellido</th>
+                        <th align="left">Título</th>
+                        <th align="left">Empresa</th>
+                        <th align="left">Teléfono de Trabajo</th>
+                        <th align="left">Celular</th>
+                        <th align="left">Dueño</th>
+                        <th align="left">Creado</th>
+                        <th align="left">Modificado</th>
 
                     </tr>
 
@@ -179,7 +179,7 @@
                     <?php endforeach; ?>
                 </table>
             <?php else: ?>
-                <p>No matching entries found.</p>
+                <p>No se Encontraron Entradas Coincidentes.</p>
             <?php endif; ?>
             <!-- /Contacts -->
         </div>

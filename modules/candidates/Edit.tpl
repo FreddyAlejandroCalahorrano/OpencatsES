@@ -28,7 +28,7 @@
                         </td>
                         <td class="tdData" >
                             <input type="checkbox" id="isActive" name="isActive"<?php if ($this->data['isActive'] == 1): ?> checked<?php endif; ?> />
-                            <img title="Unchecking this box indicates the candidate is inactive, and will no longer display on the resume search results." src="images/information.gif" alt="" width="16" height="16" />
+                            <img title="Desmarcar esta casilla indica que el candidato está inactivo y ya no aparecerá en los resultados de la búsqueda del currículum." src="images/information.gif" alt="" width="16" height="16" />
                         </td>
                     </tr>
                     
@@ -96,7 +96,7 @@
 
                     <tr>
                         <td class="tdVertical">
-                            <label id="phoneWorkLabel" for="phoneWork">Teléfono del Tranajo:</label>
+                            <label id="phoneWorkLabel" for="phoneWork">Teléfono del Trabajo:</label>
                         </td>
                         <td class="tdData">
                             <input type="text" class="inputbox" id="phoneWork" name="phoneWork" value="<?php $this->_($this->data['phoneWork']); ?>" style="width: 150px;" />
@@ -211,7 +211,7 @@
                                 <?php endforeach; ?>
                             </select>&nbsp;*
                             <div style="display:none;" id="divOwnershipChange">
-                                <input type="checkbox" name="ownershipChange" id="checkboxOwnershipChange" <?php if (!$this->canEmail): ?>disabled<?php endif; ?>> E-Mail new owner of change
+                                <input type="checkbox" name="ownershipChange" id="checkboxOwnershipChange" <?php if (!$this->canEmail): ?>disabled<?php endif; ?>> Enviar un correo electrónico al nuevo propietario del cambio.
                             </div>
                         </td>
                     </tr>

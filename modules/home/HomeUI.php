@@ -142,12 +142,12 @@ class HomeUI extends UserInterface
     {
         if (!isset($_GET['searchID']))
         {
-            CommonErrors::fatal(COMMONERROR_BADINDEX, $this, 'No search ID specified.');
+            CommonErrors::fatal(COMMONERROR_BADINDEX, $this, 'No se ha especificado ningún ID de búsqueda.');
         }
 
         if (!isset($_GET['currentURL']))
         {
-            CommonErrors::fatal(COMMONERROR_BADFIELDS, $this, 'No current URL specified.');
+            CommonErrors::fatal(COMMONERROR_BADFIELDS, $this, 'No se ha especificado ninguna URL actual.');
         }
 
         $searchID   = $_GET['searchID'];
@@ -167,12 +167,12 @@ class HomeUI extends UserInterface
     {
         if (!isset($_GET['searchID']))
         {
-            CommonErrors::fatal(COMMONERROR_BADINDEX, $this, 'No search ID specified.');
+            CommonErrors::fatal(COMMONERROR_BADINDEX, $this, 'No se ha especificado ningún ID de búsqueda.');
         }
 
         if (!isset($_GET['currentURL']))
         {
-            CommonErrors::fatal(COMMONERROR_BADFIELDS, $this, 'No current URL specified.');
+            CommonErrors::fatal(COMMONERROR_BADFIELDS, $this, 'No se ha especificado ninguna URL actual.');
         }
 
         $searchID   = $_GET['searchID'];
@@ -195,7 +195,7 @@ class HomeUI extends UserInterface
          */
         if (!isset($_GET['quickSearchFor']))
         {
-            CommonErrors::fatal(COMMONERROR_BADFIELDS, $this, 'No query string specified.');
+            CommonErrors::fatal(COMMONERROR_BADFIELDS, $this, 'No se especificó una cadena de consulta.');
         }
 
         $query = trim($_GET['quickSearchFor']);

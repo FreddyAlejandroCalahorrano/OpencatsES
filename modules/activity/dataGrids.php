@@ -90,8 +90,8 @@ class ActivityDataGrid extends DataGrid
         $this->_assignedCriterion = "";
         $this->_dataItemIDColumn = 'company.company_id';
 
-        $this->_classColumns = array( 
-            'Date' =>           array('pagerRender'    => 'return $rsData[\'dateCreated\'];',
+        $this->_classColumns = array(
+            'Fecha'      =>           array('pagerRender'    => 'return $rsData[\'dateCreated\'];',
                                       'sortableColumn' => 'dateCreatedSort',
                                       'pagerWidth'     => 110,
                                       'pagerOptional'  => true,

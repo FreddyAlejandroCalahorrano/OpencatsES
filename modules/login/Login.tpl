@@ -35,7 +35,7 @@
 
                     <?php if (ENABLE_DEMO_MODE && !($this->siteName != '' && $this->siteName != 'choose') || ($this->siteName == 'demo')): ?>
                         <br /><br />
-                        <a href="javascript:void(0);" onclick="demoLogin(); return false;">Login to Demo Account</a><br />
+                        <a href="javascript:void(0);" onclick="demoLogin(); return false;">Iniciar Sesión en la Cuenta de Demostración</a><br />
                     <?php endif; ?>
                 </div>
 
@@ -46,7 +46,7 @@
                         <div id="subFormBlock">
                             <?php if ($this->siteName != '' && $this->siteName != 'choose'): ?>
                                 <?php if ($this->siteNameFull == 'error'): ?>
-                                    <label>This site does not exist. Please check the URL and try again.</label>
+                                    <label>Este sitio no existe. Compruebe la URL y vuelva a intentarlo.</label>
                                     <br />
                                     <br />
                                 <?php else: ?>
@@ -65,11 +65,11 @@
                                 <input type="password" name="password" id="password" class="login-input-box" />
                                 <br />
 
-                                <input type="submit" class="button" value="Iniciar Seción" />
+                                <input type="submit" class="button" value="Iniciar Sesión" />
                                 <input type="reset"  id="reset" name="reset"  class="button" value="Restablecer" />
                             <?php else: ?>
                                 <br />
-                                <a href="javascript:void(0);" onclick="demoLogin(); return false;">Login to Demo Account</a><br />
+                                <a href="javascript:void(0);" onclick="demoLogin(); return false;">Iniciar Sesión en la Cuenta de Demostración</a><br />
                             <?php endif; ?>
                             <br /><br />
                         </div>
@@ -108,7 +108,7 @@
 <p>
 	&nbsp;</p>  
 
-	<span style="font-size: 12px;"><a href="http://forums.opencats.org ">opencats foro de soporte</a></span>
+	<span style="font-size: 12px;"><a href="http://forums.opencats.org ">OpenCATS Foro de Soporte</a></span>
 	           <div id="login">
                 <?php if (!empty($this->message)): ?>
                     <div>

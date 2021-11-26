@@ -190,7 +190,7 @@ class LoginUI extends UserInterface
 
         if (!isset($_POST['username']) || !isset($_POST['password']))
         {
-            $message = 'Usuario o contraseña Invalidos.';
+            $message = 'Usuario o Contraseña Invalidos.';
 
             if (isset($_GET['reloginVars']))
             {

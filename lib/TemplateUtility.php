@@ -105,7 +105,7 @@ class TemplateUtility
         /* CATS Logo */
         echo '<table cellspacing="0" cellpadding="0" style="margin: 0px; padding: 0px; float: left;">', "\n";
         echo '<tr>', "\n";
-        echo '<td rowspan="2"><img src="images/bp/applicationLogoBP.jpg" border="0" alt="CATS Applicant Tracking System" /></td>', "\n";
+        echo '<td rowspan="2"><img src="images/applicationLogo.jpg" border="0" alt="CATS Applicant Tracking System" /></td>', "\n";
         echo '</tr>', "\n";
         echo '</table>', "\n";
 

@@ -11,7 +11,7 @@
                     <td width="3%">
                         <img src="images/candidate.gif" width="24" height="24" border="0" alt="Candidates" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Candidates: Hot Lists</h2></td>
+                    <td><h2>Candidatos: Lista de Activos</h2></td>
                     <td align="right">
                         <form name="candidatesViewSelectorForm" id="candidatesViewSelectorForm" action="<?php echo(CATSUtility::getIndexName()); ?>" method="get">
                             <input type="hidden" name="m" value="candidates" />
@@ -27,10 +27,10 @@
                                             <?php if ($this->getUserAccessLevel('candidates.manageHotLists') >= ACCESS_LEVEL_DELETE): ?>
                                                 <option value="edit">(Manage Hot Lists)</option>
                                             <?php else: ?>
-                                                <option value="nullline">Hot Lists (Select to View):</option>
+                                                <option value="nullline">Lista de Activos (seleccionar para Ver):</option>
                                             <?php endif; ?>
                                             <option value="nullline">------------------------</option>
-                                            <option value="-1" <?php if ($this->hotListID == -1): ?> selected<?php endif; ?>>All Hot Candidates</option>
+                                            <option value="-1" <?php if ($this->hotListID == -1): ?> selected<?php endif; ?>>Todos los Candidatos Activos</option>
                                             <?php foreach ($this->hotListsRS as $row => $rowIndex) : ?>
                                                 <option value="<?php echo($this->hotListsRS[$row]['hotListID']) ?>"<?php if ($this->hotListID == $this->hotListsRS[$row]['hotListID']): ?> selected<?php endif; ?>"><?php echo($this->hotListsRS[$row]['description']) ?></option>
                                             <?php endforeach; ?>
@@ -39,9 +39,9 @@
                                     <td valign="top" align="right" nowrap>
                                         <?php if ($_SESSION['CATS']->getCheckBox('onlyMyCandidates')) : ?>
                                             <input type="hidden" name="myCandidates" value="off" />
-                                            <input type="checkbox" name="onlyMyCandidates" id="onlyMyCandidates" onclick="document.candidatesViewSelectorForm.submit();" checked />Only My Candidates&nbsp;
+                                            <input type="checkbox" name="onlyMyCandidates" id="onlyMyCandidates" onclick="document.candidatesViewSelectorForm.submit();" checked />Solo Mis Candidatos
                                         <?php else: ?>
-                                            <input type="checkbox" name="onlyMyCandidates" id="onlyMyCandidates" onclick="document.candidatesViewSelectorForm.submit();" />Only My Candidates&nbsp;
+                                            <input type="checkbox" name="onlyMyCandidates" id="onlyMyCandidates" onclick="document.candidatesViewSelectorForm.submit();" />Solo Mis Candidatos&nbsp;
                                         <?php endif; ?>
                                     </td>
                                 </tr>
@@ -54,7 +54,7 @@
             </table>
 
 
-            <p class="note">All Candidates - Page <?php echo($this->currentPage); ?> <?php if ($this->pager->getSortBy() == 'dateModifiedSort'): ?>(Most Recently Modified First)<?php endif; ?> <?php if ($this->onlyMyCandidates): ?>(Only My Candidates)<?php endif; ?></p>
+            <p class="note">Todos los Candidatos - Página <?php echo($this->currentPage); ?> <?php if ($this->pager->getSortBy() == 'dateModifiedSort'): ?>(Primero el más recientemente modificado)<?php endif; ?> <?php if ($this->onlyMyCandidates): ?>(Solo Mis Candidatos)<?php endif; ?></p>
 
                         <?php if (!empty($this->rs)): ?><?php echo($this->exportForm['formHead']); ?><?php endif; ?>
             

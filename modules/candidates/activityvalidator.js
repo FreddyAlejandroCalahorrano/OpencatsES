@@ -16,7 +16,7 @@ function checkActivityForm(form)
 
     if (errorMessage != '')
     {
-        alert("Form Error:\n" + errorMessage);
+        alert("Error de Formulario:\n" + errorMessage);
         return false;
     }
 
@@ -37,7 +37,7 @@ function checkEventTitle()
     fieldLabel = document.getElementById('titleLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter an event title.\n";
+        errorMessage = "    - Debes ingresar un título de evento.\n";
 
         fieldLabel.style.color = '#ff0000';
     }

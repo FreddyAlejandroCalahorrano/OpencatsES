@@ -27,7 +27,7 @@
     <?php else: ?>
         <p>La Imagen se ha Guardado..</p>
 
-        <input type="button" name="close" value="Close" onclick="parentHidePopWin();" />
+        <input type="button" name="close" value="Cerrar" onclick="parentHidePopWin();" />
         <script type="text/javascript">
             parentHidePopWin();
         </script>

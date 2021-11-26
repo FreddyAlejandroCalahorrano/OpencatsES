@@ -54,7 +54,7 @@ function checkDate(form)
 
     if (startDate > endDate)
     {
-        alert("You must enter a Date that is later\n then the begining search date.");
+        alert("Debe ingresar una fecha posterior\n luego la fecha de inicio de la búsqueda.");
         return false;
     }
     else

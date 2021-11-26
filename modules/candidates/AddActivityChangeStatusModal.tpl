@@ -244,7 +244,7 @@
         </table>
         <input type="submit" class="button" name="submit" id="submit" value="Guardar" />&nbsp;
 <?php if ($this->isJobOrdersMode): ?>
-        <input type="button" class="button" name="close" value="Cncelar" onclick="parentGoToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=joborders&amp;a=show&amp;jobOrderID=<?php echo($this->selectedJobOrderID); ?>');" />
+        <input type="button" class="button" name="close" value="Cancelar" onclick="parentGoToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=joborders&amp;a=show&amp;jobOrderID=<?php echo($this->selectedJobOrderID); ?>');" />
 <?php else: ?>
         <input type="button" class="button" name="close" value="Cancelar" onclick="parentGoToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=show&amp;candidateID=<?php echo($this->candidateID); ?>');" />
 <?php endif; ?>

@@ -23,7 +23,7 @@
 			?></ul>
 
             <input type="submit" class="button" name="submit" id="submit" value="Guardar" />&nbsp;
-            <input type="button" class="button" name="Cancelar" value="Cancel" onclick="parentHidePopWin();" />
+            <input type="button" class="button" name="Cancelar" value="Cancelar" onclick="parentHidePopWin();" />
 		</form>
     <?php else: ?>
     	<p>Todos los datos han sido guardados.</p>

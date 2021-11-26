@@ -34,24 +34,24 @@
                     <form name="loginForm" id="loginForm" action="<?php echo(CATSUtility::getIndexName()); ?>?m=login&amp;a=forgotPassword" method="post" autocomplete="off">
                         <input type="hidden" name="postback" value="true" />
                         <div id="subFormBlock">
-                            <label id="usernameLabel" for="username">Username</label><br />
+                            <label id="usernameLabel" for="username">Nombre de Usuario</label><br />
                             <input name="username" id="username" class="login-input-box" />
                             <br />
 
-                            <input type="submit" id="submit" name="submit" class="login-submit-button" value="Email my Password" />
+                            <input type="submit" id="submit" name="submit" class="login-submit-button" value="Enviar mi Contraseña por Correo Electrónico" />
                         </div>
                     </form>
                 <?php else: ?>
                     <p>
-                        An email has been sent to <?php $this->_($this->username); ?> containing your password.<br /><br />
-                        <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=login">Return to login page</a>
+                        Se ha Enviado un Correo Electrónico a <?php $this->_($this->username); ?> que contiene su contraseña.<br /><br />
+                        <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=login">Volver a la Página de Inicio de Sesión</a>
                     </p>
                 <?php endif; ?>
             </div>
 
             <div id="loginText">
                 <div class="ctr"><img src="images/security.gif" width="64" height="64" alt="security" /></div>
-                <p>Welcome to OpenCATS!</p>
+                <p>¡Bienvenido a OpenCATS!</p>
             </div>
 
             <div style="clear: both;"></div>

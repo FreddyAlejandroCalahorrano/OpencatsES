@@ -1,12 +1,12 @@
 var filter = {
     getNames: function() {
         return {
-            '==': 'is equal to',
-            '=~': 'contains',
-            '=<': 'is less than',
-            '=>': 'is greater than',
-            '=#': 'has element',
-            '=@': 'Near'
+            '==': 'es igual a',
+            '=~': 'contiene',
+            '=<': 'es menor que',
+            '=>': 'es mayor que',
+            '=#': 'tiene el elemento',
+            '=@': 'Cerca'
         };
     },
     makePreviousSelectionBoxesUnselectable: function(

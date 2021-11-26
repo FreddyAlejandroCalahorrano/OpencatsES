@@ -105,7 +105,7 @@
                         <img src="images/large_error.gif" align="left">
                     </td>
                     <td align="left" valign="center">
-                        <span style="font-size: 12pt; font-weight: bold; color: #800000; line-height: 12pt;">There was a problem with your request:</span>
+                        <span style="font-size: 12pt; font-weight: bold; color: #800000; line-height: 12pt;">Hubo un problema con su solicitud:</span>
                         <div style="font-size: 10pt; font-weight: bold; padding: 3px 0px 0px 0px;"><?php echo $this->errMessage; ?></div>
                     </td>
                 </tr>
@@ -114,7 +114,7 @@
             <?php endif; ?>
 
             <p class="note">
-                <span style="float:left;">Candidatos - Página <?php echo($this->dataGrid->getCurrentPageHTML()); ?> (<?php echo($this->dataGrid->getNumberOfRows()); ?>Elementos)</span>
+                <span style="float:left;">Candidatos - Página <?php echo($this->dataGrid->getCurrentPageHTML()); ?> (<?php echo($this->dataGrid->getNumberOfRows()); ?> Elementos)</span>
                 <span style="float:right;">
                     <?php $this->dataGrid->drawRowsPerPageSelector(); ?>
                     <?php $this->dataGrid->drawShowFilterControl(); ?>
@@ -146,7 +146,7 @@
                 <td style="padding-left: 62px;" align="center" valign="center">
 
                     <div style="text-align: center; width: 600px; line-height: 22px; font-size: 18px; font-weight: bold; color: #666666; padding-bottom: 20px;">
-                    Add candidates to keep track of possible applicants you can consider for your job orders.
+                        Agregue candidatos para realizar un seguimiento de los posibles solicitantes que puede considerar para sus pedidos de trabajo.
                     </div>
 
                     <table cellpadding="10" cellspacing="0" border="0">

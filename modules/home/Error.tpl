@@ -16,7 +16,7 @@
             </table>
 
             <p class="fatalError">
-                A fatal error has occurred.<br />
+                Ha ocurrido un error fatal.<br />
                 <br />
                 <?php echo($this->errorMessage); ?>
             </p>

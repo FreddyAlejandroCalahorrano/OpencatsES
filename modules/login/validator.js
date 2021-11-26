@@ -36,7 +36,7 @@ function checkLoginForm(form)
 
     if (errorMessage != '')
     {
-        alert("Form Error:\n" + errorMessage);
+        alert("Error de Formulario:\n" + errorMessage);
         return false;
     }
 
@@ -51,7 +51,7 @@ function checkUsername()
     fieldLabel = document.getElementById('usernameLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter a username.\n";
+        errorMessage = "    - Debes Ingresar un Nombre de Usuario.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -71,7 +71,7 @@ function checkPassword()
     fieldLabel = document.getElementById('passwordLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter a password.\n";
+        errorMessage = "    - Debes Ingresar una Contraseña.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
