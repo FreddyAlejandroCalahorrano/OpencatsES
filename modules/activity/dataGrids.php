@@ -53,6 +53,7 @@ class ActivityDataGrid extends DataGrid
         $this->showChooseColumnsBox = true;
         $this->allowResizing = true;
         $this->dateCriterion = '';
+        $this->ignoreSavedColumnLayouts = true;
         
         if (isset($parameters['period']) && !empty($parameters['period']))
         {
@@ -77,11 +78,11 @@ class ActivityDataGrid extends DataGrid
         $this->_defaultColumns = array( 
             array('name' => 'Fecha', 'width' => 110),
             array('name' => 'Nombre', 'width' => 85),
-            array('name' => 'Last Name', 'width' => 75),
-            array('name' => 'Regarding', 'width' => 125),
-            array('name' => 'Activity', 'width' => 65),
-            array('name' => 'Notes', 'width' => 240),
-            array('name' => 'Entered By', 'width' => 60),
+            array('name' => 'Apellido', 'width' => 75),
+            array('name' => 'Referente', 'width' => 125),
+            array('name' => 'Actividad', 'width' => 65),
+            array('name' => 'Notas', 'width' => 240),
+            array('name' => 'Ingresado Por', 'width' => 60),
         );
 
 
@@ -98,7 +99,7 @@ class ActivityDataGrid extends DataGrid
                                       'alphaNavigation'=> true,
                                       'filter' => 'activity.date_created'),
 
-            'First Name' =>     array('pagerRender'    => 'if ($rsData[\'dataItemType\']=='.DATA_ITEM_CANDIDATE.') {$ret = \'<img src="images/mru/candidate.gif" height="12" alt="" />\';} else if ($rsData[\'dataItemType\']=='.DATA_ITEM_CONTACT.') {$ret = \'<img src="images/mru/contact.gif" height="12">\';} else {$ret = \'<img src="images/mru/blank.gif">\';} if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; if ($rsData[\'dataItemType\']=='.DATA_ITEM_CANDIDATE.') {return $ret.\'&nbsp;<a href="'.CATSUtility::getIndexName().'?m=candidates&amp;a=show&amp;candidateID=\'.$rsData[\'dataItemID\'].\'" class="\'.$className.\'" title="\'.htmlspecialchars(InfoString::make($rsData[\'dataItemType\'],$rsData[\'dataItemID\'],$rsData[\'siteID\'])).\'">\'.htmlspecialchars($rsData[\'firstName\']).\'</a>\';} else {return  $ret.\'&nbsp;<a href="'.CATSUtility::getIndexName().'?m=contacts&amp;a=show&amp;contactID=\'.$rsData[\'dataItemID\'].\'" class="\'.$className.\'" title="\'.htmlspecialchars(InfoString::make($rsData[\'dataItemType\'],$rsData[\'dataItemID\'],$rsData[\'siteID\'])).\'">\'.htmlspecialchars($rsData[\'firstName\']).\'</a>\';}',
+            'Nombre' =>     array('pagerRender'    => 'if ($rsData[\'dataItemType\']=='.DATA_ITEM_CANDIDATE.') {$ret = \'<img src="images/mru/candidate.gif" height="12" alt="" />\';} else if ($rsData[\'dataItemType\']=='.DATA_ITEM_CONTACT.') {$ret = \'<img src="images/mru/contact.gif" height="12">\';} else {$ret = \'<img src="images/mru/blank.gif">\';} if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; if ($rsData[\'dataItemType\']=='.DATA_ITEM_CANDIDATE.') {return $ret.\'&nbsp;<a href="'.CATSUtility::getIndexName().'?m=candidates&amp;a=show&amp;candidateID=\'.$rsData[\'dataItemID\'].\'" class="\'.$className.\'" title="\'.htmlspecialchars(InfoString::make($rsData[\'dataItemType\'],$rsData[\'dataItemID\'],$rsData[\'siteID\'])).\'">\'.htmlspecialchars($rsData[\'firstName\']).\'</a>\';} else {return  $ret.\'&nbsp;<a href="'.CATSUtility::getIndexName().'?m=contacts&amp;a=show&amp;contactID=\'.$rsData[\'dataItemID\'].\'" class="\'.$className.\'" title="\'.htmlspecialchars(InfoString::make($rsData[\'dataItemType\'],$rsData[\'dataItemID\'],$rsData[\'siteID\'])).\'">\'.htmlspecialchars($rsData[\'firstName\']).\'</a>\';}',
                                      'sortableColumn'  => 'firstName',
                                      'pagerWidth'      => 85,
                                      'pagerOptional'   => false,
@@ -106,7 +107,7 @@ class ActivityDataGrid extends DataGrid
 									 'filterable' 	   => false,
                                      'filterHaving'    => 'firstName'),
 
-            'Last Name' =>      array('pagerRender'    => 'if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; if ($rsData[\'dataItemType\']=='.DATA_ITEM_CANDIDATE.') {return \'<a href="'.CATSUtility::getIndexName().'?m=candidates&amp;a=show&amp;candidateID=\'.$rsData[\'dataItemID\'].\'" class="\'.$className.\'" title="\'.htmlspecialchars(InfoString::make($rsData[\'dataItemType\'],$rsData[\'dataItemID\'],$rsData[\'siteID\'])).\'"> \'.htmlspecialchars($rsData[\'lastName\']).\'</a>\';} else {return \'<a href="'.CATSUtility::getIndexName().'?m=contacts&amp;a=show&amp;contactID=\'.$rsData[\'dataItemID\'].\'" class="\'.$className.\'" title="\'.htmlspecialchars(InfoString::make($rsData[\'dataItemType\'],$rsData[\'dataItemID\'],$rsData[\'siteID\'])).\'"> \'.htmlspecialchars($rsData[\'lastName\']).\'</a>\';}', 
+            'Apellido' =>      array('pagerRender'    => 'if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; if ($rsData[\'dataItemType\']=='.DATA_ITEM_CANDIDATE.') {return \'<a href="'.CATSUtility::getIndexName().'?m=candidates&amp;a=show&amp;candidateID=\'.$rsData[\'dataItemID\'].\'" class="\'.$className.\'" title="\'.htmlspecialchars(InfoString::make($rsData[\'dataItemType\'],$rsData[\'dataItemID\'],$rsData[\'siteID\'])).\'"> \'.htmlspecialchars($rsData[\'lastName\']).\'</a>\';} else {return \'<a href="'.CATSUtility::getIndexName().'?m=contacts&amp;a=show&amp;contactID=\'.$rsData[\'dataItemID\'].\'" class="\'.$className.\'" title="\'.htmlspecialchars(InfoString::make($rsData[\'dataItemType\'],$rsData[\'dataItemID\'],$rsData[\'siteID\'])).\'"> \'.htmlspecialchars($rsData[\'lastName\']).\'</a>\';}',
                                      'sortableColumn'  => 'lastName',
                                      'pagerWidth'      => 75,
                                      'pagerOptional'   => false,
@@ -114,28 +115,28 @@ class ActivityDataGrid extends DataGrid
 									 'filterable'      => false,
                                      'filterHaving'    => 'lastName'),
                                                              
-             'Regarding' =>      array('pagerRender'   => 'if ($rsData[\'jobIsHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; if ($rsData[\'companyIsHot\'] == 1) $companyClassName =  \'jobLinkHot\'; else $companyClassName = \'jobLinkCold\';  if ($rsData[\'regardingJobTitle\'] == \'\') {$ret = \'General\'; } else {$ret = \'<a href="'.CATSUtility::getIndexName().'?m=joborders&amp;a=show&amp;jobOrderID=\'.$rsData[\'jobOrderID\'].\'" class="\'.$className.\'">\'.htmlspecialchars($rsData[\'regardingJobTitle\']).\'</a>\'; if($rsData[\'regardingCompanyName\'] != \'\') {$ret .= \' <a href="'.CATSUtility::getIndexName().'?m=companies&amp;a=show&amp;companyID=\'.$rsData[\'companyID\'].\'" class="\'.$companyClassName.\'">(\'.htmlspecialchars($rsData[\'regardingCompanyName\']).\')\';}} return $ret;', 
+             'Referente' =>      array('pagerRender'   => 'if ($rsData[\'jobIsHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; if ($rsData[\'companyIsHot\'] == 1) $companyClassName =  \'jobLinkHot\'; else $companyClassName = \'jobLinkCold\';  if ($rsData[\'regardingJobTitle\'] == \'\') {$ret = \'General\'; } else {$ret = \'<a href="'.CATSUtility::getIndexName().'?m=joborders&amp;a=show&amp;jobOrderID=\'.$rsData[\'jobOrderID\'].\'" class="\'.$className.\'">\'.htmlspecialchars($rsData[\'regardingJobTitle\']).\'</a>\'; if($rsData[\'regardingCompanyName\'] != \'\') {$ret .= \' <a href="'.CATSUtility::getIndexName().'?m=companies&amp;a=show&amp;companyID=\'.$rsData[\'companyID\'].\'" class="\'.$companyClassName.\'">(\'.htmlspecialchars($rsData[\'regardingCompanyName\']).\')\';}} return $ret;',
                                      'sortableColumn'  => 'regarding',
                                      'pagerWidth'      => 125,
                                      'pagerOptional'   => true,
                                      'alphaNavigation' => true,
 									 'filter' 		   => 'CONCAT(joborder.title, company.name)'),        
 
-             'Activity' =>      array('pagerRender'    => '$ret = $rsData[\'typeDescription\']; return $ret;', 
+             'Actividad' =>      array('pagerRender'    => '$ret = $rsData[\'typeDescription\']; return $ret;',
                                      'sortableColumn'  => 'typeDescription',
                                      'pagerWidth'      => 65,
                                      'pagerOptional'   => true,
                                      'alphaNavigation' => true,
                                      'filter'          => 'activity_type.short_description'),  
                                      
-             'Notes' =>      array('pagerRender'    => 'return $rsData[\'notes\'];', 
+             'Notas' =>      array('pagerRender'    => 'return $rsData[\'notes\'];',
                                      'sortableColumn'  => 'notes',
                                      'pagerWidth'      => 240,
                                      'pagerOptional'   => true,
                                      'alphaNavigation' => true,
                                      'filter'    => 'activity.notes'),
 
-            'Entered By' =>         array(
+            'Ingresado Por' =>         array(
                                      'pagerRender'      => 'return StringUtility::makeInitialName($rsData[\'enteredByFirstName\'], $rsData[\'enteredByLastName\'], false, LAST_NAME_MAXLEN);',
                                      'exportRender'     => 'return $rsData[\'enteredByFirstName\'] . " " .$rsData[\'enteredByLastName\'];',
                                      'sortableColumn'     => 'enteredBySort',

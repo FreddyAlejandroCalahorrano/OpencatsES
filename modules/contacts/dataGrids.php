@@ -47,20 +47,21 @@ class ContactsListByViewDataGrid extends ContactsDataGrid
         $this->showActionArea = true;
         $this->showChooseColumnsBox = true;
         $this->allowResizing = true;
+        $this->ignoreSavedColumnLayouts = true;
 
         $this->defaultSortBy = 'dateCreatedSort';
         $this->defaultSortDirection = 'DESC';
    
         $this->_defaultColumns = array( 
-            array('name' => 'Attachments', 'width' => 10),
-            array('name' => 'First Name', 'width' => 80),
-            array('name' => 'Last Name', 'width' => 80),
-            array('name' => 'Company', 'width' => 135),
-            array('name' => 'Title', 'width' => 135),
-            array('name' => 'Work Phone', 'width' => 85),
-            array('name' => 'Owner', 'width' => 85),
-            array('name' => 'Created', 'width' => 60),
-            array('name' => 'Modified', 'width' => 60),
+            array('name' => 'Archivos Adjuntos', 'width' => 10),
+            array('name' => 'Nombre', 'width' => 80),
+            array('name' => 'Apellido', 'width' => 80),
+            array('name' => 'Empresa', 'width' => 135),
+            array('name' => 'Título', 'width' => 135),
+            array('name' => 'Teléfono del Trabajo', 'width' => 85),
+            array('name' => 'Propietario', 'width' => 85),
+            array('name' => 'Creado', 'width' => 60),
+            array('name' => 'Modificado', 'width' => 60),
         );
    
         parent::__construct("contacts:ContactsListByViewDataGrid", 
@@ -106,15 +107,15 @@ class contactSavedListByViewDataGrid extends ContactsDataGrid
         $this->defaultSortDirection = 'DESC';
    
         $this->_defaultColumns = array( 
-            array('name' => 'Attachments', 'width' => 10),
-            array('name' => 'First Name', 'width' => 80),
-            array('name' => 'Last Name', 'width' => 80),
-            array('name' => 'Company', 'width' => 135),
-            array('name' => 'Title', 'width' => 135),
-            array('name' => 'Work Phone', 'width' => 85),
-            array('name' => 'Owner', 'width' => 85),
-            array('name' => 'Created', 'width' => 60),
-            array('name' => 'Modified', 'width' => 60),
+            array('name' => 'Archivos Adjuntos', 'width' => 10),
+            array('name' => 'Nombre', 'width' => 80),
+            array('name' => 'Apellido', 'width' => 80),
+            array('name' => 'Empresa', 'width' => 135),
+            array('name' => 'Título', 'width' => 135),
+            array('name' => 'Teléfono del Trabajo', 'width' => 85),
+            array('name' => 'Propietario', 'width' => 85),
+            array('name' => 'Creado', 'width' => 60),
+            array('name' => 'Modificado', 'width' => 60),
         );
    
         parent::__construct("contacts:contactSavedListByViewDataGrid", 

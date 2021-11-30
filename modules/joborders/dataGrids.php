@@ -47,23 +47,24 @@ class JobOrdersListByViewDataGrid extends JobOrdersDataGrid
         $this->showActionArea = true;
         $this->showChooseColumnsBox = true;
         $this->allowResizing = true;
+        $this->ignoreSavedColumnLayouts = true;
 
         $this->defaultSortBy = 'dateCreatedSort';
         $this->defaultSortDirection = 'DESC';
    
         $this->_defaultColumns = array(
-            array('name' => 'Attachments', 'width' => 10),
-            array('name' => 'ID', 'width' => 26),   
-            array('name' => 'Title', 'width' => 170),
-            array('name' => 'Company', 'width' => 135),
-            array('name' => 'Type', 'width' => 30),
-            array('name' => 'Status', 'width' => 40),
-            array('name' => 'Created', 'width' => 55),
-            array('name' => 'Age', 'width' => 30),
-            array('name' => 'Submitted', 'width' => 18),
-            array('name' => 'Pipeline', 'width' => 18),
-            array('name' => 'Recruiter', 'width' => 65),
-            array('name' => 'Owner', 'width' => 55),
+            array('name' => 'Archivos Adjuntos', 'width' => 10),
+            array('name' => 'ID', 'width' => 26),
+            array('name' => 'Título', 'width' => 170),
+            array('name' => 'Empresa', 'width' => 135),
+            array('name' => 'Tipo', 'width' => 30),
+            array('name' => 'Estado', 'width' => 40),
+            array('name' => 'Creado', 'width' => 55),
+            array('name' => 'Días de Duración', 'width' => 18),
+            array('name' => 'Enviado', 'width' => 18),
+            array('name' => 'Pipelines', 'width' => 18),
+            array('name' => 'Reclutador', 'width' => 65),
+            array('name' => 'Dueño', 'width' => 55),
         );
    
         if (!eval(Hooks::get('JOBORDERS_DATAGRID_DEFAULTS'))) return;
@@ -111,18 +112,18 @@ class joborderSavedListByViewDataGrid extends JobOrdersDataGrid
         $this->defaultSortDirection = 'DESC';
    
         $this->_defaultColumns = array(
-            array('name' => 'Attachments', 'width' => 10),
+            array('name' => 'Archivos Adjuntos', 'width' => 10),
             array('name' => 'ID', 'width' => 26),   
-            array('name' => 'Title', 'width' => 170),
-            array('name' => 'Company', 'width' => 135),
-            array('name' => 'Type', 'width' => 30),
-            array('name' => 'Status', 'width' => 40),
-            array('name' => 'Created', 'width' => 55),
-            array('name' => 'Age', 'width' => 30),
-            array('name' => 'Submitted', 'width' => 18),
-            array('name' => 'Pipeline', 'width' => 18),
-            array('name' => 'Recruiter', 'width' => 65),
-            array('name' => 'Owner', 'width' => 55),
+            array('name' => 'Título', 'width' => 170),
+            array('name' => 'Empresa', 'width' => 135),
+            array('name' => 'Tipo', 'width' => 30),
+            array('name' => 'Estado', 'width' => 40),
+            array('name' => 'Creado', 'width' => 55),
+            array('name' => 'Días de Duración', 'width' => 18),
+            array('name' => 'Enviado', 'width' => 18),
+            array('name' => 'Pipelines', 'width' => 18),
+            array('name' => 'Reclutador', 'width' => 65),
+            array('name' => 'Dueño', 'width' => 55),
         );
    
         if (!eval(Hooks::get('JOBORDERS_DATAGRID_DEFAULTS'))) return;

@@ -47,20 +47,21 @@ class CompaniesListByViewDataGrid extends CompaniesDataGrid
         $this->showActionArea = true;
         $this->showChooseColumnsBox = true;
         $this->allowResizing = true;
+        $this->ignoreSavedColumnLayouts = true;
 
         $this->defaultSortBy = 'dateCreatedSort';
         $this->defaultSortDirection = 'DESC';
    
         $this->_defaultColumns = array( 
-            array('name' => 'Attachments', 'width' => 10),
+            array('name' => 'Archivos Adjuntos', 'width' => 10),
             array('name' => 'Nombre', 'width' => 255),
-            array('name' => 'Jobs', 'width' => 40),
-            array('name' => 'City', 'width' => 90),
-            array('name' => 'State', 'width' => 50),
-            array('name' => 'Phone', 'width' => 85),
-            array('name' => 'Owner', 'width' => 65),
-            array('name' => 'Created', 'width' => 60),
-            array('name' => 'Modified', 'width' => 60),
+            array('name' => 'Órd. Trabajo', 'width' => 40),
+            array('name' => 'Ciudad', 'width' => 90),
+            array('name' => 'Provincia', 'width' => 50),
+            array('name' => 'Teléfono', 'width' => 85),
+            array('name' => 'Propietario', 'width' => 65),
+            array('name' => 'Creado', 'width' => 60),
+            array('name' => 'Modificado', 'width' => 60),
         );
    
         parent::__construct("companies:CompaniesListByViewDataGrid", 
@@ -109,15 +110,15 @@ class companiesSavedListByViewDataGrid extends CompaniesDataGrid
         $this->defaultSortDirection = 'DESC';
    
         $this->_defaultColumns = array( 
-            array('name' => 'Attachments', 'width' => 10),
+            array('name' => 'Archivos Adjuntos', 'width' => 10),
             array('name' => 'Nombre', 'width' => 255),
-            array('name' => 'Jobs', 'width' => 40),
-            array('name' => 'City', 'width' => 90),
-            array('name' => 'State', 'width' => 50),
-            array('name' => 'Phone', 'width' => 85),
-            array('name' => 'Owner', 'width' => 65),
-            array('name' => 'Created', 'width' => 60),
-            array('name' => 'Modified', 'width' => 60),
+            array('name' => 'Órd. Trabajo', 'width' => 40),
+            array('name' => 'Ciudad', 'width' => 90),
+            array('name' => 'Provincia', 'width' => 50),
+            array('name' => 'Teléfono', 'width' => 85),
+            array('name' => 'Propietario', 'width' => 65),
+            array('name' => 'Creado', 'width' => 60),
+            array('name' => 'Modificado', 'width' => 60),
         );
    
         parent::__construct("companies:companiesSavedListByViewDataGrid", 

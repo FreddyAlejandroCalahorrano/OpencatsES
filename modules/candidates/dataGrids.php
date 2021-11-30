@@ -17,20 +17,21 @@ class candidatesListByViewDataGrid extends CandidatesDataGrid
         $this->showActionArea = true;
         $this->showChooseColumnsBox = true;
         $this->allowResizing = true;
+        $this->ignoreSavedColumnLayouts = true;
 
         $this->defaultSortBy = 'dateModifiedSort';
         $this->defaultSortDirection = 'DESC';
 
         $this->_defaultColumns = array(
-            array('name' => 'Attachments', 'width' => 31),
+            array('name' => 'Archivos Adjuntos', 'width' => 31),
             array('name' => 'Nombre', 'width' => 75),
-            array('name' => 'Last Name', 'width' => 85),
-            array('name' => 'City', 'width' => 75),
-            array('name' => 'State', 'width' => 50),
-            array('name' => 'Key Skills', 'width' => 215),
-            array('name' => 'Owner', 'width' => 65),
-            array('name' => 'Created', 'width' => 60),
-            array('name' => 'Modified', 'width' => 60),
+            array('name' => 'Apellido', 'width' => 85),
+            array('name' => 'Ciudad', 'width' => 75),
+            array('name' => 'Provincia', 'width' => 50),
+            array('name' => 'Habilidades', 'width' => 215),
+            array('name' => 'Propietario', 'width' => 65),
+            array('name' => 'Creado', 'width' => 60),
+            array('name' => 'Modificado', 'width' => 60),
         );
 
          parent::__construct("candidates:candidatesListByViewDataGrid",
@@ -88,15 +89,15 @@ class candidatesSavedListByViewDataGrid extends CandidatesDataGrid
         $this->defaultSortDirection = 'DESC';
 
         $this->_defaultColumns = array(
-            array('name' => 'Attachments', 'width' => 31),
+            array('name' => 'Archivos Adjuntos', 'width' => 31),
             array('name' => 'Nombre', 'width' => 75),
             array('name' => 'Apellido', 'width' => 85),
-            array('name' => 'City', 'width' => 75),
-            array('name' => 'State', 'width' => 50),
-            array('name' => 'Key Skills', 'width' => 200),
-            array('name' => 'Owner', 'width' => 65),
-            array('name' => 'Modified', 'width' => 60),
-            array('name' => 'Added To List', 'width' => 75),
+            array('name' => 'Ciudad', 'width' => 75),
+            array('name' => 'Provincia', 'width' => 50),
+            array('name' => 'Habilidades', 'width' => 200),
+            array('name' => 'Propietario', 'width' => 65),
+            array('name' => 'Modificado', 'width' => 60),
+            array('name' => 'Agregado a la lista', 'width' => 75),
         );
 
          parent::__construct("candidates:candidatesSavedListByViewDataGrid",

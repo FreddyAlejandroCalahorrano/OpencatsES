@@ -754,7 +754,7 @@ class CompaniesDataGrid extends DataGrid
         $this->_dataItemIDColumn = 'company.company_id';
 
         $this->_classColumns = array(
-            'Attachments' => array(  'select'   => 'IF(attachment_id, 1, 0) AS attachmentPresent',
+            'Archivos Adjuntos' => array(  'select'   => 'IF(attachment_id, 1, 0) AS attachmentPresent',
                                      'pagerRender' => '
                                                     if ($rsData[\'attachmentPresent\'] == 1)
                                                     {
@@ -775,7 +775,7 @@ class CompaniesDataGrid extends DataGrid
                                      'exportable' => false,
                                      'filterable' => false),
 
-            'Name' =>     array('select'         => 'company.name AS name',
+            'Nombre' =>     array('select'         => 'company.name AS name',
                                       'pagerRender'    => 'if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; return \'<a href="'.CATSUtility::getIndexName().'?m=companies&amp;a=show&amp;companyID=\'.$rsData[\'companyID\'].\'" class="\'.$className.\'">\'.htmlspecialchars($rsData[\'name\']).\'</a>\';',
                                       'sortableColumn' => 'name',
                                       'pagerWidth'     => 60,
@@ -783,7 +783,7 @@ class CompaniesDataGrid extends DataGrid
                                       'alphaNavigation'=> true,
                                       'filter'         => 'company.name'),
 
-            'Jobs' =>       array('select'   => '(
+            'Órd. Trabajo' =>       array('select'   => '(
                                                             SELECT
                                                                 COUNT(*)
                                                             FROM
@@ -797,9 +797,10 @@ class CompaniesDataGrid extends DataGrid
                                      'sortableColumn'     => 'jobs',
                                      'pagerWidth'    => 40,
                                      'filterHaving'  => 'jobs',
+                                     //'columnHeaderText' => 'O',
                                      'filterTypes'   => '===>=<'),
 
-            'Phone' =>     array('select'   => 'company.phone1 AS phone',
+            'Teléfono' =>     array('select'   => 'company.phone1 AS phone',
                                      'sortableColumn'     => 'phone',
                                      'pagerWidth'    => 80,
                                      'filter'         => 'company.phone1'),
@@ -810,14 +811,14 @@ class CompaniesDataGrid extends DataGrid
                                      'filter'         => 'company.phone2'),
 
 
-            'City' =>           array('select'   => 'company.city AS city',
+            'Ciudad' =>           array('select'   => 'company.city AS city',
                                      'sortableColumn'     => 'city',
                                      'pagerWidth'    => 80,
                                      'alphaNavigation' => true,
                                      'filter'         => 'company.city'),
 
 
-            'State' =>          array('select'   => 'company.state AS state',
+            'Provincia' =>          array('select'   => 'company.state AS state',
                                      'sortableColumn'     => 'state',
                                      'filterType' => 'dropDown',
                                      'pagerWidth'    => 50,
@@ -836,7 +837,7 @@ class CompaniesDataGrid extends DataGrid
                                      'pagerWidth'   => 80,
                                      'filter'         => 'company.url'),
 
-            'Owner' =>         array('select'   => 'owner_user.first_name AS ownerFirstName,' .
+            'Propietario' =>         array('select'   => 'owner_user.first_name AS ownerFirstName,' .
                                                    'owner_user.last_name AS ownerLastName,' .
                                                    'CONCAT(owner_user.last_name, owner_user.first_name) AS ownerSort',
                                      'pagerRender'      => 'return StringUtility::makeInitialName($rsData[\'ownerFirstName\'], $rsData[\'ownerLastName\'], false, LAST_NAME_MAXLEN);',
@@ -858,13 +859,13 @@ class CompaniesDataGrid extends DataGrid
                                      'filter'         => 'CONCAT(contact.first_name, contact.last_name)'),
 
 
-            'Created' =>       array('select'   => 'DATE_FORMAT(company.date_created, \'%m-%d-%y\') AS dateCreated',
+            'Creado' =>       array('select'   => 'DATE_FORMAT(company.date_created, \'%m-%d-%y\') AS dateCreated',
                                      'pagerRender'      => 'return $rsData[\'dateCreated\'];',
                                      'sortableColumn'     => 'dateCreatedSort',
                                      'pagerWidth'    => 60,
                                      'filterHaving' => 'DATE_FORMAT(company.date_created, \'%m-%d-%y\')'),
 
-            'Modified' =>      array('select'   => 'DATE_FORMAT(company.date_modified, \'%m-%d-%y\') AS dateModified',
+            'Modificado' =>      array('select'   => 'DATE_FORMAT(company.date_modified, \'%m-%d-%y\') AS dateModified',
                                      'pagerRender'      => 'return $rsData[\'dateModified\'];',
                                      'sortableColumn'     => 'dateModifiedSort',
                                      'pagerWidth'    => 60,

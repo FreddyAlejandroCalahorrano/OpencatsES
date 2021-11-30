@@ -1936,7 +1936,7 @@ class CandidatesDataGrid extends DataGrid
         $this->_dataItemIDColumn = 'candidate.candidate_id';
 
         $this->_classColumns = array(
-            'Attachments' => array('select' => 'IF(candidate_joborder_submitted.candidate_joborder_id, 1, 0) AS submitted,
+            'Archivos Adjuntos' => array('select' => 'IF(candidate_joborder_submitted.candidate_joborder_id, 1, 0) AS submitted,
                                                 IF(attachment_id, 1, 0) AS attachmentPresent,
                                                 IF(old_candidate_id, 1, 0) AS duplicatePresent',
 
@@ -1988,7 +1988,7 @@ class CandidatesDataGrid extends DataGrid
                                      'exportable' => false,
                                      'filterable' => false),
 
-            'First Name' =>         array('select'         => 'candidate.first_name AS firstName',
+            'Nombre' =>         array('select'         => 'candidate.first_name AS firstName',
                                       'pagerRender'    => 'if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; return \'<a href="'.CATSUtility::getIndexName().'?m=candidates&amp;a=show&amp;candidateID=\'.$rsData[\'candidateID\'].\'" class="\'.$className.\'">\'.htmlspecialchars($rsData[\'firstName\']).\'</a>\';',
                                       'sortableColumn' => 'firstName',
                                       'pagerWidth'     => 75,
@@ -1996,7 +1996,7 @@ class CandidatesDataGrid extends DataGrid
                                       'alphaNavigation'=> true,
                                       'filter'         => 'candidate.first_name'),
 
-            'Last Name' =>      array('select'         => 'candidate.last_name AS lastName',
+            'Apellido' =>      array('select'         => 'candidate.last_name AS lastName',
                                      'sortableColumn'  => 'lastName',
                                      'pagerRender'     => 'if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; return \'<a href="'.CATSUtility::getIndexName().'?m=candidates&amp;a=show&amp;candidateID=\'.$rsData[\'candidateID\'].\'" class="\'.$className.\'">\'.htmlspecialchars($rsData[\'lastName\']).\'</a>\';',
                                      'pagerWidth'      => 85,
@@ -2035,14 +2035,14 @@ class CandidatesDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'candidate.address'),
 
-            'City' =>           array('select'   => 'candidate.city AS city',
+            'Ciudad' =>           array('select'   => 'candidate.city AS city',
                                      'sortableColumn'     => 'city',
                                      'pagerWidth'    => 80,
                                      'alphaNavigation' => true,
                                      'filter'         => 'candidate.city'),
 
 
-            'State' =>          array('select'   => 'candidate.state AS state',
+            'Provincia' =>          array('select'   => 'candidate.state AS state',
                                      'sortableColumn'     => 'state',
                                      'filterType' => 'dropDown',
                                      'pagerWidth'    => 50,
@@ -2065,7 +2065,7 @@ class CandidatesDataGrid extends DataGrid
                                      'pagerWidth'   => 80,
                                      'filter'         => 'candidate.web_site'),
 
-            'Key Skills' =>    array('select'  => 'candidate.key_skills AS keySkills',
+            'Habilidades' =>    array('select'  => 'candidate.key_skills AS keySkills',
                                      'pagerRender' => 'return substr(trim($rsData[\'keySkills\']), 0, 30) . (strlen(trim($rsData[\'keySkills\'])) > 30 ? \'...\' : \'\');',
                                      'sortableColumn'    => 'keySkills',
                                      'pagerWidth'   => 210,
@@ -2179,7 +2179,7 @@ class CandidatesDataGrid extends DataGrid
                                      'pagerWidth'   => 80,
                                      'filter'         => 'candidate.can_relocate'),
 
-            'Owner' =>         array('select'   => 'owner_user.first_name AS ownerFirstName,' .
+            'Propietario' =>         array('select'   => 'owner_user.first_name AS ownerFirstName,' .
                                                    'owner_user.last_name AS ownerLastName,' .
                                                    'CONCAT(owner_user.last_name, owner_user.first_name) AS ownerSort',
                                      'join'     => 'LEFT JOIN user AS owner_user ON candidate.owner = owner_user.user_id',
@@ -2190,13 +2190,13 @@ class CandidatesDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'CONCAT(owner_user.first_name, owner_user.last_name)'),
 
-            'Created' =>       array('select'   => 'DATE_FORMAT(candidate.date_created, \'%m-%d-%y\') AS dateCreated',
+            'Creado' =>       array('select'   => 'DATE_FORMAT(candidate.date_created, \'%m-%d-%y\') AS dateCreated',
                                      'pagerRender'      => 'return $rsData[\'dateCreated\'];',
                                      'sortableColumn'     => 'dateCreatedSort',
                                      'pagerWidth'    => 60,
                                      'filterHaving' => 'DATE_FORMAT(candidate.date_created, \'%m-%d-%y\')'),
 
-            'Modified' =>      array('select'   => 'DATE_FORMAT(candidate.date_modified, \'%m-%d-%y\') AS dateModified',
+            'Modificado' =>      array('select'   => 'DATE_FORMAT(candidate.date_modified, \'%m-%d-%y\') AS dateModified',
                                      'pagerRender'      => 'return $rsData[\'dateModified\'];',
                                      'sortableColumn'     => 'dateModifiedSort',
                                      'pagerWidth'    => 60,
@@ -2206,7 +2206,7 @@ class CandidatesDataGrid extends DataGrid
             /* This one only works when called from the saved list view.  Thats why it is not optional, filterable, or exportable.
              * FIXME:  Somehow make this defined in the associated savedListDataGrid class child.
              */
-            'Added To List' =>  array('select'   => 'DATE_FORMAT(saved_list_entry.date_created, \'%m-%d-%y\') AS dateAddedToList,
+            'Agregado a la lista' =>  array('select'   => 'DATE_FORMAT(saved_list_entry.date_created, \'%m-%d-%y\') AS dateAddedToList,
                                                      saved_list_entry.date_created AS dateAddedToListSort',
                                      'pagerRender'      => 'return $rsData[\'dateAddedToList\'];',
                                      'sortableColumn'     => 'dateAddedToListSort',

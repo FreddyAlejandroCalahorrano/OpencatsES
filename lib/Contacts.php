@@ -815,7 +815,7 @@ class ContactsDataGrid extends DataGrid
         $this->_dataItemIDColumn = 'contact.contact_id';
 
         $this->_classColumns = array(
-            'First Name' =>     array('select'         => 'contact.first_name AS firstName',
+            'Nombre' =>     array('select'         => 'contact.first_name AS firstName',
                                       'pagerRender'    => 'if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; return \'<a href="'.CATSUtility::getIndexName().'?m=contacts&amp;a=show&amp;contactID=\'.$rsData[\'contactID\'].\'" class="\'.$className.\'">\'.htmlspecialchars($rsData[\'firstName\']).\'</a>\';',
                                       'sortableColumn' => 'firstName',
                                       'pagerWidth'     => 75,
@@ -823,7 +823,7 @@ class ContactsDataGrid extends DataGrid
                                       'alphaNavigation'=> true,
                                       'filter'         => 'contact.first_name'),
 
-            'Last Name' =>      array('select'         => 'contact.last_name AS lastName',
+            'Apellido' =>      array('select'         => 'contact.last_name AS lastName',
                                      'sortableColumn'  => 'lastName',
                                      'pagerRender'     => 'if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; return \'<a href="'.CATSUtility::getIndexName().'?m=contacts&amp;a=show&amp;contactID=\'.$rsData[\'contactID\'].\'" class="\'.$className.\'">\'.htmlspecialchars($rsData[\'lastName\']).\'</a>\';',
                                      'pagerWidth'      => 85,
@@ -831,7 +831,7 @@ class ContactsDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'contact.last_name'),
 
-            'Company' =>     array('select'         => 'company.name AS name,'.
+            'Empresa' =>     array('select'         => 'company.name AS name,'.
                                                        'company.company_id as companyID',
                                       'pagerRender'    => 'if ($rsData[\'isHot\'] == 1) $className =  \'jobLinkHot\'; else $className = \'jobLinkCold\'; return \'<a href="'.CATSUtility::getIndexName().'?m=companies&amp;a=show&amp;companyID=\'.$rsData[\'companyID\'].\'" class="\'.$className.\'">\'.htmlspecialchars($rsData[\'name\']).\'</a>\';',
                                       'sortableColumn' => 'name',
@@ -840,7 +840,7 @@ class ContactsDataGrid extends DataGrid
                                       'alphaNavigation'=> true,
                                       'filter'         => 'company.name'),
 
-            'Title' =>        array('select'  => 'contact.title AS title',
+            'Título' =>        array('select'  => 'contact.title AS title',
                                      'sortableColumn'    => 'title',
                                      'pagerWidth'   => 140,
                                      'alphaNavigation' => true,
@@ -855,7 +855,7 @@ class ContactsDataGrid extends DataGrid
                                      'pagerOptional'  => true,
                                      'filter'         => 'company_department.department'),
 
-            'Work Phone' =>   array('select'  => 'contact.phone_work AS workPhone',
+            'Teléfono del Trabajo' =>   array('select'  => 'contact.phone_work AS workPhone',
                                      'sortableColumn'    => 'workPhone',
                                      'pagerWidth'   => 140,
                                      'alphaNavigation' => false,
@@ -916,7 +916,7 @@ class ContactsDataGrid extends DataGrid
                                      'pagerWidth'   => 300,
                                      'filter'         => 'contact.notes'),
 
-            'Owner' =>         array('pagerRender'      => 'return StringUtility::makeInitialName($rsData[\'ownerFirstName\'], $rsData[\'ownerLastName\'], false, LAST_NAME_MAXLEN);',
+            'Propietario' =>         array('pagerRender'      => 'return StringUtility::makeInitialName($rsData[\'ownerFirstName\'], $rsData[\'ownerLastName\'], false, LAST_NAME_MAXLEN);',
                                      'exportRender'     => 'return $rsData[\'ownerFirstName\'] . " " .$rsData[\'ownerLastName\'];',
                                      'sortableColumn'     => 'ownerSort',
                                      'pagerWidth'    => 75,
@@ -924,13 +924,13 @@ class ContactsDataGrid extends DataGrid
                                      'pagerOptional'  => true,
                                      'filter'         => 'CONCAT(owner_user.first_name, owner_user.last_name)'),
 
-            'Created' =>       array('select'   => 'DATE_FORMAT(contact.date_created, \'%m-%d-%y\') AS dateCreated',
+            'Propietario' =>       array('select'   => 'DATE_FORMAT(contact.date_created, \'%m-%d-%y\') AS dateCreated',
                                      'pagerRender'      => 'return $rsData[\'dateCreated\'];',
                                      'sortableColumn'     => 'dateCreatedSort',
                                      'pagerWidth'    => 60,
                                      'filterHaving' => 'DATE_FORMAT(contact.date_created, \'%m-%d-%y\')'),
 
-            'Modified' =>      array('select'   => 'DATE_FORMAT(contact.date_modified, \'%m-%d-%y\') AS dateModified',
+            'Modificado' =>      array('select'   => 'DATE_FORMAT(contact.date_modified, \'%m-%d-%y\') AS dateModified',
                                      'pagerRender'      => 'return $rsData[\'dateModified\'];',
                                      'sortableColumn'     => 'dateModifiedSort',
                                      'pagerWidth'    => 60,

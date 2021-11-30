@@ -211,12 +211,12 @@ if (!eval(Hooks::get('JO_AJAX_GET_PIPELINE'))) return;
         </th>
         <th align="left" width="80" nowrap="nowrap">
             <a href="javascript:void(0);" onclick="PipelineJobOrder_populate(<?php echo($jobOrderID); ?>, <?php echo($page); ?>, <?php echo($entriesPerPage); ?>, <?php printSortLink('firstName'); ?>, <?php if ($isPopup) echo(1); else echo(0); ?>, 'ajaxPipelineTable', '<?php echo($_SESSION['CATS']->getCookie()); ?>', 'ajaxPipelineTableIndicator', '<?php echo($indexFile); ?>');">
-                First Name
+                Nombre
             </a>
         </th>
         <th align="left" width="100" nowrap="nowrap">
             <a href="javascript:void(0);" onclick="PipelineJobOrder_populate(<?php echo($jobOrderID); ?>, <?php echo($page); ?>, <?php echo($entriesPerPage); ?>, <?php printSortLink('lastName'); ?>, <?php if ($isPopup) echo(1); else echo(0); ?>, 'ajaxPipelineTable', '<?php echo($_SESSION['CATS']->getCookie()); ?>', 'ajaxPipelineTableIndicator', '<?php echo($indexFile); ?>');">
-                Last Name
+                Apellido
             </a>
         </th>
         <th align="left" width="40" nowrap="nowrap">
@@ -226,26 +226,26 @@ if (!eval(Hooks::get('JO_AJAX_GET_PIPELINE'))) return;
         </th>
         <th align="left" width="60" nowrap="nowrap">
             <a href="javascript:void(0);" onclick="PipelineJobOrder_populate(<?php echo($jobOrderID); ?>, <?php echo($page); ?>, <?php echo($entriesPerPage); ?>, <?php printSortLink('dateCreatedInt'); ?>, <?php if ($isPopup) echo(1); else echo(0); ?>, 'ajaxPipelineTable', '<?php echo($_SESSION['CATS']->getCookie()); ?>', 'ajaxPipelineTableIndicator', '<?php echo($indexFile); ?>');">
-                Added
+                Agregado
             </a>
         </th>
-        <th align="left" width="70" nowrap="nowrap">
+        <th align="left" width="90" nowrap="nowrap">
             <a href="javascript:void(0);" onclick="PipelineJobOrder_populate(<?php echo($jobOrderID); ?>, <?php echo($page); ?>, <?php echo($entriesPerPage); ?>, <?php printSortLink('addedByAbbrName'); ?>, <?php if ($isPopup) echo(1); else echo(0); ?>, 'ajaxPipelineTable', '<?php echo($_SESSION['CATS']->getCookie()); ?>', 'ajaxPipelineTableIndicator', '<?php echo($indexFile); ?>');">
-                Entered By
+                Ingresado Por
             </a>
         </th>
         <th align="left" width="65" nowrap="nowrap">
             <a href="javascript:void(0);" onclick="PipelineJobOrder_populate(<?php echo($jobOrderID); ?>, <?php echo($page); ?>, <?php echo($entriesPerPage); ?>, <?php printSortLink('status'); ?>, <?php if ($isPopup) echo(1); else echo(0); ?>, 'ajaxPipelineTable', '<?php echo($_SESSION['CATS']->getCookie()); ?>', 'ajaxPipelineTableIndicator', '<?php echo($indexFile); ?>');">
-                Status
+                Estado
             </a>
         </th>
         <th align="left" nowrap="nowrap">
             <a href="javascript:void(0);" onclick="PipelineJobOrder_populate(<?php echo($jobOrderID); ?>, <?php echo($page); ?>, <?php echo($entriesPerPage); ?>, <?php printSortLink('lastActivity'); ?>, <?php if ($isPopup) echo(1); else echo(0); ?>, 'ajaxPipelineTable', '<?php echo($_SESSION['CATS']->getCookie()); ?>', 'ajaxPipelineTableIndicator', '<?php echo($indexFile); ?>');">
-                Last Activity
+                Última Actividad
             </a>
         </th>
 <?php if (!$isPopup): ?>
-        <th align="center">Action</th>
+        <th align="center">Acción</th>
 <?php endif; ?>
     </tr>
 
