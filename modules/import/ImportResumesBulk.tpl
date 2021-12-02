@@ -11,11 +11,11 @@
                     <td width="3%">
                         <img src="images/reports.gif" width="24" height="24" border="0" alt="Import" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Import Data</h2></td>
+                    <td><h2>Importar Datos</h2></td>
                 </tr>
             </table>
 
-            <p class="note" id="importHide2">Import Data - Step 2</p>
+            <p class="note" id="importHide2">Importar Datos - Paso 2</p>
 
             <?php if (isset($this->errorMessage)): ?>
 
@@ -33,7 +33,7 @@
 
             <?php elseif (isset($this->successMessage)): ?>
 
-                <p class="note" id="importHide0">Success</p>
+                <p class="note" id="importHide0">Éxito</p>
 
                 <table class="searchTable" id="importHide1" width="100%">
                     <tr>
@@ -48,8 +48,8 @@
            <?php endif; ?>
             <table class="searchTable" id="importTable1" width="100%">
                 <tr>
-                    <td>CATS may discard or fail to read some of the submitted data which it does not
-                    understand how to use. Do not discard the original data!
+                    <td>CATS puede descartar o no leer algunos de los datos importados que no
+                        entiende cómo utilizar. ¡No deseche los datos originales!
                     </td>
                 </tr>
                 
@@ -61,11 +61,11 @@
                 <table class="searchTable" width="100%" id="importHide3">
                     <tr>
                         <td class="tdVertical">
-                            <label id="fileLabel" for="file">Import:</label>
+                            <label id="fileLabel" for="file">Importar:</label>
                         </td>
                         <td class="tdData">
-                            <img src="images/file/doc.gif">&nbsp;Resume&nbsp;<a href="javascript:void(0);" onclick="showPopWin('index.php?m=import&a=whatIsBulkResumes', 420, 275, null);">(How do I use bulk resumes?)</a><br />
-                            <span style="font-style: italic;">This will not create candidates, it will only add resumes to the <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&a=search">resume search</a>!</span>
+                            <img src="images/file/doc.gif">&nbsp;Currículums&nbsp;<a href="javascript:void(0);" onclick="showPopWin('index.php?m=import&a=whatIsBulkResumes', 420, 275, null);">(¿Cómo utilizo los currículums masivos?)</a><br />
+                            <span style="font-style: italic;">Esto no creará candidatos, solo agregará currículums <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&a=search">reanudar la búsqueda</a>!</span>
                         </td>
                     </tr>
                     
@@ -73,28 +73,28 @@
                         <td class="tdVertical">
                             <label id="fileLabel" for="file">
                                 <br />
-                                Files:
+                                Archivos:
                             </label>
                         </td>
                         <td class="tdData">
                             <br />
                             <?php if (count($this->foundFiles) == 0): ?>
-                                CATS has not found any files to import in /upload/.<br />
+                                CATS no ha encontrado ningún archivo para importar / cargar /.<br />
                                 <br />
                             <?php else: ?>
                                 <span id="foundFilesSpan">
-                                    CATS has found <?php echo(count($this->foundFiles)); ?> files to import.<br />
+                                    CATS ha encontrado <?php echo(count($this->foundFiles)); ?> archivos para importar.<br />
                                     <br />
                                 </span>
                             <?php endif; ?>
-                            <input class="button" type="button" value="Back" id="back" onclick="document.location.href='?m=import';">&nbsp;
+                            <input class="button" type="button" value="Atrás" id="back" onclick="document.location.href='?m=import';">&nbsp;
                             <span id="nextScreenButton" style="display:none; font-weight:bold;">
                             </span>
                             <?php if (count($this->foundFiles) != 0): ?>
-                                <input type="button" class="button" id="startImport" value="Start import" onclick="startMassImport();" />
+                                <input type="button" class="button" id="startImport" value="Iniciar Importación" onclick="startMassImport();" />
                                 <span id="pleaseWaitImport" style="display:none;">
                                     <br /><br/>
-                                    Please wait, importing resumes...
+                                        Espere, importando currículums...
                                     <span id="progressBar">
                                         <br /><br />
                                         <div id="empty" style="background-color:#eeeeee;border:1px solid black;height:20px;width:300px;padding:0px;" align="left">
@@ -107,7 +107,7 @@
                                     <br />
                                     <br />
                                     Processing resume <span id="processingResumeNumber"></span> / <?php echo(count($this->foundFiles)); ?>...<br /><br />
-                                    <input class="button" type="button" value="Abort" id="back" onclick="abortImport=true;">&nbsp;
+                                    <input class="button" type="button" value="Cancelar" id="back" onclick="abortImport=true;">&nbsp;
                                 </span>
                             <?php endif; ?>
                             <br />

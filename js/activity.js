@@ -44,66 +44,66 @@ function Activity_fillTypeSelect(selectList, selectedText)
     /* Call option. */
     optionElements[0] = document.createElement('option');
     optionElements[0].value = ACTIVITY_CALL;
-    optionElements[0].appendChild(document.createTextNode('Call'));
+    optionElements[0].appendChild(document.createTextNode('Llamada'));
 
     /* Call (Talked) option. */
     optionElements[1] = document.createElement('option');
     optionElements[1].value = ACTIVITY_CALL_TALKED;
-    optionElements[1].appendChild(document.createTextNode('Call (Talked)'));
+    optionElements[1].appendChild(document.createTextNode('Llamada (Hablada)'));
 
     /* Call (LVM) option. */
     optionElements[2] = document.createElement('option');
     optionElements[2].value = ACTIVITY_CALL_LVM;
-    optionElements[2].appendChild(document.createTextNode('Call (LVM)'));
+    optionElements[2].appendChild(document.createTextNode('Llamada (LVM)'));
 
     /* Call (Missed) option. */
     optionElements[3] = document.createElement('option');
     optionElements[3].value = ACTIVITY_CALL_MISSED;
-    optionElements[3].appendChild(document.createTextNode('Call (Missed)'));
+    optionElements[3].appendChild(document.createTextNode('Llamada (Perdida)'));
 
     /* Email option. */
     optionElements[4] = document.createElement('option');
     optionElements[4].value = ACTIVITY_EMAIL;
-    optionElements[4].appendChild(document.createTextNode('E-Mail'));
+    optionElements[4].appendChild(document.createTextNode('C-Electrónico'));
 
     /* Meeting option. */
     optionElements[5] = document.createElement('option');
     optionElements[5].value = ACTIVITY_MEETING;
-    optionElements[5].appendChild(document.createTextNode('Meeting'));
+    optionElements[5].appendChild(document.createTextNode('Cita'));
 
     /* Other option. */
     optionElements[6] = document.createElement('option');
     optionElements[6].value = ACTIVITY_OTHER;
-    optionElements[6].appendChild(document.createTextNode('Other'));
+    optionElements[6].appendChild(document.createTextNode('Otra'));
 
     /* Select the correct option. */
     if (selectedText)
     {
-        if (selectedText == 'Call')
+        if (selectedText == 'Llamada')
         {
             optionElements[0].setAttribute('selected', 'selected');
         }
-        else if (selectedText == 'Call (Talked)')
+        else if (selectedText == 'Llamada (Hablada)')
         {
             optionElements[1].setAttribute('selected', 'selected');
         }
-        else if (selectedText == 'Call (LVM)')
+        else if (selectedText == 'Llamada (LVM)')
         {
             optionElements[2].setAttribute('selected', 'selected');
         }
-        else if (selectedText == 'Call (Missed)')
+        else if (selectedText == 'Llamada (Perdida)')
         {
             optionElements[3].setAttribute('selected', 'selected');
         }
-        else if (selectedText == 'E-Mail')
+        else if (selectedText == 'C-Electrónico')
         {
             optionElements[4].setAttribute('selected', 'selected');
         }
-        else if (selectedText == 'Meeting')
+        else if (selectedText == 'Cita')
         {
             optionElements[5].setAttribute('selected', 'selected');
         }
-        else if (selectedText == 'Other')
+        else if (selectedText == 'Otra')
         {
             optionElements[6].setAttribute('selected', 'selected');
         }
@@ -180,7 +180,7 @@ function Activity_editEntry(activityID, dataItemID, dataItemType, sessionCookie)
 
         if (!http.responseXML)
         {
-            var errorMessage = "An error occurred while receiving a response from the server.\n\n"
+            var errorMessage = "Se produjo un error al recibir una respuesta del servidor.\n\n"
                              + http.responseText;
             alert(errorMessage);
             return;
@@ -196,7 +196,7 @@ function Activity_editEntry(activityID, dataItemID, dataItemType, sessionCookie)
         {
             if (errorMessageNode.firstChild)
             {
-                var errorMessage = "An error occurred while receiving a response from the server.\n\n"
+                var errorMessage = "Se produjo un error al recibir una respuesta del servidor..\n\n"
                                  + errorMessageNode.firstChild.nodeValue;
                 alert(errorMessage);
             }
@@ -250,7 +250,7 @@ function Activity_editEntry(activityID, dataItemID, dataItemType, sessionCookie)
         notesTextArea.className = 'inputbox';
 
         /* The .replace regex strips HTML. */
-        if (notesTD.firstChild && notesTD.innerHTML != '(No Notes)')
+        if (notesTD.firstChild && notesTD.innerHTML != '(Sin Notas)')
         {
             notesTextArea.appendChild(
                 document.createTextNode(
@@ -262,13 +262,13 @@ function Activity_editEntry(activityID, dataItemID, dataItemType, sessionCookie)
         /* Create a submit button. */
         var submitButton = document.createElement('input');
         submitButton.setAttribute('type', 'submit');
-        submitButton.setAttribute('value', 'Submit');
+        submitButton.setAttribute('value', 'Enviar');
         submitButton.className = 'input-button';
 
         /* Create a cancel button. */
         var cancelButton = document.createElement('input');
         cancelButton.setAttribute('type', 'button');
-        cancelButton.setAttribute('value', 'Cancel');
+        cancelButton.setAttribute('value', 'Cancelar');
         cancelButton.className = 'input-button';
 
         /* Date editor. */
@@ -457,7 +457,7 @@ function Activity_submitEditedEntry(notes, date, hour, minute, ampm,
         {
             if (errorMessageNode.firstChild)
             {
-                var errorMessage = "An error occurred while receiving a response from the server.\n\n"
+                var errorMessage = "Se produjo un error al recibir una respuesta del servidor.\n\n"
                                  + errorMessageNode.firstChild.nodeValue;
                 alert(errorMessage);
             }
@@ -513,7 +513,7 @@ function Activity_submitEditedEntry(notes, date, hour, minute, ampm,
 
 function Activity_deleteEntry(activityID, sessionCookie)
 {
-    if (!confirm('Delete this activity?'))
+    if (!confirm('¿Eliminar esta actividad?'))
     {
         return false;
     }
@@ -547,7 +547,7 @@ function Activity_deleteEntry(activityID, sessionCookie)
         {
             if (errorMessageNode.firstChild)
             {
-                var errorMessage = "An error occurred while receiving a response from the server.\n\n"
+                var errorMessage = "Se produjo un error al recibir una respuesta del servidor.\n\n"
                                  + errorMessageNode.firstChild.nodeValue;
                 alert(errorMessage);
             }

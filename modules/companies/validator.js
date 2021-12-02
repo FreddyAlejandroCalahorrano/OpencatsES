@@ -91,7 +91,7 @@ function checkName()
     fieldLabel = document.getElementById('nameLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar un Nombre.\n";
+        errorMessage = "    - Debe ingresar un Nombre.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -111,7 +111,7 @@ function checkSearchName()
     fieldLabel = document.getElementById('wildCardStringLabel_name');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar algún texto de búsqueda.\n";
+        errorMessage = "    - Debe ingresar algún texto de búsqueda.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -131,7 +131,7 @@ function checkSearchKeyTechnologies()
     fieldLabel = document.getElementById('wildCardStringLabel_keyTechnologies');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar algún texto de búsqueda.\n";
+        errorMessage = "    - Debe ingresar algún texto de búsqueda.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -151,7 +151,7 @@ function checkFilename()
     fieldLabel = document.getElementById('file');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar un archivo para subir.\n";
+        errorMessage = "    - Debe ingresar un archivo para subir.\n";
 
         fieldLabel.style.color = '#ff0000';
     }

@@ -163,7 +163,7 @@ use OpenCATS\UI\QuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td class="vertical">Candidatos:</td>
+                                <td class="vertical">Pipelines:</td>
                                 <td class="data"><?php $this->_($this->data['pipeline']) ?></td>
                             </tr>
 

@@ -82,7 +82,7 @@ function checkFirstName()
     fieldLabel = document.getElementById('firstNameLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar un nombre.\n";
+        errorMessage = "    - Debe ingresar un nombre.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -102,7 +102,7 @@ function checkLastName()
     fieldLabel = document.getElementById('lastNameLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar un apellido.\n";
+        errorMessage = "    - Debe ingresar un apellido.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -123,7 +123,7 @@ function checkCompany()
 
     if (isNaN(fieldValue) || fieldValue <= 0)
     {
-        errorMessage = "    - Debes seleccionar una empresa.\n";
+        errorMessage = "    - Debe seleccionar una empresa.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -163,7 +163,7 @@ function checkSearchFullName()
     fieldLabel = document.getElementById('wildCardStringLabel_fullName');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar algún texto de búsqueda.\n";
+        errorMessage = "    - Debe ingresar algún texto de búsqueda.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -183,7 +183,7 @@ function checkSearchCompanyName()
     fieldLabel = document.getElementById('wildCardStringLabel_companyName');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar algún texto de búsqueda.\n";
+        errorMessage = "    - Debe ingresar algún texto de búsqueda.\n";
 
         fieldLabel.style.color = '#ff0000';
     }

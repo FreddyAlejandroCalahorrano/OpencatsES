@@ -7,11 +7,11 @@
                 <font color="green"><?php echo count($this->importedCandidates); ?></font> Candidate<?php echo count($this->importedCandidates) != 1 ? 's' : ''; ?> Imported
                 </span>
                 <p />
-                A candidate has all applicable information (such as name, address, skill set) on file
-                and can be added to job orders and included in reports and actions. The uploaded resume
-                documents are attached to the candidate record for later viewing and searches.
+                Un candidato tiene toda la información aplicable (como nombre, dirección, conjunto de habilidades) en el archivo
+                y puede agregarse a las órdenes de trabajo e incluirse en informes y acciones. El currículum subido
+                Los documentos se adjuntan al registro del candidato para su posterior visualización y búsqueda..
                 <p />
-                <b>Imported Candidates:</b>
+                <b>Candidatos Importados:</b>
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #F8FAFF; padding: 10px; border: 1px solid #A5BAE9;">
                     <?php $col = false; for ($i=0; $i<count($this->importedCandidates) && $i<=10; $i++): $candidate = $this->importedCandidates[$i]; ?>
                     <tr>
@@ -23,7 +23,7 @@
                     <?php if ($i == 10 && count($this->importedCandidates) > 10): ?>
                     <tr>
                         <td nowrap="nowrap"<?php echo (($col = !$col) ? ' style="background-color: #EDF3FF;"' : ''); ?>>
-                            ... <span style="color: #666666; font-style: italic;"><?php echo number_format(count($this->importedCandidates)-10,0); ?> candidates not shown</span>
+                            ... <span style="color: #666666; font-style: italic;"><?php echo number_format(count($this->importedCandidates)-10,0); ?> Candidatos no mostrados</span>
                         </td>
                     </tr>
                     <?php endif; ?>
@@ -32,7 +32,7 @@
                 <?php if (count($this->importedDuplicates)): ?>
                 <br />
                 <span style="font-weight: bold; color: #800000;">
-                <?php echo number_format(count($this->importedDuplicates), 0); ?> candidates were duplicates and not added.
+                <?php echo number_format(count($this->importedDuplicates), 0); ?> Los candidatos fueron duplicados y no añadidos.
                 </span>
                 <?php endif; ?>
             </td>
@@ -42,14 +42,14 @@
             <?php endif; ?>
             <td <?php if (LicenseUtility::isParsingEnabled()): ?>width="45%" <?php endif; ?>valign="top">
                 <span style="font-size: 18px; font-weight: bold;">
-                <font color="blue"><?php echo count($this->importedDocuments); ?></font> Resume Document<?php echo count($this->importedDocuments) != 1 ? 's' : ''; ?> Saved
+                <font color="blue"><?php echo count($this->importedDocuments); ?></font> Reanudar Documento<?php echo count($this->importedDocuments) != 1 ? 's' : ''; ?> Guardado
                 </span>
                 <p />
-                A resume document is a file that cannot be converted into a candidate because it's missing key
-                information (like the candidate's name). These files have been saved and are full-text searchable. They
-                must be converted into candidates manually.
+                Un documento de currículum es un archivo que no se puede convertir en un candidato porque le falta una clave
+                información (como el nombre del candidato). Estos archivos se han guardado y se pueden buscar en texto completo. Ellos
+                deben convertirse en candidatos manualmente.
                 <p />
-                <b>Resume Documents:</b>
+                <b>Resumen del Documento:</b>
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #F8FAFF; padding: 10px; border: 1px solid #A5BAE9;">
                     <?php $col = false; for ($i=0; $i<count($this->importedDocuments) && $i<=10; $i++): $document = $this->importedDocuments[$i]; ?>
                     <tr>
@@ -72,14 +72,14 @@
             <td colspan="3" valign="top" style="padding-top: 20px;">
                 <br /><br />
                 <span style="font-size: 18px; font-weight: bold;">
-                <font color="red"><?php echo count($this->importedFailed); ?></font> Document<?php echo count($this->importedFailed) != 1 ? 's' : ''; ?> Failed to be Imported
+                <font color="red"><?php echo count($this->importedFailed); ?></font> Documento<?php echo count($this->importedFailed) != 1 ? 's' : ''; ?> No se pudo importar
                 </span>
                 <p />
-                A document fails to import because it's either corrupt or CATS doesn't know how to open it. You
-                could try to convert these files to CATS-friendly formats like Microsoft Word, Adobe PDF or as
-                plain text files using the appropriate application.
+                Un documento no se puede importar porque está dañado o CATS no sabe cómo abrirlo. usted
+                podría intentar convertir estos archivos a formatos compatibles con CATS como Microsoft Word, Adobe PDF o como
+                archivos de texto sin formato utilizando la aplicación adecuada.
                 <p />
-                <b>Failed Documents:</b>
+                <b>Documentos Fallidos:</b>
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #F8FAFF; padding: 10px; border: 1px solid #A5BAE9;">
                     <?php $col = false; for ($i=0; $i<count($this->importedFailed); $i++): $failed = $this->importedFailed[$i]; ?>
                     <tr>

@@ -11,13 +11,13 @@
                     <td width="3%">
                         <img src="images/reports.gif" width="24" height="24" border="0" alt="Import" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Import Data</h2></td>
+                    <td><h2>Importar Datos</h2></td>
                 </tr>
             </table>
 
             <?php if (isset($this->successMessage)): ?>
 
-                <p class="note">Success</p>
+                <p class="note">Éxito</p>
 
                 <table class="searchTable">
                     <tr>
@@ -31,16 +31,16 @@
 
             <?php endif; ?>
 
-            <p class="note">Pending Commits</p>
+            <p class="note">Compromisos Pendientes</p>
 
             <table class="searchTable">
                 <tr>
                     <td>
                         <?php foreach ($this->data as $data): ?>
-                            Import #<?php echo($data['importID']); ?> - <?php echo($data['addedLines']); ?> entries added to database.<br />
-                            <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=revert&amp;importID=<?php echo($data['importID']) ?>';" value="Revert Import" class="button">
-                            <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=commit&amp;importID=<?php echo($data['importID']) ?>';" value="Commit Import" class="button">
-                            <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=viewerrors&amp;importID=<?php echo($data['importID']) ?>';" value="View Errors" class="button">
+                            Importar #<?php echo($data['importID']); ?> - <?php echo($data['addedLines']); ?> entradas agregadas a la base de datos.<br />
+                            <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=revert&amp;importID=<?php echo($data['importID']) ?>';" value="Revertir Importación" class="button">
+                            <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=commit&amp;importID=<?php echo($data['importID']) ?>';" value="Confirmar Importación" class="button">
+                            <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=viewerrors&amp;importID=<?php echo($data['importID']) ?>';" value="Ver Errores" class="button">
                             <br /><br />
                         <?php endforeach; ?>
                     </td>
@@ -50,7 +50,7 @@
 
             <?php if (isset($this->importErrors)): ?>
 
-                <p class="note">Errors Reported by Import</p>
+                <p class="note">Errores Notificados por la Importación</p>
 
                 <table class="searchTable" width="740">
                     <tr>
@@ -59,8 +59,8 @@
                         </td>
                     </tr>
                 </table>
-                <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=revert&amp;importID=<?php echo($this->importID); ?>';" value="Revert Import" class="button">
-                <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=commit&amp;importID=<?php echo($this->importID); ?>';" value="Commit Import" class="button">
+                <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=revert&amp;importID=<?php echo($this->importID); ?>';" value="Revertir Importación" class="button">
+                <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=commit&amp;importID=<?php echo($this->importID); ?>';" value="Confirmar Importación" class="button">
 
             <?php endif; ?>
 

@@ -19,8 +19,8 @@
                     <td><h2>Contactos: Inicio</h2></td>
                     <td align="right">
                         <form name="contactsViewSelectorForm" id="contactsViewSelectorForm" action="<?php echo(CATSUtility::getIndexName()); ?>" method="get">
-                            <input type="hidden" name="m" value="contactos" />
-                            <input type="hidden" name="a" value="listarPorvista" />
+                            <input type="hidden" name="m" value="Contactos" />
+                            <input type="hidden" name="a" value="listar por Vista" />
 
                             <table class="viewSelector">
                                 <tr>

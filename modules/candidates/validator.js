@@ -28,7 +28,7 @@ function checkEditForm(form)
 {
     var errorMessage = '';
 
-    errorMessage += checkFirstName();
+    errorMessage += checkFirstName();zsççç
     errorMessage += checkLastName();
 
     if (errorMessage != '')
@@ -141,7 +141,7 @@ function checkFirstName()
     fieldLabel = document.getElementById('firstNameLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar un nombre.\n";
+        errorMessage = "    - Debe ingresar un nombre.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -161,7 +161,7 @@ function checkLastName()
     fieldLabel = document.getElementById('lastNameLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar un apellido.\n";
+        errorMessage = "    - Debe ingresar un apellido.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -181,7 +181,7 @@ function checkSearchFullName()
     fieldLabel = document.getElementById('wildCardStringLabel_fullName');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar algún texto de búsqueda.\n";
+        errorMessage = "    - Debe ingresar algún texto de búsqueda.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -201,7 +201,7 @@ function checkSearchKeySkills()
     fieldLabel = document.getElementById('wildCardStringLabel_keySkills');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar algún texto de búsqueda.\n";
+        errorMessage = "    - Debe ingresar algún texto de búsqueda.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -221,7 +221,7 @@ function checkSearchResume()
     fieldLabel = document.getElementById('wildCardStringLabel_resume');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar algún texto de búsqueda.\n";
+        errorMessage = "    - Debe ingresar algún texto de búsqueda.\n";
 
         fieldLabel.style.color = '#ff0000';
     }

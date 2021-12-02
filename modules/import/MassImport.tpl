@@ -11,22 +11,22 @@
                         <td class="stepColumn<?php if ($this->step == 1): ?>Selected<?php endif; ?>">
                             <span style="font-size: 18px; font-weight: bold;">Step 1</span>
                             <br />
-                            Upload resume documents
+                            Cargar documentos de currículum
                         </td>
                         <td class="stepColumn<?php if ($this->step == 2): ?>Selected<?php endif; ?>">
                             <span style="font-size: 18px; font-weight: bold;">Step 2</span>
                             <br />
-                            Process Documents
+                            Procesar Documentos
                         </td>
                         <td class="stepColumn<?php if ($this->step == 3): ?>Selected<?php endif; ?>">
                             <span style="font-size: 18px; font-weight: bold;">Step 3</span>
                             <br />
-                            Review
+                            Revisar
                         </td>
                         <td class="stepColumn<?php if ($this->step == 4): ?>Selected<?php endif; ?>">
-                            <span style="font-size: 18px; font-weight: bold;">Step 4</span>
+                            <span style="font-size: 18px; font-weight: bold;">Paso 4</span>
                             <br />
-                            Finish Up
+                            Finalizar
                         </td>
                     </tr>
                 </table>

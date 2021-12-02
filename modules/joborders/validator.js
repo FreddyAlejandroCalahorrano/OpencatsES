@@ -123,7 +123,7 @@ function checkCity()
     fieldLabel = document.getElementById('cityLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Usted debe ingresar una ciudad.\n";
+        errorMessage = "    - Debe ingresar una ciudad.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -143,7 +143,7 @@ function checkState()
     fieldLabel = document.getElementById('stateLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar a una provincia.\n";
+        errorMessage = "    - Debe ingresar a una provincia.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -163,7 +163,7 @@ function checkCompany()
     fieldLabel = document.getElementById('companyIDLabel');
     if (fieldValue <= 0)
     {
-        errorMessage = "    - Debes seleccionar una empresa.\n";
+        errorMessage = "    - Debe seleccionar una empresa.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -183,7 +183,7 @@ function checkRecruiter()
     fieldLabel = document.getElementById('recruiterLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes seleccionar un reclutador.\n";
+        errorMessage = "    - Debe seleccionar un reclutador.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -203,7 +203,7 @@ function checkOwner()
     fieldLabel = document.getElementById('ownerLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes seleccionar un dueño.\n";
+        errorMessage = "    - Debe seleccionar un dueño.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -223,7 +223,7 @@ function checkOpenings()
     fieldLabel = document.getElementById('openingsLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar una cantidad de vacantes.\n\n";
+        errorMessage = "    - Debe ingresar una cantidad de vacantes.\n\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -249,7 +249,7 @@ function checkOpeningsAvailable()
     fieldLabel = document.getElementById('openingsAvailableLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar una cantidad de vacantes.\n";
+        errorMessage = "    - Debe ingresar una cantidad de vacantes.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -285,7 +285,7 @@ function checkSearchJobTitle()
     fieldLabel = document.getElementById('wildCardStringLabel_jobTitle');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar algún texto de búsqueda.\n";
+        errorMessage = "    - Debe ingresar algún texto de búsqueda.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -305,7 +305,7 @@ function checkSearchCompanyName()
     fieldLabel = document.getElementById('wildCardStringLabel_companyName');
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar algún texto de búsqueda.\n";
+        errorMessage = "    - Debe ingresar algún texto de búsqueda.\n";
 
         fieldLabel.style.color = '#ff0000';
     }

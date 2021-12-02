@@ -45,11 +45,11 @@ class JobOrderStatuses
         'Pre-Open' => array('Upcoming', 'Lead')
     );
     private static $_defaultFilters = array(
-        'Active / On Hold / Full',
-        'Active',
-        'On Hold / Full',
-        'Closed / Canceled',
-        'Upcoming / Lead'
+        'Activo / En espera / Completo',
+        'Activo',
+        'En espera / Completo',
+        'Cerrado / Cancelado',
+        'A la Cabeza'
     );
     private static $_defaultSharingStatuses = array('Active');
     private static $_defaultStatisticsStatuses = array('Active', 'OnHold', 'Full', 'Closed');

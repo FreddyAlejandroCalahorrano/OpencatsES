@@ -1,0 +1,1 @@
+UPDATE calendar_event_type SET short_description = 'LLamada1' WHERE short_description = 'LLamada'

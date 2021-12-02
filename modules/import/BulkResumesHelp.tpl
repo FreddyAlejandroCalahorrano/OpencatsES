@@ -2,14 +2,14 @@
 <?php TemplateUtility::printModalHeader('Login'); ?>
         <div align="center">
             <p style="background-image: url('images/blue_gradient.jpg'); background-repeat: repeat-x; padding: 4px; margin-top: 0px; margin-bottom: 8px; width: 100%; font: normal normal bold  12px/120% Verdana, Tahoma, sans-serif; color: #F6F6F6;">
-                 Bulk Resumes
+                Currículums Masivos
             </p>
             <br />
             <div style="font: normal normal 12px Arial, Tahoma, sans-serif">
-                With bulk resumes, you can quickly upload many resumes into the system and
-                make them searchable.  When searching for resume keywords, when you see
-                a bulk resume you wish to convert into a candidate, simply click the
-                <img src="images/candidate_tiny.gif" height="12"> icon on the search result.
+                Con los currículums masivos, puede cargar rápidamente muchos currículums en el sistema y
+                hacer que se puedan buscar. Cuando busque palabras clave de currículum, cuando vea
+                un currículum masivo que desea convertir en un candidato, simplemente haga clic en el
+                <img src="images/candidate_tiny.gif" height="12"> icono en el resultado de la búsqueda.
                 <br />
             </div>
             <br />

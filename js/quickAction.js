@@ -37,7 +37,7 @@ quickAction.LinkMenuOption.prototype.getOption = function()
 
 quickAction.LinkMenuOption.prototype.getHtml = function()
 {
-    var message = "'Are you sure?'";
+    var message = "'¿Estas seguro?'";
     var result;
     switch(this.getOption())
     {
@@ -82,7 +82,7 @@ quickAction.DefaultMenu.prototype.getId = function()
 quickAction.DefaultMenu.prototype.getOptions = function()
 {
     return [
-        new quickAction.MenuOption('Add To List', 'showQuickActionAddToList(' +  this.menuDataItemType + ', ' + this.menuDataItemId + ');')
+        new quickAction.MenuOption('Agregar a la Lista', 'showQuickActionAddToList(' +  this.menuDataItemType + ', ' + this.menuDataItemId + ');')
     ];
 };
 

@@ -79,7 +79,7 @@ use OpenCATS\UI\QuickActionMenu;
                         <!-- CONTACT INFO -->
 
                             <tr>
-                                <td class="vertical">Contacto de Faturación:</td>
+                                <td class="vertical">Contacto de Facturación:</td>
                                 <td class="data">
                                     <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=contacts&amp;a=show&amp;contactID=<?php echo($this->data['billingContact']); ?>">
                                         <?php $this->_($this->data['billingContactFullName']); ?>

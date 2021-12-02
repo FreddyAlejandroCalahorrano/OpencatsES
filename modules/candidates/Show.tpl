@@ -103,7 +103,7 @@ use OpenCATS\UI\CandidateDuplicateQuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td class="vertical">Teéfono del Trabajo:</td>
+                                <td class="vertical">Teléfono del Trabajo:</td>
                                 <td class="data"><?php $this->_($this->data['phoneWork']); ?></td>
                             </tr>
 
@@ -558,7 +558,7 @@ use OpenCATS\UI\CandidateDuplicateQuickActionMenu;
 <?php if (!$this->isPopup): ?>
             <?php if ($this->getUserAccessLevel('candidates.considerForJobSearch') >= ACCESS_LEVEL_EDIT): ?>
                 <a href="#" onclick="showPopWin('<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=considerForJobSearch&amp;candidateID=<?php echo($this->candidateID); ?>', 750, 390, null); return false;">
-                    <img src="images/consider.gif" width="16" height="16" class="absmiddle" alt="Add to Job Order" border="0" />&nbsp;Agregar este Candidato a la Orden de Trabajo
+                    <img src="images/consider.gif" width="16" height="16" class="absmiddle" alt="Agregar este Candidato a la Orden de Trabajo" border="0" />&nbsp;Agregar este Candidato a la Orden de Trabajo
                 </a>
             <?php endif; ?>
 <?php endif; ?>
@@ -622,7 +622,7 @@ use OpenCATS\UI\CandidateDuplicateQuickActionMenu;
             <div id="addActivityDiv">
                 <?php if ($this->getUserAccessLevel('pipelines.addActivityChangeStatus') >= ACCESS_LEVEL_EDIT): ?>
                     <a href="#" id="addActivityLink" onclick="showPopWin('<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=addActivityChangeStatus&amp;candidateID=<?php echo($this->candidateID); ?>&amp;jobOrderID=-1', 600, 480, null); return false;">
-                        <img src="images/new_activity_inline.gif" width="16" height="16" class="absmiddle" title="Log an Activity / Change Status" alt="Log an Activity / Change Status" border="0" />&nbsp;Registrar una Actividad
+                        <img src="images/new_activity_inline.gif" width="16" height="16" class="absmiddle" title="Log an Activity / Change Status" alt="Registrar una Actividad" border="0" />&nbsp;Registrar una Actividad
                     </a>
                 <?php endif; ?>
                 <img src="images/indicator2.gif" id="addActivityIndicator" alt="" style="visibility: hidden; margin-left: 5px;" height="16" width="16" />

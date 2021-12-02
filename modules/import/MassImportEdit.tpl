@@ -12,7 +12,7 @@
                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tr>
                                 <td align="left" valign="middle" class="infoBarText">
-                                    Candidate Details
+                                    Detalles del Candidato
                                 </td>
                                 <td align="right" valign="middle" class="infoFileText">
                                     &nbsp;
@@ -26,10 +26,10 @@
                     <table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding-top: 10px;">
                         <tr>
                             <td style="font-size: 14px; padding-top: 10px;">
-                                <b>* - Fields that are required for this document to be converted into a candidate.</b>
+                                <b>* - Campos que son obligatorios para que este documento se convierta en candidato.</b>
                             </td>
                             <td align="right" valign="bottom">
-                                <input type="submit" value="Save ->" style="cursor: pointer;" />
+                                <input type="submit" value="Guardar ->" style="cursor: pointer;" />
                             </td>
                         </tr>
                     </table>
@@ -40,7 +40,7 @@
                                 <div class="parsedData">
                                     <table cellpadding="0" cellpadding="0">
                                         <tr>
-                                            <td class="fieldCell fieldTitle">First Name:</td>
+                                            <td class="fieldCell fieldTitle">Nombre:</td>
                                             <td class="fieldCell">
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -57,7 +57,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="fieldCell fieldTitle">Last Name: *</td>
+                                            <td class="fieldCell fieldTitle">Apellido: *</td>
                                             <td class="fieldCell">
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -74,7 +74,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="fieldCell fieldTitle">Address:</td>
+                                            <td class="fieldCell fieldTitle">Dirección:</td>
                                             <td class="fieldCell">
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -91,7 +91,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="fieldCell fieldTitle">City:</td>
+                                            <td class="fieldCell fieldTitle">Ciudad:</td>
                                             <td class="fieldCell">
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -108,7 +108,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="fieldCell fieldTitle">State:</td>
+                                            <td class="fieldCell fieldTitle">Provincia:</td>
                                             <td class="fieldCell">
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -125,7 +125,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="fieldCell fieldTitle">Zip Code:</td>
+                                            <td class="fieldCell fieldTitle">Código Postal:</td>
                                             <td class="fieldCell">
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -142,7 +142,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="fieldCell fieldTitle">E-mail: *</td>
+                                            <td class="fieldCell fieldTitle">Correo Electrónico: *</td>
                                             <td class="fieldCell">
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -159,7 +159,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="fieldCell fieldTitle">Phone:</td>
+                                            <td class="fieldCell fieldTitle">Teléfono:</td>
                                             <td class="fieldCell">
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -177,7 +177,7 @@
                                         </tr>
                                         <tr>
                                             <td class="fieldCell fieldTitle" colspan="2">
-                                                Skills:
+                                                Habilidades:
                                                 <br />
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -195,7 +195,7 @@
                                         </tr>
                                         <tr>
                                             <td class="fieldCell fieldTitle" colspan="2">
-                                                Education:
+                                                Educación:
                                                 <br />
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>
@@ -213,7 +213,7 @@
                                         </tr>
                                         <tr>
                                             <td class="fieldCell fieldTitle" colspan="2">
-                                                Experience:
+                                                Experiencia:
                                                 <br />
                                                 <table cellpadding="0" cellspacing="0" border="0">
                                                     <tr>

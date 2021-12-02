@@ -20,7 +20,7 @@ function checkAddForm(form)
 
     if (errorMessage != '')
     {
-        alert("Form Error:\n" + errorMessage);
+        alert("Error de Formulario:\n" + errorMessage);
         return false;
     }
     return true;
@@ -86,7 +86,7 @@ function checkDescription(mode)
     }
     if (fieldValue == '')
     {
-        errorMessage = "    - Debes ingresar una descripción.\n";
+        errorMessage = "    - Debe ingresar una descripción.\n";
 
         fieldLabel.style.color = '#ff0000';
     }

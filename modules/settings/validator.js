@@ -41,7 +41,7 @@ function checkChangePasswordForm(form)
 
     if (errorMessage != '')
     {
-        alert("Form Error:\n" + errorMessage);
+        alert("Error de Formulario:\n" + errorMessage);
         return false;
     }
 
@@ -65,7 +65,7 @@ function checkAddUserForm(form)
 
     if (errorMessage != '')
     {
-        alert("Form Error:\n" + errorMessage);
+        alert("Error de Formulario:\n" + errorMessage);
         return false;
     }
 
@@ -82,7 +82,7 @@ function checkEditUserForm(form)
 
     if (errorMessage != '')
     {
-        alert("Form Error:\n" + errorMessage);
+        alert("Error de Formulario:\n" + errorMessage);
         return false;
     }
 
@@ -97,7 +97,7 @@ function checkSiteNameForm(form)
 
     if (errorMessage != '')
     {
-        alert("Form Error:\n" + errorMessage);
+        alert("Error de Formulario:\n" + errorMessage);
         return false;
     }
 
@@ -113,7 +113,7 @@ function checkUserFirstName()
     fieldLabel = document.getElementById('firstNameLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter a first name.\n";
+        errorMessage = "    - Debe Ingresar un Nombre.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -133,7 +133,7 @@ function checkUserLastName()
     fieldLabel = document.getElementById('lastNameLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter a last name.\n";
+        errorMessage = "    - Debe Ingresar un Apellido.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -153,7 +153,7 @@ function checkUserUsername()
     fieldLabel = document.getElementById('usernameLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter a username.\n";
+        errorMessage = "    - Debe Ingresar un Nombre de Usuario.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -173,7 +173,7 @@ function checkUserPassword()
     fieldLabel = document.getElementById('passwordLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter a password.\n";
+        errorMessage = "    - Debe Ingresar una Contraseña.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -193,7 +193,7 @@ function checkUserRetypePassword()
     fieldLabel = document.getElementById('retypePasswordLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter a password in both fields.\n";
+        errorMessage = "    - Debe Ingresar una Contraseña en Ambos Campos.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -217,7 +217,7 @@ function checkUserPasswordsMatch()
 
     if (fieldValue1 != fieldValue2)
     {
-        errorMessage = "    - The two passwords you entered do not match.\n";
+        errorMessage = "    - Las dos Contraseñas que Ingresó no Coinciden.\n";
 
         fieldLabel1.style.color = '#ff0000';
         fieldLabel2.style.color = '#ff0000';
@@ -239,7 +239,7 @@ function checkCurrentPassword()
     fieldLabel = document.getElementById('currentPasswordLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter your current password.\n";
+        errorMessage = "    - Debe Ingresar su Contraseña Actual\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -259,7 +259,7 @@ function checkNewPassword()
     fieldLabel = document.getElementById('newPasswordLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter a new password.\n";
+        errorMessage = "    - Debe Ingresar una Nueva Contraseña.\n";
 
         fieldLabel.style.color = '#FF0000';
     }
@@ -279,7 +279,7 @@ function checkRetypeNewPassword()
     fieldLabel = document.getElementById('retypeNewPasswordLabel');
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter your new password in both fields.\n";
+        errorMessage = "    - Debe Ingresar su Nueva Contraseña en Ambos Campos.\n";
 
         fieldLabel.style.color = '#ff0000';
     }
@@ -303,7 +303,7 @@ function checkPasswordsMatch()
 
     if (fieldValue1 != fieldValue2)
     {
-        errorMessage = "    - The two passwords you entered do not match.\n";
+        errorMessage = "    - Las dos Contraseñas que Ingresó no Coinciden.\n";
 
         fieldLabel1.style.color = '#ff0000';
         fieldLabel2.style.color = '#ff0000';
@@ -325,7 +325,7 @@ function checkValidSiteName()
 
     if (fieldValue == '')
     {
-        errorMessage = "    - You must enter a Site Name.\n";
+        errorMessage = "    - Debe Ingresar un Nombre de Sitio.\n";
 
         fieldLabel.style.color = '#ff0000';
     }

@@ -11,7 +11,7 @@
                     <td width="3%">
                         <img src="images/reports.gif" width="24" height="24" border="0" alt="Import" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Import Data</h2></td>
+                    <td><h2>Importar Datos</h2></td>
                 </tr>
             </table>
 
@@ -31,7 +31,7 @@
 
             <?php elseif (isset($this->successMessage)): ?>
 
-                <p class="note" id="importHide0">Success</p>
+                <p class="note" id="importHide0">Éxito</p>
 
                 <table class="searchTable" id="importHide1">
                     <tr>
@@ -45,12 +45,12 @@
 
             <?php elseif (isset($this->pendingCommits)): ?>
 
-                <p class="warning" id="importHide0">Notice</p>
+                <p class="warning" id="importHide0">Aviso</p>
 
                 <table class="searchTable" id="importHide1">
                     <tr>
                         <td>
-                            You have recently imported CSV data.  You can click here to review or delete the imported data.<br />
+                            Recientemente ha importado datos CSV. Puede hacer clic aquí para revisar o eliminar los datos importados.<br />
                             <input type="button" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=viewpending';" value="View Recent Imports" class="button" />
                         </td>
                     </tr>
@@ -60,12 +60,13 @@
 
 
             <?php else: ?>
-                <p class="note" id="importHide0">Warning!</p>
+                <p class="note" id="importHide0">Advertencia!</p>
 
                 <table class="searchTable" id="importTable1" width="100%">
                     <tr>
-                        <td>CATS may discard or fail to read some of the submitted data which it does not
-                        understand how to use. Do not discard the original data!
+                        <td>
+                            CATS puede descartar o no leer algunos de los datos importados que no
+                            entiende cómo utilizar. ¡No deseche los datos originales!
                         </td>
                     </tr>
 
@@ -74,18 +75,18 @@
                 <br />
             <?php endif; ?>
 
-            <p class="warning" id="importShow0" style="display:none;">PLEASE WAIT!</p>
+            <p class="warning" id="importShow0" style="display:none;">ESPERE POR FAVOR!</p>
 
             <table class="searchTable" id="importShow1" style="display:none;">
                 <tr>
                     <td>
-                        Please wait! Importing data may take a few minutes.<br />
+                        ¡Espere por favor! La importación de datos puede tardar unos minutos.<br />
                         <img src="images/loading.gif" />
                     </td>
                 </tr>
             </table>
 
-            <p class="note" id="importHide2">Import Data</p>
+            <p class="note" id="importHide2">Importar Datos</p>
 
             <form name="importDataForm" id="importDataForm" action="<?php echo(CATSUtility::getIndexName()); ?>?m=import&amp;a=import&amp;#step2" enctype="multipart/form-data" method="post" autocomplete="off" <?php if (isset($this->contactsUploadNotice) && $this->contactsUploadNotice): ?> onsubmit="return checkField(<?php echo(count($this->theFields)); ?>, 'company_id', 'You must have 1 field set as Company.') && showLoading();"<?php else: ?> onsubmit="return showLoading();"<?php endif; ?>>
                 <input type="hidden" name="postback" id="postback" value="postback" />
@@ -99,13 +100,13 @@
 
                     <tr>
                         <td class="tdVertical">
-                            <label id="dataContainingDisabledLabel" for="dataContainingDisabled">File Format:</label>
+                            <label id="dataContainingDisabledLabel" for="dataContainingDisabled">Formato de Archivo:</label>
                         </td>
                         <td class="tdData">
                             <?php if ($this->dataContaining == 'tab'): ?>
-                                Tab Delimited Data
+                                Datos Delimitados por Tabuciones
                             <?php elseif ($this->dataContaining == 'csv'): ?>
-                                Comma Delimited Data (CSV)
+                                Datos Delimitados por Comas (CSV)
                             <?php endif; ?>
 
                         </td>
@@ -113,15 +114,15 @@
 
                     <tr>
                         <td class="tdVertical">
-                            <label id="importIntoLabel" for="importIntoDisabled">Import Into:</label>
+                            <label id="importIntoLabel" for="importIntoDisabled">Importar en:</label>
                         </td>
                         <td class="tdData">
                             <?php if ($this->importInto == 'Candidates'): ?>
-                                <img src="images/candidate_inline.gif">&nbsp;Candidates
+                                <img src="images/candidate_inline.gif">&nbsp;Candidatos
                             <?php elseif ($this->importInto == 'Companies'): ?>
-                                <img src="images/mru/company.gif">&nbsp;Companies
+                                <img src="images/mru/company.gif">&nbsp;Empresas
                             <?php elseif ($this->importInto == 'Contacts'): ?>
-                                <img src="images/mru/contact.gif">&nbsp;Contacts
+                                <img src="images/mru/contact.gif">&nbsp;Contactos
                             <?php endif; ?>
                         </td>
                     </tr>
@@ -133,39 +134,39 @@
             <br />
 
 
-            <p class="note" id="importHide5"><a name="step2">Map Data</a></p>
+            <p class="note" id="importHide5"><a name="step2">Mapa de Datos</a></p>
 
             <?php if (isset($this->contactsUploadNotice) && $this->contactsUploadNotice): ?>
 
             <table class="searchTable" id="importHide6">
                 <tr>
                     <td>
-                        You are importing data into Contacts. Each contact is required to have an associated
-                        Company.<br /><br />
+                        Estás importando datos a Contactos. Cada contacto debe tener asociado una
+                        Empresa.<br /><br />
 
-                        If you wish, CATS can create the companies for each company who is not in the database. The
-                        company's contact information will be identical to the first contacts contact information.
+                        Si lo desea, CATS puede crear las empresas para cada empresa que no se encuentre en la base de datos.
+                        La información de contacto de la empresa será idéntica a la información de contacto de los primeros contactos.
                         <br /><br />
 
-                        For example, if adding John Smith listed as being associated to Fun Industries, and John
-                        Smith is listed as having work address '1234 Fun St.', then CATS can create the company Fun
-                        Industries with address '1234 Fun St.'.<br /><br />
+                        Por ejemplo, si agrega John Smith como asociado a Fun Industries, y John
+                        Smith figura con la dirección de trabajo '1234 Fun St.', luego CATS puede crear la empresa Fun
+                        Industrias con dirección '1234 Fun St.'.<br /><br />
 
-                        If you choose not to generate company data, then contacts with unknown companies will not be
-                        imported.<br /><br />
+                        Si elige no generar datos de la empresa, los contactos con empresas desconocidas no serán
+                        importados.<br /><br />
 
-                        <span class="bold">Should CATS generate the company data automatically?</span><br />
+                        <span class="bold">¿Debería CATS generar los datos de la empresa automáticamente??</span><br />
                         <select id="generateCompanies" name="generateCompanies" class ="inputBox" style="width: 260px;" onchange="evaluateUnnamedContacts();">
-                            <option value="yes" selected="selected">Yes, generate assocated company data.</option>
-                            <option value="no">No, just import the contacts.</option>
+                            <option value="yes" selected="selected">Sí, generar datos de empresa asociados.</option>
+                            <option value="no">No, solo importa los contactos.</option>
                         </select>
                         <br />
                         <span id='unnamedContactsSpan'>
                         <br />
-                        <span class="bold">If there is no name for the companies contact, should CATS name the contact 'nobody' and add it to the company?</span><br />
+                        <span class="bold">Si no hay un nombre para el contacto de la empresa, ¿CATS debería nombrar el contacto "nadie" y agregarlo a la empresa?</span><br />
                         <select id="unnamedContacts" name="unnamedContacts" class ="inputBox" style="width: 260px;">
-                            <option value="yes" selected="selected">Yes, add a name as necessary.</option>
-                            <option value="no">No, throw out these records.</option>
+                            <option value="yes" selected="selected">Sí, agregue un nombre según sea necesario.</option>
+                            <option value="no">No, elimine estos registros.</option>
                         </select>
                         </span>
                     </td>
@@ -177,8 +178,8 @@
 
             <table class="searchTable" id="importHide9">
                 <tr>
-                    <td>The following fields were detected in your data. Please pick where to put the
-                    data from each field, then press import at the bottom.</td>
+                    <td>siguientes campos en sus datos. Elija dónde poner los
+                        datos de cada campo, luego presione importar en la parte inferior.</td>
                 </tr>
             </table>
 
@@ -196,17 +197,17 @@
                                     <?php $match = true; ?>
                                 <?php endif; ?>
                             <?php endforeach; ?>
-                            <a href="javascript:void(0);" onclick="showSampleData(<?php echo($fieldIndex); ?>);" onmouseout="hideSampleData(<?php echo($fieldIndex); ?>);" title="Sample Data">
+                            <a href="javascript:void(0);" onclick="showSampleData(<?php echo($fieldIndex); ?>);" onmouseout="hideSampleData(<?php echo($fieldIndex); ?>);" title="Data de Muestra">
                                 <img src="images/mru/contact.gif" alt="" border="0" />
                             </a>
                             &nbsp;
                             <select id="importType<?php echo($fieldIndex); ?>" name="importType<?php echo($fieldIndex); ?>" class="inputbox" style="width: 230px;" onchange="evaluateFieldSelection(<?php echo($fieldIndex); ?>);">
-                                <option value="">Do not import.</option>
-                                <option value="cats" <?php if ($match): ?>selected<?php endif; ?>>Import as a <?php echo($this->importInto); ?> field.</option>
-                                <?php if ($this->isSA): ?><option value="foreign">Add field to Extra Fields and Import.</option><?php endif; ?>
+                                <option value="">No importar.</option>
+                                <option value="cats" <?php if ($match): ?>selected<?php endif; ?>>Importar como <?php echo($this->importInto); ?> campo.</option>
+                                <?php if ($this->isSA): ?><option value="foreign">Agregar campo a Campos Adicionales e Importar.</option><?php endif; ?>
                             </select>
                             <span <?php if (!$match): ?>style="display:none;"<?php endif; ?> id="importIntoSpan<?php echo($fieldIndex); ?>">
-                                &nbsp;<?php echo($this->importInto); ?> Field:&nbsp;
+                                &nbsp;<?php echo($this->importInto); ?> Campo:&nbsp;
                                 <select id="importIntoField<?php echo($fieldIndex); ?>" name="importIntoField<?php echo($fieldIndex); ?>" class="inputbox" style="width: 180px;">
                                     <?php for ($i = 0; $i < count($this->importTypes); $i += 2): ?>
                                         <option value='<?php echo($this->importTypes[$i+1]); ?>' <?php if ($match && strtolower($theField) == strtolower($this->importTypes[$i])): ?>selected<?php endif; ?>><?php echo($this->importTypes[$i]); ?></option>
@@ -218,7 +219,7 @@
                                 <table class="searchTable">
                                     <tr>
                                         <td>
-                                            <span class="bold">Sample Data:</span>
+                                            <span class="bold">Datos de Muestra</span>
 
                                             <?php $fieldsDisplayed = 0; ?>
                                             <?php for ($i = 0; $i < 20; $i++): ?>
@@ -227,7 +228,7 @@
                                                 <?php endif; ?>
                                             <?php endfor; ?>
                                             <?php if ($fieldsDisplayed == 0): ?>
-                                                <br /><i>(none)</i>
+                                                <br /><i>(ninguno)</i>
                                             <?php endif; ?>
                                         </td>
                                     </tr>
@@ -239,8 +240,8 @@
                 <?php endforeach; ?>
             </table>
 
-            <input type="reset"  class="button" name="reset"  id="importHide8"  value="Reset" onclick="for (var i = 0; i < <?php echo(count($this->theFields)); ?>; i++) evaluateFieldSelection(i); " />&nbsp;
-            <input type="submit" class="button" name="submit" id="importHide7" value="Next - Import data" />&nbsp;
+            <input type="reset"  class="button" name="reset"  id="importHide8"  value="Reiniciar" onclick="for (var i = 0; i < <?php echo(count($this->theFields)); ?>; i++) evaluateFieldSelection(i); " />&nbsp;
+            <input type="submit" class="button" name="submit" id="importHide7" value="Siguiente: Importar Datos" />&nbsp;
             </form>
         </div>
     </div>

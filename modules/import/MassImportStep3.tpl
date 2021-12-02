@@ -3,11 +3,11 @@
         <table cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr>
                 <td align="left" valign="middle" class="infoBarText">
-                    Review
+                    Revisar
                 </td>
                 <td align="right" valign="middle" class="infoFileText">
-                    <b><?php echo LicenseUtility::isParsingEnabled() ? 'Parsed and ' : ''; ?>Ready to Import</b> <?php echo number_format($cnt = count($this->documents), 0); ?>
-                    resume document<?php echo $cnt != 1 ? 's' : ''; ?>
+                    <b><?php echo LicenseUtility::isParsingEnabled() ? 'Parsed and ' : ''; ?>Listo para Importar</b> <?php echo number_format($cnt = count($this->documents), 0); ?>
+                    resumen del documento<?php echo $cnt != 1 ? 's' : ''; ?>
                 </td>
             </tr>
         </table>
@@ -16,10 +16,10 @@
     <div class="resultsScroller">
         <table cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr>
-                <td class="dataColumnTitle" width="30%">File</td>
-                <td class="dataColumnTitle" width="20%">Name</td>
-                <td class="dataColumnTitle" width="23%">Location</td>
-                <td class="dataColumnTitle" width="27%">E-mail</td>
+                <td class="dataColumnTitle" width="30%">Archivo</td>
+                <td class="dataColumnTitle" width="20%">Nombre</td>
+                <td class="dataColumnTitle" width="23%">Localización</td>
+                <td class="dataColumnTitle" width="27%">Correo Electrónico</td>
                 <td align="middle" width="16" style="background-color: #DDECFE;"><img src="images/scrollTop.jpg" border="0" width="16" height="16" onmousedown="startGridScrollUp();" onmouseup="endScrolling();" style="cursor: pointer;" /></td>
             </tr>
         <?php for($row=0; $row<8; $row++): ?>
@@ -39,16 +39,16 @@
 
     <div style="font-size: 14px;">
         <?php if (LicenseUtility::isParsingEnabled()): ?>
-            CATS has attempted to extract relevant information like contact data, education and skill sets automatically.
-            This process is <b>not</b> an exact science and can sometimes guess incorrectly (or not at all). Click on a
-            row above to find out more information.
+            CATS ha intentado extraer información relevante como datos de contacto, educación y conjuntos de habilidades de forma automática.
+            Este proceso <b>no</b> es una ciencia exacta y, a veces, puede adivinar incorrectamente (o no adivinar nada). Haga clic en un
+            fila de arriba para obtener más información.
             <br />
-            <b>Please review these results carefully and make any necessary changes before importing them!</b>
+            <b>¡Revise estos resultados detenidamente y realice los cambios necesarios antes de importarlos!</b>
         <?php else: ?>
-            By default, these documents will be imported as <u>searchable</u> resume files and <b>not</b> as candidates.
+            De forma predeterminada, estos documentos se importarán como <u>buscables</u> y <b>no</b> como candidatos.
             <br /><br />
-            <b>To import candidates: </b>Click on a document and manually enter information like name and
-            e-mail address. The document will then be imported as a candidate.
+            <b>Para importar candidatos: </b>Haga clic en un documento e ingrese manualmente información como el nombre y
+            la dirección de correo electrónico. Luego, el documento se importará como candidato.
         <?php endif; ?>
     </div>
 

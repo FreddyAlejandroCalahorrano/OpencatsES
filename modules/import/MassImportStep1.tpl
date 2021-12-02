@@ -12,49 +12,49 @@ You have <?php echo number_format(count($this->documents), 0); ?> document<?php 
 <?php if ($this->multipleFilesEnabled): ?>
     <span style="font-size: 16px;">
     <?php if ($this->uploadPath !== false): ?>
-        To import multiple files, move or copy your resume documents to the following directory on the computer
-        that hosts CATS:
+        Para importar varios archivos, mueva o copie sus documentos de currículum al siguiente directorio en la computadora
+        que aloja CATS:
         <br /><br />
 
         <b><?php echo $this->uploadPath; ?></b>
 
         <br /><br />
-        Once you have resumes in this folder, <a href="<?php echo CATSUtility::getIndexName(); ?>?m=import&a=importSelectType&typeOfImport=resume">
-        reload</a> this page to start the import process.
+        Una vez que tenga currículums en esta carpeta, <a href="<?php echo CATSUtility::getIndexName(); ?>?m=import&a=importSelectType&typeOfImport=resume">
+        recargar</a> esta página para iniciar el proceso de importación.
 
         <br /><br />
 
         <?php if (LicenseUtility::isProfessional()): ?>
-        If you need any assistance, please contact the CATS support team.</br >
+        Si necesita ayuda, comuníquese con el equipo de soporte de CATS.</br >
         <?php else: ?>
-        If you need assistance in uploading files to your web server, contact your system administrator.<br />
+        Si necesita ayuda para cargar archivos en su servidor web, comuníquese con el administrador del sistema.<br />
         <?php endif; ?>
     <?php else: ?>
-        In order to import resume documents into CATS, you need to create a directory named "<b>upload</b>" on the computer
-        that hosts cats. This directory needs to have its permissions set to allow files to be created by your
-        web server.
+        Para importar documentos de currículum a CATS, debe crear un directorio llamado "<b>upload</b>" en la computadora
+        que alberga CATS. Este directorio debe tener sus permisos configurados para su
+        Servidor Web.
         <br /><br />
-        <b>Linux Instructions:</b>
+        <b>Instrucciones de Linux:</b>
         <br />
         <blockquote>
         <span style="color: #c0c0c0;">&gt;</span> mkdir /PATH/TO/CATS/upload<br />
         <span style="color: #c0c0c0;">&gt;</span> chmod -R 777 /PATH/TO/CATS/upload
         </blockquote>
         <br />
-        <b>Windows Instructions:</b>
+        <b>Instrucciones de Windows:</b>
         <blockquote>
-        <span style="color: #c0c0c0;">&gt;</span> Create a folder named <b>upload</b> in the directory you installed CATS.<br />
-        <span style="color: #c0c0c0;">&gt;</span> Set the appropriate permissions by right clicking the file and selecting <b>Properties</b>, then <b>Security</b>.<br />
-        <span style="color: #c0c0c0;">&gt;</span> Make sure all users have access to read, write and delete files and directories.
+        <span style="color: #c0c0c0;">&gt;</span> Crea una carpeta llamada <b>upload</b> en el directorio que instalaste CATS.<br />
+        <span style="color: #c0c0c0;">&gt;</span> Establezca los permisos apropiados haciendo clic derecho en el archivo y seleccionando <b>Propiedades</b>, luego <b>Seguridad</b>.<br />
+        <span style="color: #c0c0c0;">&gt;</span> Asegúrese de que todos los usuarios tengan acceso para leer, escribir y eliminar archivos y directorios.
         </blockquote>
     <?php endif; ?>
     </span>
 
 
 <?php else: ?>
-    The automated bulk resume import feature has been temporarily disabled.<br /><br />
-    To import resumes into the bulk resume pool, please contact <a href="mailto:support@catsone.com">support@catsone.com</a>
-    for assistance from the CATS team.
+    La función de importación automática de currículums masivos se ha desactivado temporalmente.<br /><br />
+    Para importar currículums al grupo de currículums masivos, comuníquese con <a href="mailto:support@catsone.com">support@catsone.com</a>
+    para obtener ayuda del equipo CATS.
     <br />
 
 
@@ -72,28 +72,28 @@ You have <?php echo number_format(count($this->documents), 0); ?> document<?php 
             <td align="left" valign="top">
                 <span style="font-size: 16px;">
                 <?php if (LicenseUtility::isProfessional()): ?>
-                You are a registered CATS Professional user <b><?php echo LicenseUtility::getName(); ?></b>.
+                   Eres un usuario profesional de CATS registrado <b><?php echo LicenseUtility::getName(); ?></b>.
                 <?php elseif (LicenseUtility::isOpenSource()): ?>
-                <b>You are a registered open source user of CATS.</b>
+                <b>Eres un usuario de código abierto registrado de CATS.</b>
                 <?php endif; ?>
                 </span>
 
                 <p />
                 <?php if ((is_array($status = LicenseUtility::getParsingStatus()) && $status['parseLimit'] == -1)): ?>
                     <span style="font-size: 14px; color: #333333;">
-                    You have unlimited use of the Resfly parsing service, which searches your resume files for contact
-                    and resume information. CATS will import all applicable resume documents as candidates.
+                    Tiene uso ilimitado del servicio de análisis de Resfly, que busca contactos en sus archivos de currículum
+                    y reanudar la información. CATS importará todos los documentos de currículum correspondientes como candidatos.
                     </span>
                 <?php else: ?>
                     <span style="font-size: 14px; color: #333333;">
-                    Your resume documents will be imported as searchable documents but <b>not</b> as candidates unless
-                    you manually complete the required fields for each document (first and last names).
+                    Los documentos de su currículum se importarán como documentos de búsqueda, pero <b>no</b> como candidatos a menos que
+                    completes manualmente los campos obligatorios para cada documento (nombre y apellido).
                     <br /><br />
-                    With the
-                    Resfly parsing service, much of the candidate's information can be imported automatically.
+                    Con el
+                    Servicio de análisis de Resfly, gran parte de la información del candidato se puede importar automáticamente.
                     <br />
-                    Consider <a href="http://www.catsone.com/?a=getcats" style="font-size: 14px;" target="_blank">upgrading to CATS Professional</a>
-                    for unlimited use of this service.
+                    Considerar <a href="http://www.catsone.com/?a=getcats" style="font-size: 14px;" target="_blank">actualizar a CATS Professional</a>
+                    para el uso ilimitado de este servicio.
                     </span>
                 <?php endif; ?>
             </td>

@@ -5,7 +5,7 @@
     <?php $currentDocument = 0; ?>
 <?php endif; ?>
 <div style="font-size: 22px; font-weight: bold; text-align: center; margin: 60px 0 60px 0; color: #666666;">
-Please wait whilst OpenCATS processes your resume documents...
+    Espere mientras OpenCATS procesa sus documentos de currículum...
 <br />
 <span style="font-size: 14px; color: #666666;" id="timeWait">&nbsp;</span>
 </div>
@@ -18,7 +18,7 @@ Please wait whilst OpenCATS processes your resume documents...
 <div>
     <table cellpadding="0" cellspacing="0">
         <tr>
-            <td style="color: #666666;" width="409" align="right">Processing: &nbsp;</td>
+            <td style="color: #666666;" width="409" align="right">Procesando: &nbsp;</td>
             <td id="fileName" style="color: #163C90; font-weight: bold;">"<?php echo (isset($this->files) && isset($this->files[$currentDocument])) ? $this->files[$currentDocument]['realName'] : ''; ?>"</td>
             <td><span style="color: #666666;">...</span></td>
         </tr>

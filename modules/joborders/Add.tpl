@@ -15,7 +15,7 @@
                 </tr>
             </table>
 
-            <p class="note">Agregue una nueva Orden de Trabajo al sistema.</p>
+            <p class="note">Agregue una nueva Orden de Trabajo al Sistema.</p>
 
             <?php if ($this->noCompanies): ?>
                 <table style="margin-top: 8px; width: 50%;" class="selectView">

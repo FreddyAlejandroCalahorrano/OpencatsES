@@ -11,12 +11,12 @@
                     <td width="3%">
                         <img src="images/reports.gif" width="24" height="24" border="0" alt="Import" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Import: Error</h2></td>
+                    <td><h2>Importar: Error</h2></td>
                 </tr>
             </table>
 
             <p class="fatalError">
-                A fatal error has occurred.<br />
+                Ha ocurrido un error fatal.<br />
                 <br />
                 <?php echo($this->errorMessage); ?>
             </p>

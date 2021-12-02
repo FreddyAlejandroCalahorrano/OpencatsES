@@ -924,7 +924,7 @@ class ContactsDataGrid extends DataGrid
                                      'pagerOptional'  => true,
                                      'filter'         => 'CONCAT(owner_user.first_name, owner_user.last_name)'),
 
-            'Propietario' =>       array('select'   => 'DATE_FORMAT(contact.date_created, \'%m-%d-%y\') AS dateCreated',
+            'Creado' =>       array('select'   => 'DATE_FORMAT(contact.date_created, \'%m-%d-%y\') AS dateCreated',
                                      'pagerRender'      => 'return $rsData[\'dateCreated\'];',
                                      'sortableColumn'     => 'dateCreatedSort',
                                      'pagerWidth'    => 60,

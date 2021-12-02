@@ -12,7 +12,7 @@
                     <td class="tdData"><input type="file" id="file" name="file" /></td>
                 </tr>
                 <tr>
-                    <td class="tdVertical">Resumen:</td>
+                    <td class="tdVertical">Currículum:</td>
                     <td>
                         <input type="radio" id="resume" name="resume" value="1" checked="checked" />Si
                         <input type="radio" id="resume" name="resume" value="0" />No

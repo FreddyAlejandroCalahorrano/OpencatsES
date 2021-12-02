@@ -34,7 +34,7 @@ $interface = new SecureAJAXInterface();
 
 if (!$interface->isRequiredIDValid('candidateJobOrderID', false))
 {
-    $interface->outputXMLErrorPage(-1, 'Invalid candidate-joborder ID.');
+    $interface->outputXMLErrorPage(-1, 'ID de Candidato - Orden de Trabajo no Válido.');
     die();
 }
 
@@ -50,17 +50,17 @@ foreach ($pipelineActivitiesRS as $rowIndex => $row)
 {
     if (empty($pipelineActivitiesRS[$rowIndex]['notes']))
     {
-        $pipelineActivitiesRS[$rowIndex]['notes'] = '(No Notes)';
+        $pipelineActivitiesRS[$rowIndex]['notes'] = '(Sin Notas)';
     }
 }
 
 /* Output HTML. */
-echo '<div class="noteUnsizedSpan">Activity History:</div>',
+echo '<div class="noteUnsizedSpan">Historial de Actividad:</div>',
      '<table>';
 
 if (empty($pipelineActivitiesRS))
 {
-    echo '<tr><td>No activity entries could be found.</td></tr>';
+    echo '<tr><td>No se Pudieron Encontrar Entradas de Actividad.</td></tr>';
 }
 else
 {
