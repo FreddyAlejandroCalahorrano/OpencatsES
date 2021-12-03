@@ -62,7 +62,7 @@
             <!-- /JO -->
 
             <!-- Candidates -->
-            <p class="note">Resultados de Candidatos/p>
+            <p class="note">Resultados de Candidatos</p>
             <?php if (!empty($this->candidatesRS)): ?>
                 <table class="sortable" width="100%">
                     <tr>
