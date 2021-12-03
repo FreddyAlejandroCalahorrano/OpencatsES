@@ -979,19 +979,19 @@ class TemplateUtility
         switch ($dataItemType)
         {
             case DATA_ITEM_CANDIDATE:
-                return 'Candidate';
+                return 'Candidato';
                 break;
 
             case DATA_ITEM_COMPANY:
-                return 'Company';
+                return 'Empresa';
                 break;
 
             case DATA_ITEM_CONTACT:
-                return 'Contact';
+                return 'Contacto';
                 break;
 
             case DATA_ITEM_JOBORDER:
-                return 'Joborder';
+                return 'Órd. Trabajo';
                 break;
 
             default:
