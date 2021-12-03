@@ -101,7 +101,7 @@
                     <img src="images/actions/edit.gif" width="16" height="16" class="absmiddle" style="border: none;" alt="edit user" />&nbsp;Editar
                 </a>
             <?php else: ?>
-                <input type="button" name="back" class = "button" value="Back" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings';" />
+                <input type="button" name="back" class = "button" value="Regresar" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings';" />
             <?php endif; ?>
             <br clear="all" />
             <br />

@@ -11,28 +11,28 @@
                     <td width="3%">
                         <img src="images/settings.gif" width="24" height="24" border="0" alt="Settings" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Settings: My Profile</h2></td>
+                    <td><h2>Ajustes: Mi Perfil</h2></td>
                 </tr>
             </table>
 
 	    <?php if ($this->auth_mode == "ldap"): ?>
-		<p class="note">LDAP Enabled. Password cannot be changed from OpenCATS</p>
+		<p class="note">LDAP Activado. La contraseña no se puede cambiar desde OpenCATS</p>
 	    <?php endif; ?>
-            <p class="note">Change Password</p>
+            <p class="note">Cambiar la Contraseña</p>
 
             <form name="changePasswordForm" id="changePasswordForm" action="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=changePassword" method="post" onsubmit="return checkChangePasswordForm(document.changePasswordForm);">
                 <input type="hidden" name="postback" id="postback" value="postback" />
 
 
                 <?php if ($this->isDemoUser): ?>
-                    Note that as a demo user, you do not have privileges to modify any settings.
+                    Tenga en cuenta que, como usuario de demostración, no tiene privilegios para modificar ninguna configuración.
                     <br /><br />
                 <?php endif; ?>
 
                 <table class="searchTable">
                     <tr>
                         <td colspan="2">
-                            <span class="bold">Change Password</span>
+                            <span class="bold">Cambiar la Contraseña</span>
                             <br />
                             <br />
                             <span id='passwordErrorMessage' style="font:smaller; color: red">
@@ -46,7 +46,7 @@
 
                     <tr>
                         <td>
-                            <label id="currentPasswordLabel" for="currentPassword">Current Password:</label>&nbsp;
+                            <label id="currentPasswordLabel" for="currentPassword">Contraseña Actual:</label>&nbsp;
                         </td>
                         <td>
                             <input type="password" class="inputbox" id="currentPassword" name="currentPassword" />&nbsp;*
@@ -55,7 +55,7 @@
 
                     <tr>
                         <td>
-                            <label id="newPasswordLabel" for="newPassword">New Password:</label>&nbsp;
+                            <label id="newPasswordLabel" for="newPassword">Nueva Contraseña:</label>&nbsp;
                         </td>
                         <td>
                             <input type="password" class="inputbox" id="newPassword" name="newPassword" />&nbsp;*
@@ -64,7 +64,7 @@
 
                     <tr>
                         <td>
-                            <label id="retypeNewPasswordLabel" for="retypeNewPassword">Retype New Password:</label>&nbsp;
+                            <label id="retypeNewPasswordLabel" for="retypeNewPassword">Repita la Contraseña:</label>&nbsp;
                         </td>
                         <td>
                             <input type="password" class="inputbox" id="retypeNewPassword" name="retypeNewPassword" />&nbsp;*
@@ -74,9 +74,9 @@
                     <tr>
                         <td colspan="2">
                             <br />
-                            <input type="submit" class="button" id="changePassword" name="changePassword" value="Change Password" />
-                            <input type="reset"  class="button" id="reset"          name="reset"          value="Reset" />
-                            <input type="button" name="back" class = "button" value="Back" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings';" />
+                            <input type="submit" class="button" id="changePassword" name="changePassword" value="Cambiar la Contraseña" />
+                            <input type="reset"  class="button" id="reset"          name="reset"          value="Borrar" />
+                            <input type="button" name="back" class = "button" value="Regresar" onclick="document.location.href='<?php echo(CATSUtility::getIndexName()); ?>?m=settings';" />
                        </td>
                     </tr>
                 </table>

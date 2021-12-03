@@ -371,7 +371,7 @@ use OpenCATS\UI\QuickActionMenu;
                                     <img src="images/actions/email.gif" width="16" height="16" alt="" class="absmiddle" border="0" title="Send E-Mail (<?php $this->_($contactsData['email1']); ?>)"/>
                                 </a>
                             <?php else: ?>
-                                <img src="images/actions/email_no.gif" title="No E-Mail Address" width="16" height="16" alt="" class="absmiddle" border="0" />
+                                <img src="images/actions/email_no.gif" title="Sin Dirección de Correo Electrónico" width="16" height="16" alt="" class="absmiddle" border="0" />
                             <?php endif; ?>
                             <?php if ($this->getUserAccessLevel('contacts.edit') >= ACCESS_LEVEL_EDIT): ?>
                                 <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=contacts&amp;a=edit&amp;contactID=<?php $this->_($contactsData['contactID']) ?>">
