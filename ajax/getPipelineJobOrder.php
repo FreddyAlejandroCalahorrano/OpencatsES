@@ -221,7 +221,7 @@ if (!eval(Hooks::get('JO_AJAX_GET_PIPELINE'))) return;
         </th>
         <th align="left" width="40" nowrap="nowrap">
             <a href="javascript:void(0);" onclick="PipelineJobOrder_populate(<?php echo($jobOrderID); ?>, <?php echo($page); ?>, <?php echo($entriesPerPage); ?>, <?php printSortLink('state'); ?>, <?php if ($isPopup) echo(1); else echo(0); ?>, 'ajaxPipelineTable', '<?php echo($_SESSION['CATS']->getCookie()); ?>', 'ajaxPipelineTableIndicator', '<?php echo($indexFile); ?>');">
-                Loc
+                Provincia
             </a>
         </th>
         <th align="left" width="60" nowrap="nowrap">
