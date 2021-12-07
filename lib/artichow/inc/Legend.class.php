@@ -648,19 +648,19 @@ class awLegend implements awPositionable {
 
 
 		$text1 = new awText(
-			'Weekly',
+			'Semanal',
 			new Tuffy(8),
 			new Color(0, 0, 0, 0),
 			0);
 
 		$text2 = new awText(
-			'Monthly',
+			'Mensual',
 			new Tuffy(8),
 			new Color(0, 0, 0, 0),
 			0);
 			
 		$text3 = new awText(
-			'Yearly',
+			'Anual',
 			new Tuffy(8),
 			new Color(0, 0, 0, 0),
 			0);
