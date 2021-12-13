@@ -234,7 +234,7 @@
                         </td>
 
                         <td class="tdVertical">
-                            <label id="isHotLabel" for="isHot">Aspirante:</label>
+                            <label id="isHotLabel" for="isHot">Hot:</label>
                         </td>
                         <td class="tdData">
                             <input type="checkbox" tabindex="18" id="isHot" name="isHot"<?php if ($this->data['isHot'] == 1): ?> checked<?php endif; ?> />&nbsp;

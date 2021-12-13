@@ -133,7 +133,7 @@
 
                     <tr>
                         <td class="tdVertical">
-                            <label id="isHotLabel" for="isHot">Empresa Aspirante:</label>
+                            <label id="isHotLabel" for="isHot">Empresa Hot:</label>
                         </td>
                         <td class="tdData">
                             <input type="checkbox" id="isHot" name="isHot" />&nbsp;

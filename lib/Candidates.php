@@ -560,7 +560,7 @@ class Candidates
     public function getWithDuplicity($candidateID)
     {
         $data = $this->get($candidateID);
-        
+
         $sql = sprintf(
             "SELECT
                 candidate_duplicates.old_candidate_id AS duplicateTo

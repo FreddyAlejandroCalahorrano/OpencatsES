@@ -223,7 +223,7 @@
                             </td>
 
                             <td class="tdVertical">
-                                <label id="isHotLabel" for="isHot">Aspirante:</label>
+                                <label id="isHotLabel" for="isHot">Hot:</label>
                             </td>
                             <td class="tdData">
                                 <input type="checkbox" tabindex="16" id="isHot" name="isHot" />&nbsp;

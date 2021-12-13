@@ -93,7 +93,7 @@
                                             <input type="checkbox" id="isHot" name="isHot" checked />
                                         <?php else: ?>
                                             <input type="checkbox" id="isHot" name="isHot" />
-                                        <?php endif; ?>&nbsp;Empresa Aspirante
+                                        <?php endif; ?>&nbsp;Empresa Hot
                                     </td>
                                 </tr>
 

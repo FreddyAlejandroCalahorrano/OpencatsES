@@ -161,7 +161,7 @@
 
                     <tr>
                         <td class="tdVertical" valign="top" style="height: 28px;">
-                            <label id="isHotLabel" for="isHot">Aspirante a una Plaza:</label>
+                            <label id="isHotLabel" for="isHot">Candidato Hot:</label>
                         </td>
                         <td class="tdData" >
                             <input type="checkbox" id="isHot" name="isHot"<?php if ($this->data['isHot'] == 1): ?> checked<?php endif; ?> />

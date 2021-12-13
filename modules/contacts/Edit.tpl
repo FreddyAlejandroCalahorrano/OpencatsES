@@ -114,7 +114,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="isHotLabel" for="isHot">Contacto Activo:</label>
+                                        <label id="isHotLabel" for="isHot">Contacto Hot:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="checkbox" id="isHot" name="isHot"<?php if ($this->data['isHotContact'] == 1): ?> checked<?php endif; ?> />&nbsp;
