@@ -109,7 +109,7 @@ use OpenCATS\UI\QuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td class="vertical">Dueño</td>
+                                <td class="vertical">Dueño:</td>
                                 <td class="data"><?php $this->_($this->data['ownerFullName']); ?></td>
                             </tr>
 

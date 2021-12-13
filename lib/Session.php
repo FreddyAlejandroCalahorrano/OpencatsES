@@ -648,7 +648,7 @@ class CATSSession
         if ($loginStatus == LOGIN_INVALID_USER)
         {
             $this->_isLoggedIn = false;
-            $this->_loginError = 'Invalid username or password.';
+            $this->_loginError = 'Usuario o Contraseña Invalidos.';
 
             return;
         }
@@ -697,7 +697,7 @@ class CATSSession
         if (!$rs || $db->isEOF())
         {
             $this->_isLoggedIn = false;
-            $this->_loginError = 'Invalid username or password.';
+            $this->_loginError = 'Usuario o Contraseña Invalidos..';
             return;
         }
 
@@ -723,7 +723,7 @@ class CATSSession
         {
             case LOGIN_INVALID_PASSWORD:
                 $this->_isLoggedIn = false;
-                $this->_loginError = 'Invalid username or password.';
+                $this->_loginError = 'Usuario o Contraseña Invalidos..';
 
                 /* Log the login as unsuccessful. */
                 if ($addToHistory)

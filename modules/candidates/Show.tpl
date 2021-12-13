@@ -205,7 +205,7 @@ use OpenCATS\UI\CandidateDuplicateQuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td class="vertical">Propietario:</td>
+                                <td class="vertical">Dueño:</td>
                                 <td class="data"><?php $this->_($this->data['ownerFullName']); ?></td>
                             </tr>
 
