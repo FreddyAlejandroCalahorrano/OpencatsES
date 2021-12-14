@@ -29,7 +29,7 @@ class candidatesListByViewDataGrid extends CandidatesDataGrid
             array('name' => 'Ciudad', 'width' => 75),
             array('name' => 'Provincia', 'width' => 50),
             array('name' => 'Habilidades', 'width' => 215),
-            array('name' => 'Propietario', 'width' => 65),
+            array('name' => 'Dueño', 'width' => 65),
             array('name' => 'Creado', 'width' => 60),
             array('name' => 'Modificado', 'width' => 60),
         );
@@ -95,7 +95,7 @@ class candidatesSavedListByViewDataGrid extends CandidatesDataGrid
             array('name' => 'Ciudad', 'width' => 75),
             array('name' => 'Provincia', 'width' => 50),
             array('name' => 'Habilidades', 'width' => 200),
-            array('name' => 'Propietario', 'width' => 65),
+            array('name' => 'Dueño', 'width' => 65),
             array('name' => 'Modificado', 'width' => 60),
             array('name' => 'Agregado a la lista', 'width' => 75),
         );

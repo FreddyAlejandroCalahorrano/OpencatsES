@@ -92,7 +92,7 @@ class ListsDataGrid extends DataGrid
                                       'pagerWidth'     => 75,
                                       'pagerOptional'  => true,
                                       'filter'         => 'data_item_type.short_description'),
-            'Propietario' =>          array('select'   => 'owner_user.first_name AS ownerFirstName,' .
+            'Dueño' =>          array('select'   => 'owner_user.first_name AS ownerFirstName,' .
                                                     'owner_user.last_name AS ownerLastName,' .
                                                     'CONCAT(owner_user.last_name, owner_user.first_name) AS ownerSort',
                                       'join'     => 'LEFT JOIN user AS owner_user ON saved_list.created_by = owner_user.user_id',
@@ -120,7 +120,7 @@ class ListsDataGrid extends DataGrid
             array('name' => 'Descripción', 'width' => 355),
             array('name' => 'Tipo de Dato', 'width' => 75),
             array('name' => 'Tipo de Lista', 'width' => 75),
-            array('name' => 'Propietario', 'width' => 75),
+            array('name' => 'Dueño', 'width' => 75),
             array('name' => 'Creado', 'width' => 60),
             array('name' => 'Modificado', 'width' => 60),
         );

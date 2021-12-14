@@ -837,7 +837,7 @@ class CompaniesDataGrid extends DataGrid
                                      'pagerWidth'   => 80,
                                      'filter'         => 'company.url'),
 
-            'Propietario' =>         array('select'   => 'owner_user.first_name AS ownerFirstName,' .
+            'Dueño' =>         array('select'   => 'owner_user.first_name AS ownerFirstName,' .
                                                    'owner_user.last_name AS ownerLastName,' .
                                                    'CONCAT(owner_user.last_name, owner_user.first_name) AS ownerSort',
                                      'pagerRender'      => 'return StringUtility::makeInitialName($rsData[\'ownerFirstName\'], $rsData[\'ownerLastName\'], false, LAST_NAME_MAXLEN);',

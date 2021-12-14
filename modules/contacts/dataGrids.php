@@ -59,7 +59,7 @@ class ContactsListByViewDataGrid extends ContactsDataGrid
             array('name' => 'Empresa', 'width' => 135),
             array('name' => 'Título', 'width' => 135),
             array('name' => 'Teléfono del Trabajo', 'width' => 85),
-            array('name' => 'Propietario', 'width' => 85),
+            array('name' => 'Dueño', 'width' => 85),
             array('name' => 'Creado', 'width' => 60),
             array('name' => 'Modificado', 'width' => 60),
         );

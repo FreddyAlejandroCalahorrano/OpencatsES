@@ -59,7 +59,7 @@ class CompaniesListByViewDataGrid extends CompaniesDataGrid
             array('name' => 'Ciudad', 'width' => 90),
             array('name' => 'Provincia', 'width' => 50),
             array('name' => 'Teléfono', 'width' => 85),
-            array('name' => 'Propietario', 'width' => 65),
+            array('name' => 'Dueño', 'width' => 65),
             array('name' => 'Creado', 'width' => 60),
             array('name' => 'Modificado', 'width' => 60),
         );
@@ -116,7 +116,7 @@ class companiesSavedListByViewDataGrid extends CompaniesDataGrid
             array('name' => 'Ciudad', 'width' => 90),
             array('name' => 'Provincia', 'width' => 50),
             array('name' => 'Teléfono', 'width' => 85),
-            array('name' => 'Propietario', 'width' => 65),
+            array('name' => 'Dueño', 'width' => 65),
             array('name' => 'Creado', 'width' => 60),
             array('name' => 'Modificado', 'width' => 60),
         );

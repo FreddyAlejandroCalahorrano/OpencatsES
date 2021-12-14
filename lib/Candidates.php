@@ -2179,7 +2179,7 @@ class CandidatesDataGrid extends DataGrid
                                      'pagerWidth'   => 80,
                                      'filter'         => 'candidate.can_relocate'),
 
-            'Propietario' =>         array('select'   => 'owner_user.first_name AS ownerFirstName,' .
+            'Dueño' =>         array('select'   => 'owner_user.first_name AS ownerFirstName,' .
                                                    'owner_user.last_name AS ownerLastName,' .
                                                    'CONCAT(owner_user.last_name, owner_user.first_name) AS ownerSort',
                                      'join'     => 'LEFT JOIN user AS owner_user ON candidate.owner = owner_user.user_id',
