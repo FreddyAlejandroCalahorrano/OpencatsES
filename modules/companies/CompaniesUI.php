@@ -372,7 +372,7 @@ class CompaniesUI extends UserInterface
         /* Contacts for this company */
         $contacts   = new Contacts($this->_siteID);
         $contactsRS = $contacts->getAll(-1, $companyID);
-        $contactsRSWC = null;
+        $contactsRSWC = [];
 
         if (!empty($contactsRS))
         {
