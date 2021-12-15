@@ -1663,7 +1663,7 @@ class DataGrid
                 echo ('<br />');
                 $newParameterArray = $this->_parameters;
                 $newParameterArray['resetColumns'] = true;
-                echo ('<span style="font-weight:bold;">' . $this->_makeControlLink($newParameterArray) . '<img src="images/checkbox_blank.gif" alt="" border="0" />&nbsp;&nbsp;&nbsp;&nbsp;Reset to Default Columns</a></span><br />' . "\n");
+                echo ('<span style="font-weight:bold;">' . $this->_makeControlLink($newParameterArray) . '<img src="images/checkbox_blank.gif" alt="" border="0" />&nbsp;&nbsp;&nbsp;&nbsp;Restablecer columnas predeterminadas</a></span><br />' . "\n");
 
                 echo ('</div>');
             }
