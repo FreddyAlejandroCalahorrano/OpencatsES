@@ -217,7 +217,7 @@ class InfoString
         }
 
         $infoString = sprintf(
-            '<span class="bold">Candidate:</span>&nbsp;%s %s',
+            '<span class="bold">Candidato:</span>&nbsp;%s %s',
             htmlspecialchars($infoRS['firstName']),
             htmlspecialchars($infoRS['lastName'])
         );

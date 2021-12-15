@@ -49,7 +49,7 @@
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
                                         <input type="checkbox" name="onlyHotJobOrders" id="onlyHotJobOrders" <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>checked<?php endif; ?> onclick="<?php echo $this->dataGrid->getJSAddRemoveFilterFromCheckbox('IsHot', '==', '\'1\''); ?>" />
-                                        <label for="onlyHotJobOrders">Solo Órdenes de Trabajo Aspirantes</label>&nbsp;
+                                        <label for="onlyHotJobOrders">Solo Órdenes de Trabajo Hot</label>&nbsp;
                                     </td>
                                 </tr>
                             </table>
@@ -82,7 +82,7 @@
                     (<?php echo($this->dataGrid->getNumberOfRows()); ?> Elementos)
                     (<?php if ($this->dataGrid->getFilterValue('Status') != '') echo ($this->dataGrid->getFilterValue('Status')); else echo ('Todo'); ?>)
                     <?php if ($this->dataGrid->getFilterValue('OwnerID') ==  $this->userID): ?>(Solo mis Órdenes de Trabajo)<?php endif; ?>
-                    <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>(Solo Órdenes de Trabajo Aspirantes)<?php endif; ?>
+                    <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>(Solo Órdenes de Trabajo Hot)<?php endif; ?>
                 </span>
                 <span style="float:right;">
                     <?php $this->dataGrid->drawRowsPerPageSelector(); ?>

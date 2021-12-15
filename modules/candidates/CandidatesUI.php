@@ -3212,7 +3212,7 @@ class CandidatesUI extends UserInterface
             );
 
             $eventHTML = sprintf(
-                '<p>An event of type <span class="bold">%s</span> has been scheduled on <span class="bold">%s</span>.</p>',
+                '<p>Un evento de tipo <span class="bold">%s</span> ha sido programado para <span class="bold">%s</span>.</p>',
                 htmlspecialchars($eventTypeDescription),
                 htmlspecialchars($formattedDate)
 
@@ -3221,7 +3221,7 @@ class CandidatesUI extends UserInterface
         }
         else
         {
-            $eventHTML = '<p>No event has been scheduled.</p>';
+            $eventHTML = '<p>No se ha programado ningún evento.</p>';
             $eventScheduled = false;
         }
 

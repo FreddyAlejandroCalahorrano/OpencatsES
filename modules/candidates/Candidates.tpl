@@ -36,7 +36,7 @@
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
                                         <input type="checkbox" name="onlyHotCandidates" id="onlyHotCandidates" <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>checked<?php endif; ?> onclick="<?php echo $this->dataGrid->getJSAddRemoveFilterFromCheckbox('IsHot', '==', '\'1\''); ?>" />
-                                        <label for="onlyHotCandidates">Solo Candidatos Activos</label>&nbsp;
+                                        <label for="onlyHotCandidates">Solo Candidatos Hot</label>&nbsp;
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
 	                					<a href="javascript:void(0);" id="exportBoxLink<?= $md5InstanceName ?>" onclick="toggleHideShowControls('<?= $md5InstanceName ?>-tags'); return false;">Filtrar por Etiquetas</a>
