@@ -523,7 +523,7 @@ class GraphsUI extends UserInterface
         $colorArray[7] = new LinearGradient(new AlmostBlack, new White, 0);
 
         $graph = new GraphComparisonChart(
-            $y, $x, $colorArray, 'Status of Candidates', $this->width,
+            $y, $x, $colorArray, 'Estado de los candidatos', $this->width,
             $this->height, $statisticsData['totalPipeline']
         );
 
