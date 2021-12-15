@@ -33,7 +33,7 @@
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
                                         <input type="checkbox" name="onlyHotCompanies" id="onlyHotContacts" <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>checked<?php endif; ?> onclick="<?php echo $this->dataGrid->getJSAddRemoveFilterFromCheckbox('IsHot', '==', '\'1\''); ?>" />
-                                        <label for="onlyHotContacts">Solo Contactos Aspirantes</label>&nbsp;
+                                        <label for="onlyHotContacts">Solo Contactos Hot</label>&nbsp;
                                     </td>
                                 </tr>
                             </table>
@@ -63,7 +63,7 @@
                     Contactos - Página <?php echo($this->dataGrid->getCurrentPageHTML()); ?>
                     (<?php echo($this->dataGrid->getNumberOfRows()); ?> Elementos)
                     <?php if ($this->dataGrid->getFilterValue('OwnerID') ==  $this->userID): ?>(Solo Mis Contactos)<?php endif; ?>
-                    <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>(Solo Contactos Aspirantes)<?php endif; ?>
+                    <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>(Solo Contactos Hot)<?php endif; ?>
                 </span>
                 <span style="float:right;">
                     <?php $this->dataGrid->drawRowsPerPageSelector(); ?>
