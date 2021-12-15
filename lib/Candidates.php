@@ -2004,32 +2004,32 @@ class CandidatesDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'candidate.last_name'),
 
-            'E-Mail' =>         array('select'   => 'candidate.email1 AS email1',
+            'Correo Electrónico' =>         array('select'   => 'candidate.email1 AS email1',
                                      'sortableColumn'     => 'email1',
                                      'pagerWidth'    => 80,
                                      'filter'         => 'candidate.email1'),
 
-            '2nd E-Mail' =>     array('select'   => 'candidate.email2 AS email2',
+            '2do C Electrónico' =>     array('select'   => 'candidate.email2 AS email2',
                                      'sortableColumn'     => 'email2',
                                      'pagerWidth'    => 80,
                                      'filter'         => 'candidate.email2'),
 
-            'Home Phone' =>     array('select'   => 'candidate.phone_home AS phoneHome',
+            'Teléfono de Casa' =>     array('select'   => 'candidate.phone_home AS phoneHome',
                                      'sortableColumn'     => 'phoneHome',
                                      'pagerWidth'    => 80,
                                      'filter'         => 'candidate.phone_home'),
 
-            'Cell Phone' =>     array('select'   => 'candidate.phone_cell AS phoneCell',
+            'Teléfono Celular' =>     array('select'   => 'candidate.phone_cell AS phoneCell',
                                      'sortableColumn'     => 'phoneCell',
                                      'pagerWidth'    => 80,
                                      'filter'         => 'candidate.phone_cell'),
 
-            'Work Phone' =>     array('select'   => 'candidate.phone_work AS phoneWork',
+            'Teléfono del Trabajo' =>     array('select'   => 'candidate.phone_work AS phoneWork',
                                      'sortableColumn'     => 'phoneWork',
                                      'pagerWidth'    => 80,
                                      'filter'         => 'candidate.phone_work'),
 
-            'Address' =>        array('select'   => 'candidate.address AS address',
+            'Dirección' =>        array('select'   => 'candidate.address AS address',
                                      'sortableColumn'     => 'address',
                                      'pagerWidth'    => 250,
                                      'alphaNavigation' => true,
@@ -2049,17 +2049,17 @@ class CandidatesDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'candidate.state'),
 
-            'Zip' =>            array('select'  => 'candidate.zip AS zip',
+            'Código Postal' =>            array('select'  => 'candidate.zip AS zip',
                                      'sortableColumn'    => 'zip',
                                      'pagerWidth'   => 50,
                                      'filter'         => 'candidate.zip'),
 
-            'Misc Notes' =>     array('select'  => 'candidate.notes AS notes',
+            'Notas' =>     array('select'  => 'candidate.notes AS notes',
                                      'sortableColumn'    => 'notes',
                                      'pagerWidth'   => 300,
                                      'filter'         => 'candidate.notes'),
 
-            'Web Site' =>      array('select'  => 'candidate.web_site AS webSite',
+            'Sitio Web' =>      array('select'  => 'candidate.web_site AS webSite',
                                      'pagerRender'     => 'return \'<a href="\'.htmlspecialchars($rsData[\'webSite\']).\'">\'.htmlspecialchars($rsData[\'webSite\']).\'</a>\';',
                                      'sortableColumn'    => 'webSite',
                                      'pagerWidth'   => 80,
@@ -2071,7 +2071,7 @@ class CandidatesDataGrid extends DataGrid
                                      'pagerWidth'   => 210,
                                      'filter'         => 'candidate.key_skills'),
 
-            'Recent Status' => array('select'  => '(
+            'Estado Reciente' => array('select'  => '(
                                                     SELECT
                                                         CONCAT(
                                                             \'<a href="'.CATSUtility::getIndexName().'?m=joborders&amp;a=show&amp;jobOrderID=\',
@@ -2107,7 +2107,7 @@ class CandidatesDataGrid extends DataGrid
                                      'filterHaving'  => 'lastStatus',
                                      'filterTypes'   => '=~'),
 
-            'Recent Status (Extended)' => array('select'  => '(
+            'Estado Reciente (Extendido)' => array('select'  => '(
                                                     SELECT
                                                         CONCAT(
                                                             candidate_joborder_status.short_description,
@@ -2144,35 +2144,35 @@ class CandidatesDataGrid extends DataGrid
                                      'exportable' => false,
                                      'filterable' => false),
 
-            'Source' =>        array('select'  => 'candidate.source AS source',
+            'Fuente' =>        array('select'  => 'candidate.source AS source',
                                      'sortableColumn'    => 'source',
                                      'pagerWidth'   => 140,
                                      'alphaNavigation' => true,
                                      'filter'         => 'candidate.source'),
 
-            'Available' =>     array('select'   => 'DATE_FORMAT(candidate.date_available, \'%m-%d-%y\') AS dateAvailable',
+            'Fecha de Disponibilidad' =>     array('select'   => 'DATE_FORMAT(candidate.date_available, \'%m-%d-%y\') AS dateAvailable',
                                      'sortableColumn'     => 'dateAvailable',
                                      'pagerWidth'    => 60),
 
-            'Current Employer' => array('select'  => 'candidate.current_employer AS currentEmployer',
+            'Empleador Actual' => array('select'  => 'candidate.current_employer AS currentEmployer',
                                      'sortableColumn'    => 'currentEmployer',
                                      'pagerWidth'   => 125,
                                      'alphaNavigation' => true,
                                      'filter'         => 'candidate.current_employer'),
 
-            'Current Pay' => array('select'  => 'candidate.current_pay AS currentPay',
+            'Pago Actual' => array('select'  => 'candidate.current_pay AS currentPay',
                                      'sortableColumn'    => 'currentPay',
                                      'pagerWidth'   => 125,
                                      'filter'         => 'candidate.current_pay',
                                      'filterTypes'   => '===>=<'),
 
-            'Desired Pay' => array('select'  => 'candidate.desired_pay AS desiredPay',
+            'Pago Deseado' => array('select'  => 'candidate.desired_pay AS desiredPay',
                                      'sortableColumn'    => 'desiredPay',
                                      'pagerWidth'   => 125,
                                      'filter'         => 'candidate.desired_pay',
                                      'filterTypes'   => '===>=<'),
 
-            'Can Relocate'  => array('select'  => 'candidate.can_relocate AS canRelocate',
+            'Puede Reubicarse'  => array('select'  => 'candidate.can_relocate AS canRelocate',
                                      'pagerRender'     => 'return ($rsData[\'canRelocate\'] == 0 ? \'No\' : \'Yes\');',
                                      'exportRender'     => 'return ($rsData[\'canRelocate\'] == 0 ? \'No\' : \'Yes\');',
                                      'sortableColumn'    => 'canRelocate',

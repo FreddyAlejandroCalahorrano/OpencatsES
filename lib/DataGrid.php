@@ -1625,7 +1625,7 @@ class DataGrid
 
                 /* Dropdown selector to choose which columns are visible. */
                 echo ('<div class="ajaxSearchResults" id="ColumnBox'.$md5InstanceName.'" align="left" onclick="toggleHideShowControls(\''.$md5InstanceName.'\');" style="width:200px; ' . $this->globalStyle . '">' . "\n");
-                echo ('<span style="font-weight:bold; color:#000000;">Show Columns:</span><br/><br />' . "\n");
+                echo ('<span style="font-weight:bold; color:#000000;">Mostrar Columnas:</span><br/><br />' . "\n");
 
                 /* Contents of dropdown menu. */
                 foreach ($this->_classColumns as $index => $data)

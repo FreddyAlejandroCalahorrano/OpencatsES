@@ -904,7 +904,7 @@ class JobOrdersDataGrid extends DataGrid
                                       'filter'         => 'joborder.joborder_id',
                                       'filterTypes'   => '===>=<'),
 
-            'Company Job ID'  => array ('select' => 'joborder.client_job_id AS cpyJobID',
+            'ID de Trabajo de la Empresa'  => array ('select' => 'joborder.client_job_id AS cpyJobID',
                                         'sortableColumn' => 'cpyJobID',
                                         'pagerWidth'     => 65,
                                         'pagerOptional'  => true,
@@ -931,7 +931,7 @@ class JobOrdersDataGrid extends DataGrid
                                       'alphaNavigation'=> true,
                                       'filter'         => 'company.name'),
 
-            'Department' =>           array('select'   => 'company_department.name AS department',
+            'Departamento' =>           array('select'   => 'company_department.name AS department',
                                       'join'           => 'LEFT JOIN company_department ON company_department.company_department_id = joborder.company_department_id',
                                       'pagerRender'    => 'return $rsData[\'department\'];',
                                       'sortableColumn' => 'department',
@@ -974,13 +974,13 @@ class JobOrdersDataGrid extends DataGrid
                                      'pagerWidth'    => 60,
                                      'filterHaving' => 'DATE_FORMAT(joborder.date_created, \'%m-%d-%y\')'),
 
-            'Modified' =>      array('select'   => 'DATE_FORMAT(joborder.date_modified, \'%m-%d-%y\') AS dateModified',
+            'Modificado' =>      array('select'   => 'DATE_FORMAT(joborder.date_modified, \'%m-%d-%y\') AS dateModified',
                                      'pagerRender'      => 'return $rsData[\'dateModified\'];',
                                      'sortableColumn'     => 'dateModifiedSort',
                                      'pagerWidth'    => 60,
                                      'pagerOptional' => true,
                                      'filterHaving' => 'DATE_FORMAT(joborder.date_modified, \'%m-%d-%y\')'),
-            'In Pipeline' => array('select'     => '(
+            'En Pipeline' => array('select'     => '(
                                                             SELECT
                                                                 COUNT(*)
                                                             FROM
@@ -997,7 +997,7 @@ class JobOrdersDataGrid extends DataGrid
                                        'filterHaving'  => 'totalPipeline',
                                        'filterTypes'   => '===>=<'),
 
-            'Not Contacted' => array('select'   => '(
+            'No Contactado' => array('select'   => '(
                                                               SELECT
                                                                   COUNT(*)
                                                               FROM
@@ -1052,7 +1052,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'filterHaving'  => 'pipeline',
                                      'filterTypes'   => '===>=<'),
 
-             'Interviews' =>       array('select'   => '(
+             'Entrevistas' =>       array('select'   => '(
                                                              SELECT
                                                                  COUNT(*)
                                                              FROM
@@ -1093,7 +1093,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'CONCAT(recruiter_user.first_name, recruiter_user.last_name)'),
 
-            'Contact' =>       array('select'   => 'contact.first_name AS contactFirstName,' .
+            'Contacto' =>       array('select'   => 'contact.first_name AS contactFirstName,' .
                                                    'contact.last_name AS contactLastName,' .
                                                    'CONCAT(contact.last_name, contact.first_name) AS contactSort,' .
                                                    'contact.contact_id AS contactID',
@@ -1104,7 +1104,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'CONCAT(contact.first_name, contact.last_name)'),
 
-            'Contact Phone' => array('select'   => 'contact.phone_work AS contactPhone',
+            'Teléfono de Contacto' => array('select'   => 'contact.phone_work AS contactPhone',
                                      'pagerRender'      => 'return $rsData[\'contactPhone\'];',
                                      'exportRender'     => 'return $rsData[\'contactPhone\'];',
                                      'sortableColumn'     => 'contactPhone',
@@ -1112,7 +1112,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'alphaNavigation' => false,
                                      'filter'         => 'contact.phone_work'),
 
-            'City'          => array('select'   => 'joborder.city AS locationCity',
+            'Ciudad'          => array('select'   => 'joborder.city AS locationCity',
                                      'pagerRender'      => 'return $rsData[\'locationCity\'];',
                                      'exportRender'     => 'return $rsData[\'locationCity\'];',
                                      'sortableColumn'     => 'locationCity',
@@ -1120,7 +1120,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'joborder.city'),
 
-            'State'          => array('select'   => 'joborder.state AS locationState',
+            'Provincia'          => array('select'   => 'joborder.state AS locationState',
                                      'pagerRender'      => 'return $rsData[\'locationState\'];',
                                      'exportRender'     => 'return $rsData[\'locationState\'];',
                                      'sortableColumn'     => 'locationState',
@@ -1128,7 +1128,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'joborder.state'),
 
-            'Max Rate'          => array('select'   => 'joborder.rate_max AS maxRate',
+            'Tarifa Máxima'          => array('select'   => 'joborder.rate_max AS maxRate',
                                      'pagerRender'      => 'return $rsData[\'maxRate\'];',
                                      'exportRender'     => 'return $rsData[\'maxRate\'];',
                                      'sortableColumn'     => 'maxRate',
@@ -1137,7 +1137,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'filter'         => 'joborder.rate_max',
                                      'filterTypes'   => '===>=<'),
 
-            'Salary'          => array('select'   => 'joborder.salary AS salary',
+            'Salario'          => array('select'   => 'joborder.salary AS salary',
                                      'pagerRender'      => 'return $rsData[\'salary\'];',
                                      'exportRender'     => 'return $rsData[\'salary\'];',
                                      'sortableColumn'     => 'salary',
@@ -1146,7 +1146,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'filter'         => 'joborder.salary',
                                      'filterTypes'   => '===>=<'),
 
-            'Duration'          => array('select'   => 'joborder.duration AS duration',
+            'Duración'          => array('select'   => 'joborder.duration AS duration',
                                      'pagerRender'      => 'return $rsData[\'duration\'];',
                                      'exportRender'     => 'return $rsData[\'duration\'];',
                                      'sortableColumn'     => 'duration',
@@ -1155,7 +1155,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'filter'         => 'joborder.duration',
                                      'filterTypes'   => '===>=<'),
 
-            'Openings'      => array('select'   => 'joborder.openings_available AS openingsAvailable',
+            'Aspirante'      => array('select'   => 'joborder.openings_available AS openingsAvailable',
                                      'pagerRender'      => 'return $rsData[\'openingsAvailable\'];',
                                      'exportRender'     => 'return $rsData[\'openingsAvailable\'];',
                                      'sortableColumn'     => 'openingsAvailable',
@@ -1164,7 +1164,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'filter'         => 'joborder.openings_available',
                                      'filterTypes'   => '===>=<'),
 
-            'Misc Notes' =>    array('select'  => 'joborder.notes AS notes',
+            'Notas' =>    array('select'  => 'joborder.notes AS notes',
                                      'sortableColumn'    => 'notes',
                                      'pagerWidth'   => 300,
                                      'filter'         => 'joborder.notes'),
@@ -1182,7 +1182,7 @@ class JobOrdersDataGrid extends DataGrid
                                      'filterable' => false,
                                      'filterDescription' => 'Only Hot Job Orders'),
 
-            'Public/Private' => array('select'  => 'IF(joborder.public, \'Public\', \'Private\') AS public',
+            'Público/Privado' => array('select'  => 'IF(joborder.public, \'Public\', \'Private\') AS public',
                                     'sortableColumn'    => 'public',
                                     'pagerWidth'   => 50,
                                     'filter'         => 'IF(joborder.public, \'Public\', \'Private\')')

@@ -800,12 +800,12 @@ class CompaniesDataGrid extends DataGrid
                                      //'columnHeaderText' => 'O',
                                      'filterTypes'   => '===>=<'),
 
-            'Teléfono' =>     array('select'   => 'company.phone1 AS phone',
+            'Teléfono Principal' =>     array('select'   => 'company.phone1 AS phone',
                                      'sortableColumn'     => 'phone',
                                      'pagerWidth'    => 80,
                                      'filter'         => 'company.phone1'),
 
-            'Phone 2' =>     array('select'   => 'company.phone2 AS phone2',
+            'Teléfono Secundario' =>     array('select'   => 'company.phone2 AS phone2',
                                      'sortableColumn'     => 'phone2',
                                      'pagerWidth'    => 80,
                                      'filter'         => 'company.phone2'),
@@ -825,13 +825,13 @@ class CompaniesDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'company.state'),
 
-            'Zip' =>            array('select'  => 'company.zip AS zip',
+            'Código Postal' =>            array('select'  => 'company.zip AS zip',
                                      'sortableColumn'    => 'zip',
                                      'pagerWidth'   => 50,
                                      'filter'         => 'company.zip'),
 
 
-            'Web Site' =>      array('select'  => 'company.url AS webSite',
+            'Sitio Web' =>      array('select'  => 'company.url AS webSite',
                                      'pagerRender'     => 'return \'<a href="\'.htmlspecialchars($rsData[\'webSite\']).\'" target="_blank">\'.htmlspecialchars($rsData[\'webSite\']).\'</a>\';',
                                      'sortableColumn'    => 'webSite',
                                      'pagerWidth'   => 80,
@@ -847,7 +847,7 @@ class CompaniesDataGrid extends DataGrid
                                      'alphaNavigation' => true,
                                      'filter'         => 'CONCAT(owner_user.first_name, owner_user.last_name)'),
 
-            'Contact' =>       array('select'   => 'contact.first_name AS contactFirstName,' .
+            'Contacto' =>       array('select'   => 'contact.first_name AS contactFirstName,' .
                                                    'contact.last_name AS contactLastName,' .
                                                    'CONCAT(contact.last_name, contact.first_name) AS contactSort,' .
                                                    'contact.contact_id AS contactID',
@@ -872,7 +872,7 @@ class CompaniesDataGrid extends DataGrid
                                      'pagerOptional' => false,
                                      'filterHaving' => 'DATE_FORMAT(company.date_modified, \'%m-%d-%y\')'),
 
-            'Misc Notes' =>     array('select'  => 'company.notes AS notes',
+            'Notas' =>     array('select'  => 'company.notes AS notes',
                                      'sortableColumn'    => 'notes',
                                      'pagerWidth'   => 300,
                                      'filter'         => 'company.notes'),
