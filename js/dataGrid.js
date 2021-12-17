@@ -672,7 +672,7 @@ function showNewFilter(
 /* Generic message to display when a user tries to export selected, but nothing is selected. */
 function dataGridNoSelected()
 {
-    alert ('You have not selected any items!');
+    alert ('¡No ha seleccionado ningún artículo!');
 }
 
 /* Mouse handler hooks. */
