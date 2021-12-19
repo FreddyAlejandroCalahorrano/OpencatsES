@@ -428,7 +428,7 @@ class TemplateUtility
                          $savedSearchRow['searchID'], '&amp;currentURL=', $currentUrlGETString, '">';
                 }
 
-                echo '<img src="images/actions/add_small.gif" alt="" style="border: none;" title="Save This Search" /></a>&nbsp;', "\n";
+                echo '<img src="images/actions/add_small.gif" alt="" style="border: none;" title="Guardar Esta Búsqueda" /></a>&nbsp;', "\n";
 
                 $escapedURL  = htmlspecialchars($savedSearchRow['URL']);
 
@@ -485,7 +485,7 @@ class TemplateUtility
 
                 echo '<a href="', $indexName, '?m=home&amp;a=deleteSavedSearch&amp;searchID=',
                      $savedSearchRow['searchID'], '&currentURL=', $currentUrlGETString, '">',
-                     '<img src="images/actions/delete_small.gif" style="border: none;" title="Delete This Search" /></a>&nbsp;';
+                     '<img src="images/actions/delete_small.gif" style="border: none;" title="Eliminar Esta Búsqueda" /></a>&nbsp;';
 
                 echo '<a href="', $escapedURL, '&amp;savedSearchID=', $savedSearchRow['searchID'],
                      '" onclick="gotoSearch(\'', $escapedText, "', '", $escapedURL,

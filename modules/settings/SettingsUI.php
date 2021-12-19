@@ -2832,7 +2832,7 @@ class SettingsUI extends UserInterface
                 break;
 
             case LOGIN_SUCCESS:
-                $message = 'Your password has been successfully changed. Please log in again using your new password.';
+                $message = 'Su contraseña ha sido cambiada exitosamente. Vuelva a iniciar sesión con su nueva contraseña.';
                 $messageSuccess = 'true';
                 $logout = true;
                 break;

@@ -51,7 +51,7 @@
                 <?php endif; ?>
             </table>
             <?php if (AUTH_MODE != "ldap"): ?>
-                <a id="add_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=addUser" title="You have <?php $this->_($this->license['diff']); ?> user accounts remaining.">
+                <a id="add_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=addUser" title="Tienes <?php $this->_($this->license['diff']); ?> cuentas de usuario restantes.">
                     <img src="images/candidate_inline.gif" width="16" height="16" class="absmiddle" alt="add" style="border: none;" />&nbsp;Agregar Usuario
                 </a>
             <?php endif; ?>

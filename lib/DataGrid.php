@@ -1996,7 +1996,7 @@ echo ('<script type="text/javascript">setTableWidth("table'.$md5InstanceName.'",
         else
         {
             $html = sprintf(
-                '<div><div style="float:left; width:170px;">%s</div><div style="float:right; width:125px;"><a href="javascript:void(0);" onclick="if (exportArray%s.length>0) window.location.href=\'%s&i=%s&p=%s&dynamicArgument%s=\' + urlEncode(serializeArray(exportArray%s)); else dataGridNoSelected();">Selected</a></div></div>',
+                '<div><div style="float:left; width:170px;">%s</div><div style="float:right; width:125px;"><a href="javascript:void(0);" onclick="if (exportArray%s.length>0) window.location.href=\'%s&i=%s&p=%s&dynamicArgument%s=\' + urlEncode(serializeArray(exportArray%s)); else dataGridNoSelected();">Seleccionados</a></div></div>',
                 htmlspecialchars($actionTitle),
                 md5($this->_instanceName),
                 $actionURL,

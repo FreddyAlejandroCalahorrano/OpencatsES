@@ -134,8 +134,8 @@ class contactSavedListByViewDataGrid extends ContactsDataGrid
     {
         $html = '';
 
-        $html .= $this->getInnerActionAreaItem('Remove From This List', CATSUtility::getIndexName().'?m=lists&amp;a=removeFromListDatagrid&amp;dataItemType='.DATA_ITEM_CONTACT.'&amp;savedListID='.$this->getMiscArgument(), false);
-        $html .= $this->getInnerActionAreaItem('Export', CATSUtility::getIndexName().'?m=export&amp;a=exportByDataGrid');
+        $html .= $this->getInnerActionAreaItem('Eliminar de esta Lista', CATSUtility::getIndexName().'?m=lists&amp;a=removeFromListDatagrid&amp;dataItemType='.DATA_ITEM_CONTACT.'&amp;savedListID='.$this->getMiscArgument(), false);
+        $html .= $this->getInnerActionAreaItem('Exportar', CATSUtility::getIndexName().'?m=export&amp;a=exportByDataGrid');
 
         $html .= parent::getInnerActionArea();
 
