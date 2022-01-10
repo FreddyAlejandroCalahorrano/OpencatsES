@@ -2192,7 +2192,7 @@ echo ('<script type="text/javascript">setTableWidth("table'.$md5InstanceName.'",
                 $requestString .= '&' . urlencode('parameters' . $this->_instanceName) . '=' . urlencode(serialize($newParameterArray));
 
                 echo sprintf(
-                    '<span style="%s">Page <input id="pageSelection%s%s" style="width: 32px;" value="%s" onkeypress="document.getElementById(\'pageSelectionButton%s%s\').style.display=\'\';"/> of %s&nbsp;<input id="pageSelectionButton%s%s" type="button"  class="button" style="display:none;" value="Go" onclick="document.location.href=\'%s?%s&dynamicArgument%s=\' + ((document.getElementById(\'pageSelection%s%s\').value -1 ) * %s);">%s</span>',
+                    '<span style="%s">Previa <input id="pageSelection%s%s" style="width: 32px;" value="%s" onkeypress="document.getElementById(\'pageSelectionButton%s%s\').style.display=\'\';"/> de %s&nbsp;<input id="pageSelectionButton%s%s" type="button"  class="button" style="display:none;" value="Go" onclick="document.location.href=\'%s?%s&dynamicArgument%s=\' + ((document.getElementById(\'pageSelection%s%s\').value -1 ) * %s);">%s</span>',
                     $this->globalStyle,
                     $ID, $md5InstanceName,      //Select Box ID
                     $this->_currentPage,
@@ -2296,7 +2296,7 @@ echo ('<script type="text/javascript">setTableWidth("table'.$md5InstanceName.'",
 
             if (!isset($this->_parameters['filterAlpha']))
             {
-                echo $link . '&nbsp;&nbsp;<span style="font-weight:bold;">ALL</span></a>';
+                echo $link . '&nbsp;&nbsp;<span style="font-weight:bold;">TODOS</span></a>';
             }
             else
             {
@@ -2466,7 +2466,7 @@ echo ('<script type="text/javascript">setTableWidth("table'.$md5InstanceName.'",
         /* If this is the last page, don't make a link; just text. */
         if ($this->_currentPage == $this->_totalPages)
         {
-            return '<span class="pagerPrevNext" style="' . $this->globalStyle . '">Next &gt;&gt;</span>&nbsp;&nbsp;<span class="pagerPrevNext" style="' . $this->globalStyle . '">Last &gt;</span>' . "\n";
+            return '<span class="pagerPrevNext" style="' . $this->globalStyle . '">Siguiente &gt;&gt;</span>&nbsp;&nbsp;<span class="pagerPrevNext" style="' . $this->globalStyle . '">Última &gt;</span>' . "\n";
         }
 
         $newParameterArray = $this->_parameters;
@@ -2480,7 +2480,7 @@ echo ('<script type="text/javascript">setTableWidth("table'.$md5InstanceName.'",
         }
 
         return sprintf(
-            '%sNext &gt;&gt;</a>&nbsp;&nbsp;%sLast &gt;</a>%s',
+            '%sSiguiente &gt;&gt;</a>&nbsp;&nbsp;%sÚltima &gt;</a>%s',
             $this->_makeControlLink($newParameterArray, 'pagerPrevNext'),
             $this->_makeControlLink($newParameterArray2, 'pagerPrevNext'),
             "\n"
@@ -2502,7 +2502,7 @@ echo ('<script type="text/javascript">setTableWidth("table'.$md5InstanceName.'",
         /* If this is the first page, don't make a link; just text. */
         if ($this->_currentPage == 1)
         {
-            return '<span class="pagerPrevNext" style="' . $this->globalStyle . '">&lt; First</span>&nbsp;&nbsp;<span class="pagerPrevNext" style="' . $this->globalStyle . '">&lt;&lt; Prev</span>' . "\n";
+            return '<span class="pagerPrevNext" style="' . $this->globalStyle . '">&lt; Primera</span>&nbsp;&nbsp;<span class="pagerPrevNext" style="' . $this->globalStyle . '">&lt;&lt; Página</span>' . "\n";
         }
 
         $newParameterArray = $this->_parameters;
@@ -2512,7 +2512,7 @@ echo ('<script type="text/javascript">setTableWidth("table'.$md5InstanceName.'",
         $newParameterArray2['rangeStart'] = 0;
 
         return sprintf(
-            '%s&lt; First</a>&nbsp;&nbsp;%s&lt;&lt; Prev</a>%s',
+            '%s&lt; Primera</a>&nbsp;&nbsp;%s&lt;&lt; Página</a>%s',
             $this->_makeControlLink($newParameterArray2, 'pagerPrevNext'),
             $this->_makeControlLink($newParameterArray, 'pagerPrevNext'),
             "\n"
